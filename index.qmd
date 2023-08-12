@@ -1,0 +1,9 @@
+---
+title: "Lab"
+---
+
+Welcome to this lab!
+
+
+- [Assignemnts](/assignments.qmd)
+
