@@ -6,9 +6,11 @@ This section contains an overview about the programming toolkit you will need fo
 
 You will need to:
 
-1. Install [Anaconda](@sec-anaconda) (includes Python and some toolkits)
-2. Install [Visual Studio Code](@sec-vscode) (a code editor)
-3. Create an acount at [GitHub](@sec-github) (for software development and version control)
+1. Install a [SQL](@sec-sql) database (MySQL and MySQL Workbench)
+2. Install and setup [Anaconda](@sec-anaconda) (includes Python and some toolkits)
+3. Install [Visual Studio Code](@sec-vscode) (a code editor) and some extensions
+4. Prepare your work environment with an environment file (which ususally inlcudes passwords and API-keys)
+5. Create an acount at [GitHub](@sec-github) (for software development and version control)
 
 Please read all the instructions and complete the tasks listed in the following two sections ("Fundamentals" and "Tools").
 
@@ -16,7 +18,6 @@ Please read all the instructions and complete the tasks listed in the following 
 If you aren't familiar with the terminal, you may want to look at this [short introduction](@sec-terminal)
 :::
 
----
 
 ## Fundamentals
 
@@ -109,33 +110,71 @@ Review this sites to learn more about Markdown:
 
 ## Tools {#sec-tools}
 
+### SQL {#sec-sql}
+
+#### MySQL
+
+MySQL (pronounced "My S-Q-L" or sometimes "My Sequel") is a powerful open-source relational database management system (RDBMS). It uses a structured query language (SQL) to manage, manipulate, and retrieve data stored in relational databases.
+
+
+::: {.callout-tip}
+## To do
+
+- Install MySQL (select "No thanks, just start my download")
+  - [Windows](https://dev.mysql.com/downloads/installer/)
+  - [Mac](https://dev.mysql.com/downloads/mysql/)
+:::
+
+
+#### MySQL Workbench
+
+MySQL Workbench is a unified visual tool for database architects, developers, and DBAs. It provides features like data modeling, SQL development, and comprehensive administration tools for server configuration, user administration, and much more. Essentially, it's a one-stop-shop for managing and working with MySQL databases.
+
+::: {.callout-tip}
+## To do
+
+- Install [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
+
+:::
+
+
+#### Create a Database
+
+Use MySQL Workbench to create a new database called `db_data`
+
+```sql
+DROP DATABASE IF EXISTS `db_data`;
+CREATE DATABASE `db_data`; 
+USE `db_data`;
+```
+
 ### Anaconda {#sec-anaconda}
 
 #### Basics
 
-The open-source [Anaconda Individual Edition](https://www.anaconda.com/products/individual) is one of the easiest ways to get started with data science projects. It already includes Python and the most important data science modules. 
+The open-source [Anaconda Distribution](https://www.anaconda.com/download) is one of the easiest ways to get started with data science projects. It already includes Python and the most important data science modules. 
 
 :::{.callout-tip}
 Anaconda is a data science toolkit which already includes most of the data science modules we need.
 :::
 
-Anaconda's package manager `conda` makes it easy to manage multiple data environments that can be maintained and run separately without interference from each other (in so called virtual environments). `conda` analyses the current environment including everything currently installed, and, together with any version limitations specified (e.g. the user may wish to have TensorFlow version 2,0 or higher), works out how to install a compatible set of dependencies, and shows a warning if this cannot be done. Instead of conda, you can also use `pip` (the standard package installer for Python) to install packages. Note that you should only use either conda or pip in one environment (we usually use conda).
+Anaconda's package manager `conda` makes it easy to manage multiple data environments that can be maintained and run separately without interference from each other (in so called virtual environments). `conda` analyses the current environment including everything currently installed, and, together with any version limitations specified (e.g. the user may wish to have TensorFlow version 2,0 or higher), works out how to install a compatible set of dependencies, and shows a warning if this cannot be done. Instead of conda, you can also use `pip` (the standard package installer for Python) to install packages. Note that you should only use either conda or pip in one environment (we usually use pip).
 
 #### If you already have it
 
-If you already have Anaconda on your machine, make sure that you use the latest version (in our course, we use Python 3.9). In your terminal, type `python --version` to see which Python version you are using in your Anaconda base environment.
+If you already have Anaconda on your machine, make sure that you use the latest version (in our course, we use Python 3.11). In your terminal, type `python --version` to see which Python version you are using in your Anaconda base environment.
 
 *You may also uninstall your current Anaconda environment from your machine and install the latest version: here a guide of how to [uninstall Anaconda](https://docs.anaconda.com/anaconda/install/uninstall/).*
 
 
 #### Installation
 
-Install the latest version of the Anaconda Individual Edition:
+Install the latest version of the Anaconda Distribution:
 
 ::: {.callout-tip}
 ## To do
 
-- [Anaconda installation](https://www.anaconda.com/products/individual)
+- [Anaconda installation](https://www.anaconda.com/download)
 
 :::
 
@@ -146,7 +185,7 @@ After you have installed Anaconda, you can update it. The following commands wil
 
 - On *Windows* open the Start menu and open an ["Anaconda Command Prompt"](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html#starting-conda). 
 - On *macOS* or *Linux* open a [terminal window](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html#starting-conda).
-- In your terminal, type: conda update --all
+- In your terminal, type: `conda update --all`
 
 :::
 
@@ -154,14 +193,16 @@ Now follow the steps described in the next section.
 
 #### Set up environment
 
-After you have installed and updated Anaconda, you can install the modules we need for our course in a new environment. 
+After you have installed and updated Anaconda, you can install the modules we need for our labs in a new environment. 
 
 
 ::: {.callout-tip}
 ## To do
-- Install [GitHub course environments](https://github.com/kirenz/environments)
-- Use the following course environment: env-ds.yml
+- Go to [GitHub course environments](https://github.com/kirenz/environments)
+- Install the course environment stated in your lab
 :::
+
+<!--
 
 #### Install or update Modules
 
@@ -191,7 +232,7 @@ conda install scikit-learn=1.0.2
 
 Finally, take a look at the [Anaconda Cheat Sheet](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf) which provides a list of useful commands.
 
----
+-->
 
 ### Visual Studio Code {#sec-vscode}
 
