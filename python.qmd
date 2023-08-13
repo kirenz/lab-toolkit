@@ -148,57 +148,6 @@ After you have installed and updated Anaconda, you can install the modules you n
 :::
 
 
-## Working environment
-
-### Folder
-
-Before you start a lab, you should always first create a new folder on your machine with the name of the lab (e.g. `clustering`). 
-
-### Environment file
-
-In most labs we need to access a database or an API. Since we do not want to include passwords and API-keys in our Python scripts, we need to create an environment ("env") file.
-
-A `.env` file is a simple configuration file where environment-specific settings, such as database credentials or API keys, are stored in key-value pairs. 
-
-By separating these settings from the main application code, we can ensure that sensitive or environment-specific information is both easily configurable and not inadvertently shared or published. 
-
-The `.` before a filename serves a specific purpose in many operating systems: A filename that starts with a . is considered a "hidden" file. 
-
-We will use libraries like `python-dotenv` to load the variables from the file into our Python script automatically.
-
-
-#### env file in MacOS
-
-1. [Download the `env` file](/.env) 
-2. Open Finder and navigate to the Downloads folder 
-3. Move the file in your lab folder.
-4. Open the file and replace the relevant placeholder (e.g. `YOUR-PASSWORD`). 
-5. Save the changes.
-6. Rename the file from `env` to `.env` (this will hide the file)
-7. To view hidden files, you need to press the “Command” + “Shift” + “.” (period) keys at the same time. The hidden files will show up as translucent in the folder.
-8. If you want to obscure the files again, press the same “Command” + “Shift” + “.” (period) combination.
-
-
-#### env file in Windows 10
-
-1. [Download the `env` file](/.env) 
-2. Open File Explorer from the taskbar. 
-3. Move the file in your lab folder.
-4. Open the file and replace the relevant placeholder (e.g. `YOUR-PASSWORD`).
-5. Save the changes.
-6. Rename the file from `env` to `.env` (this will hide the file)
-7. To view the hidden file: Select View > Options > Change folder and search options.
-8. Select the View tab and, in Advanced settings, select Show hidden files, folders, and drives and OK.
-
-#### env file in Windows 11
-
-1. [Download the `env` file](/.env) 
-2. Open File Explorer from the taskbar. 
-4. Open the file and replace the relevant placeholder (e.g. `YOUR-PASSWORD`).
-5. Save the changes.
-6. Rename the file from `env` to `.env` (this will hide the file)
-7. To view the hidden file: Select View > Show > Hidden items.
-
 <!--
 
 #### Install or update Modules
@@ -228,6 +177,34 @@ conda install scikit-learn=1.0.2
 ```
 
 Finally, take a look at the [Anaconda Cheat Sheet](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf) which provides a list of useful commands.
+
+-->
+
+<!--
+
+### Miniforge {#sec-miniforge}
+
+As an alternative to Anaconda, you can also use the open-source project [Miniforge](https://github.com/conda-forge/miniforge).
+
+Miniforge is a small, bootstrap version of the data science platform Anaconda that includes only Python, the open source package management system [conda](https://docs.conda.io/en/latest/) and a small number of other useful packages. 
+
+Miniforge also uses Anaconda's package manager `conda`, which makes it easy to manage multiple data environments that can be maintained and run separately without interference from each other (in so called virtual environments).
+
+:::{.callout-tip}
+Miniforge is an community-led alternative to the data science platforms Anaconda and Miniconda, provided by Anaconda, Inc.
+:::
+
+Compared to Anaconda, Miniforge provides more up-to-date packages, and is more user-friendly. Therefore, I recommend using Miniforge for data science projects.
+
+::: {.callout-tip}
+## To do
+
+Install the latest version of the Miniforge
+
+- [Miniforge installation tutorial](https://kirenz.github.io/codelabs/codelabs/miniforge-setup/#0)
+
+:::
+
 
 -->
 
@@ -301,30 +278,53 @@ If you have troubles to use Anaconda in Visual Studio Code, follow these instruc
 -->
 
 
-<!--
+## Working environment
 
-### Miniforge {#sec-miniforge}
+### Folder
 
-As an alternative to Anaconda, you can also use the open-source project [Miniforge](https://github.com/conda-forge/miniforge).
+Before you start a lab, you should always first create a new folder on your machine with the name of the lab (e.g. `clustering`). 
 
-Miniforge is a small, bootstrap version of the data science platform Anaconda that includes only Python, the open source package management system [conda](https://docs.conda.io/en/latest/) and a small number of other useful packages. 
+### Environment file
 
-Miniforge also uses Anaconda's package manager `conda`, which makes it easy to manage multiple data environments that can be maintained and run separately without interference from each other (in so called virtual environments).
+In most labs we need to access a database or an API. Since we do not want to include passwords and API-keys in our Python scripts, we need to create an environment ("env") file.
 
-:::{.callout-tip}
-Miniforge is an community-led alternative to the data science platforms Anaconda and Miniconda, provided by Anaconda, Inc.
-:::
+A `.env` file is a simple configuration file where environment-specific settings, such as database credentials or API keys, are stored in key-value pairs. 
 
-Compared to Anaconda, Miniforge provides more up-to-date packages, and is more user-friendly. Therefore, I recommend using Miniforge for data science projects.
+By separating these settings from the main application code, we can ensure that sensitive or environment-specific information is both easily configurable and not inadvertently shared or published. 
 
-::: {.callout-tip}
-## To do
+The `.` before a filename serves a specific purpose in many operating systems: A filename that starts with a . is considered a "hidden" file. 
 
-Install the latest version of the Miniforge
+We will use libraries like `python-dotenv` to load the variables from the file into our Python script automatically.
 
-- [Miniforge installation tutorial](https://kirenz.github.io/codelabs/codelabs/miniforge-setup/#0)
 
-:::
----
+#### env file in MacOS
 
--->
+1. [Download the `env` file](/.env) 
+2. Open Finder and navigate to the Downloads folder 
+3. Move the file in your lab folder.
+4. Open the file and replace the relevant placeholder (e.g. `YOUR-PASSWORD`). 
+5. Save the changes.
+6. Rename the file from `env` to `.env` (this will hide the file)
+7. To view hidden files, you need to press the “Command” + “Shift” + “.” (period) keys at the same time. The hidden files will show up as translucent in the folder.
+8. If you want to obscure the files again, press the same “Command” + “Shift” + “.” (period) combination.
+
+
+#### env file in Windows 10
+
+1. [Download the `env` file](/.env) 
+2. Open File Explorer from the taskbar. 
+3. Move the file in your lab folder.
+4. Open the file and replace the relevant placeholder (e.g. `YOUR-PASSWORD`).
+5. Save the changes.
+6. Rename the file from `env` to `.env` (this will hide the file)
+7. To view the hidden file: Select View > Options > Change folder and search options.
+8. Select the View tab and, in Advanced settings, select Show hidden files, folders, and drives and OK.
+
+#### env file in Windows 11
+
+1. [Download the `env` file](/.env) 
+2. Open File Explorer from the taskbar. 
+4. Open the file and replace the relevant placeholder (e.g. `YOUR-PASSWORD`).
+5. Save the changes.
+6. Rename the file from `env` to `.env` (this will hide the file)
+7. To view the hidden file: Select View > Show > Hidden items.
