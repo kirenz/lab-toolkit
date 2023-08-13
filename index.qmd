@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Welcome 👋"
 ---
 
 This lab contains instructions about the programming toolkit you will need for our course. 
