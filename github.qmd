@@ -1,0 +1,50 @@
+---
+title: "GitHub"
+---
+
+## Basics
+
+[GitHub](https://github.com/) is a provider of internet hosting for software development and version control using Git. We will use GitHub as a platform for web hosting and collaboration.
+
+:::{.callout-tip}
+Git is a version control system -- like the “Track Changes” features from Microsoft Word with many more additional features.
+:::
+
+- Git can be used to store content 
+- Code can be changed and other developers can add code in parallel.
+- Git has a remote repository which is stored in a server and a local repository which is stored in the computer of each developer.  
+
+<br>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w3jLJU7DT5E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+
+<br>
+
+
+## GitHub-account
+
+You need a free GitHub-account for our course. Please follow the instructions below (*in case you already have a GitHub account: please add your HdM-email address to your account*):
+
+::: {.callout-warning}
+## To do
+
+- [Create a GitHub account with your HdM-email](https://github.com/join)
+- Verify your GitHub email
+- You may also sign up fot the free [student developer pack](https://education.github.com/pack)  
+- Install the [VS Code GitHub extension](https://code.visualstudio.com/docs/editor/github)
+- [Install GitHub desktop to synchronize your machine with GitHub](https://desktop.github.com/)
+
+:::
+
+
+<!--
+### GitHub SSH Key
+
+Using the SSH protocol, you can connect and authenticate to remote servers and services from your terminal. With SSH keys, you can connect to GitHub without supplying your username and personal access token at each visit.
+
+1. [Check for existing SSH keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys)
+1. [Generate a SSH-Key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+1. [Add a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+1. [Test connection](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection)
+-->
+
