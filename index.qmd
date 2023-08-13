@@ -2,7 +2,11 @@
 title: "Welcome 👋"
 ---
 
-This lab contains instructions about the programming toolkit you will need for our course. 
+This tutorial contains instructions about the programming toolkit you will need for our course. 
+
+
+![](/images/logo.png){width="50%"}
+
 
 :::{.callout-tip}
 If you aren't familiar with the command line, you should first take a look at this [short introduction](/cli.qmd)
