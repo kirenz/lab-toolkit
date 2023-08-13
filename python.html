@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -139,7 +173,7 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#working-environment" id="toc-working-environment" class="nav-link" data-scroll-target="#working-environment">Working environment</a>
   <ul class="collapse">
-  <li><a href="#folder" id="toc-folder" class="nav-link" data-scroll-target="#folder">Folder</a></li>
+  <li><a href="#folder-structure" id="toc-folder-structure" class="nav-link" data-scroll-target="#folder-structure">Folder structure</a></li>
   <li><a href="#environment-file" id="toc-environment-file" class="nav-link" data-scroll-target="#environment-file">Environment file</a></li>
   </ul></li>
   </ul>
@@ -169,13 +203,13 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="basics">Basics</h2>
 <p>Python is an object-oriented language (an object is an entity that contains data along with associated metadata and/or functionality).</p>
 <p>One thing that distinguishes Python from many other programming languages is that it is interpreted rather than compiled. This means that it is executed line by line which is particular useful for data analysis, as well as the creation of interactive, executable documents like Jupyter Notebooks.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -201,13 +235,13 @@ Tip
 <section id="sec-colab" class="level2">
 <h2 class="anchored" data-anchor-id="sec-colab">Colab</h2>
 <p>Colaboratory, or “Colab” for short, is a free to use product from Google Research. Colab allows anybody to write and execute python code through the browser, and is especially well suited to perform data analysis and machine learning.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -237,13 +271,13 @@ To do
 <section id="markdown" class="level2">
 <h2 class="anchored" data-anchor-id="markdown">Markdown</h2>
 <p>Markdown is one of the world’s most popular markup languages used in data science. Jupyter Notebooks use Markdown to provide an unified authoring framework for data science, combining code, its results, and commentary in Markdown.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -273,13 +307,13 @@ To do
 <section id="basics-1" class="level3">
 <h3 class="anchored" data-anchor-id="basics-1">Basics</h3>
 <p>The open-source <a href="https://www.anaconda.com/download">Anaconda Distribution</a> is one of the easiest ways to get started with data science projects. It already includes Python and the most important data science modules.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -287,7 +321,7 @@ Tip
 </div>
 </div>
 <p>Anaconda’s package manager <code>conda</code> makes it easy to manage multiple data environments that can be maintained and run separately without interference from each other (in so called virtual environments).</p>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -414,13 +448,13 @@ Miniforge is a small, bootstrap version of the data science platform Anaconda th
 
 Miniforge also uses Anaconda's package manager `conda`, which makes it easy to manage multiple data environments that can be maintained and run separately without interference from each other (in so called virtual environments).
 
-:::{.callout-tip}
+:::{.callout-note}
 Miniforge is an community-led alternative to the data science platforms Anaconda and Miniconda, provided by Anaconda, Inc.
 :::
 
 Compared to Anaconda, Miniforge provides more up-to-date packages, and is more user-friendly. Therefore, I recommend using Miniforge for data science projects.
 
-::: {.callout-tip}
+::: {.callout-note}
 ## To do
 
 Install the latest version of the Miniforge
@@ -438,13 +472,13 @@ Install the latest version of the Miniforge
 <section id="basics-2" class="level3">
 <h3 class="anchored" data-anchor-id="basics-2">Basics</h3>
 <p>Visual Studio Code (also called Code) is a powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with a rich ecosystem of extensions for Python.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -536,21 +570,60 @@ If you have troubles to use Anaconda in Visual Studio Code, follow these instruc
 </section>
 <section id="working-environment" class="level2">
 <h2 class="anchored" data-anchor-id="working-environment">Working environment</h2>
-<section id="folder" class="level3">
-<h3 class="anchored" data-anchor-id="folder">Folder</h3>
-<p>Before you start a lab, you should always first create a new folder on your machine with the name of the lab (e.g.&nbsp;<code>clustering</code>).</p>
+<section id="folder-structure" class="level3">
+<h3 class="anchored" data-anchor-id="folder-structure">Folder structure</h3>
+<p>Before you start a lab, you should always first create a new folder on your machine with the name of the lab (e.g.&nbsp;<code>clustering</code>). Here, we create a parent directory called “labs” where we can store the different labs.</p>
+<p>Below is a tutorial on how to create a new folder called “labs” using the command line interface for both Windows and macOS.</p>
+<section id="windows" class="level4">
+<h4 class="anchored" data-anchor-id="windows">Windows</h4>
+<ol type="1">
+<li>Press <code>Windows + R</code> keys simultaneously to open the Run dialog.</li>
+<li>Type <code>cmd</code> and press <code>Enter</code> to open the Command Prompt.</li>
+<li>Navigate to the directory where you want to create the new folder using the <code>cd</code> (change directory) command.</li>
+</ol>
+<p>For example (replace <code>YourUsername</code> and <code>\your\path</code>):</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> C:<span class="dt">\U</span>sers<span class="dt">\[</span>YourUsername]<span class="dt">\y</span>our<span class="dt">\p</span>ath</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="4" type="1">
+<li>Once you are in the desired directory, create a new folder named “labs” using the following command:</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> labs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="macoslinux" class="level4">
+<h4 class="anchored" data-anchor-id="macoslinux">macOs/Linux</h4>
+<ol type="1">
+<li><p>Open the Terminal application. You can find it in the Applications &gt; Utilities folder or search for it using Spotlight.</p></li>
+<li><p>Navigate to the directory where you want to create the new folder using the cd (change directory) command.</p></li>
+</ol>
+<p>For example For example (replace <code>YourUsername</code> and <code>/your/path</code>):</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /Users/<span class="pp">[</span><span class="ss">YourUsername</span><span class="pp">]</span>/your/path</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="3" type="1">
+<li>Once you are in the desired directory, create a new folder named “labs” using the following command:</li>
+</ol>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> labs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
 </section>
 <section id="environment-file" class="level3">
 <h3 class="anchored" data-anchor-id="environment-file">Environment file</h3>
-<p>In most labs we need to access a database or an API. Since we do not want to include passwords and API-keys in our Python scripts, we need to create an environment (“env”) file.</p>
-<p>A <code>.env</code> file is a simple configuration file where environment-specific settings, such as database credentials or API keys, are stored in key-value pairs.</p>
-<p>By separating these settings from the main application code, we can ensure that sensitive or environment-specific information is both easily configurable and not inadvertently shared or published.</p>
-<p>The <code>.</code> before a filename serves a specific purpose in many operating systems: A filename that starts with a . is considered a “hidden” file.</p>
+<p>In most labs we need to access a database or an API. Since we do not want to include passwords and API-keys in our Python scripts, we need to create an environment (“env”) file. A <code>.env</code> file is a simple configuration file where environment-specific settings, such as database credentials or API keys, are stored in key-value pairs.</p>
+<p>By separating these settings from the main application code, we can ensure that sensitive or environment-specific information is both easily configurable and not inadvertently shared or published. The <code>.</code> before a filename serves a specific purpose in many operating systems: A filename that starts with a . is considered a “hidden” file.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>We will use libraries like <code>python-dotenv</code> to load the variables from the file into our Python script automatically.</p>
-<section id="env-file-in-macos" class="level4">
-<h4 class="anchored" data-anchor-id="env-file-in-macos">env file in MacOS</h4>
+</div>
+</div>
+<p>Below are tutorials on how to create a <code>.env</code> file.</p>
+<section id="macos" class="level4">
+<h4 class="anchored" data-anchor-id="macos">macOs</h4>
 <ol type="1">
-<li><a href="./.env">Download the <code>env</code> file</a></li>
+<li><a href="./.env">Download the <code>env</code> file template</a></li>
 <li>Open Finder and navigate to the Downloads folder</li>
 <li>Move the file in your lab folder.</li>
 <li>Open the file and replace the relevant placeholder (e.g.&nbsp;<code>YOUR-PASSWORD</code>).</li>
@@ -560,10 +633,10 @@ If you have troubles to use Anaconda in Visual Studio Code, follow these instruc
 <li>If you want to obscure the files again, press the same “Command” + “Shift” + “.” (period) combination.</li>
 </ol>
 </section>
-<section id="env-file-in-windows-10" class="level4">
-<h4 class="anchored" data-anchor-id="env-file-in-windows-10">env file in Windows 10</h4>
+<section id="windows-10" class="level4">
+<h4 class="anchored" data-anchor-id="windows-10">Windows 10</h4>
 <ol type="1">
-<li><a href="./.env">Download the <code>env</code> file</a></li>
+<li><a href="./.env">Download the <code>env</code> file template</a></li>
 <li>Open File Explorer from the taskbar.</li>
 <li>Move the file in your lab folder.</li>
 <li>Open the file and replace the relevant placeholder (e.g.&nbsp;<code>YOUR-PASSWORD</code>).</li>
@@ -573,10 +646,10 @@ If you have troubles to use Anaconda in Visual Studio Code, follow these instruc
 <li>Select the View tab and, in Advanced settings, select Show hidden files, folders, and drives and OK.</li>
 </ol>
 </section>
-<section id="env-file-in-windows-11" class="level4">
-<h4 class="anchored" data-anchor-id="env-file-in-windows-11">env file in Windows 11</h4>
+<section id="windows-11" class="level4">
+<h4 class="anchored" data-anchor-id="windows-11">Windows 11</h4>
 <ol type="1">
-<li><a href="./.env">Download the <code>env</code> file</a></li>
+<li><a href="./.env">Download the <code>env</code> file template</a></li>
 <li>Open File Explorer from the taskbar.</li>
 <li>Open the file and replace the relevant placeholder (e.g.&nbsp;<code>YOUR-PASSWORD</code>).</li>
 <li>Save the changes.</li>

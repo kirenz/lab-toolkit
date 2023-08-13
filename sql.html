@@ -256,29 +256,15 @@ To do
 <section id="create-a-simple-table" class="level3">
 <h3 class="anchored" data-anchor-id="create-a-simple-table">Create a simple table</h3>
 <p>We’ll begin by creating a table named campaigns that will hold data about different marketing campaigns.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The table has columns for:</p>
+<p>:::{.callout-note, collapse=“true”} # Columns in marketing campaigns table</p>
 <ul>
-<li>id: A unique identifier for each campaign.</li>
-<li>name: The name of the marketing campaign.</li>
-<li>start_date &amp; end_date: The time frame of the campaign.</li>
-<li>budget: The budget allocated to the campaign.</li>
-<li>channel: The channel used for the campaign (e.g., “Email”, “Social Media”, “TV”).</li>
-</ul>
-</div>
-</div>
-<ul>
-<li>Open a new query tab (File -&gt; New Query Tab)</li>
-<li>Copy the SQL statement below and paste it into the Query Tab</li>
+<li><p>id: A unique identifier for each campaign.</p></li>
+<li><p>name: The name of the marketing campaign.</p></li>
+<li><p>start_date &amp; end_date: The time frame of the campaign.</p></li>
+<li><p>budget: The budget allocated to the campaign.</p></li>
+<li><p>channel: The channel used for the campaign (e.g., “Email”, “Social Media”, “TV”). :::</p></li>
+<li><p>Open a new query tab (File -&gt; New Query Tab) in MySQL Workbench</p></li>
+<li><p>Copy the SQL statement below and paste it into the Query Tab</p></li>
 </ul>
 <div class="sourceCode" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> campaigns (</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">id</span> <span class="dt">INT</span> AUTO_INCREMENT <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
@@ -291,7 +277,7 @@ Note
 <ul>
 <li>Click on the ⚡ symbol to execute the script</li>
 <li>Click on the refresh symbol 🔃 to display the database (on the top left next to <code>SCHEMAS</code>)</li>
-<li>Click on the database symbol “db_data” at the left sidebar below SCHEMAS</li>
+<li>Click on the database symbol “db_data” at the left sidebar below <code>SCHEMAS</code></li>
 <li>Expand “Tables” -&gt; “campaigns” -&gt; “Columns” to view the columns of the table</li>
 </ul>
 </section>
@@ -299,7 +285,7 @@ Note
 <h3 class="anchored" data-anchor-id="insert-values-into-the-table">Insert values into the table</h3>
 <p>Let’s now insert some sample marketing campaigns into our table:</p>
 <ul>
-<li>Open a new query tab (File -&gt; New Query Tab)</li>
+<li>Open a new query tab (File -&gt; New Query Tab) in MySQL Workbench</li>
 <li>Copy the SQL statement below and paste it into the Query Tab</li>
 </ul>
 <div class="sourceCode" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> campaigns (name, start_date, end_date, budget, channel) <span class="kw">VALUES</span></span>
@@ -314,7 +300,7 @@ Note
 <h3 class="anchored" data-anchor-id="retrieve-values-from-the-table">Retrieve values from the table</h3>
 <p>After inserting the campaigns, you can retrieve them using a simple SELECT query. For instance:</p>
 <ul>
-<li>Open a new query tab (File -&gt; New Query Tab)</li>
+<li>Open a new query tab (File -&gt; New Query Tab) in MySQL Workbench</li>
 <li>Copy the SQL statement below and paste it into the Query Tab</li>
 </ul>
 <div class="sourceCode" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> </span>
