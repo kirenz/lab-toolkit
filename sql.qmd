@@ -1,0 +1,50 @@
+---
+title: "SQL"
+---
+
+## Basics
+
+SQL (Structured Query Language, pronounced "S-Q-L" or sometimes "Sequel") is a standardized database language specifically used for managing and manipulating relational databases. 
+
+Through SQL, users can create, retrieve, update, and delete data, as well as design and manage database structures. Widely adopted across various database systems, SQL serves as the foundation for many modern data operations and applications.
+
+
+## MySQL
+
+MySQL (pronounced "My S-Q-L" or sometimes "My Sequel") is a powerful open-source relational database management system (RDBMS). 
+
+It uses a structured query language (SQL) to manage, manipulate, and retrieve data stored in relational databases.
+
+
+::: {.callout-tip}
+## To do
+
+- Install MySQL (select "No thanks, just start my download")
+  - [Windows](https://dev.mysql.com/downloads/installer/)
+  - [Mac](https://dev.mysql.com/downloads/mysql/)
+:::
+
+
+## MySQL Workbench
+
+MySQL Workbench is a unified visual tool and provides features like data modeling, SQL development, and comprehensive administration tools like user administration. 
+
+Essentially, it's a one-stop-shop for managing and working with MySQL databases.
+
+::: {.callout-tip}
+## To do
+
+- Install [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
+
+:::
+
+
+## Create a Database
+
+Use MySQL Workbench to create a new database called `db_data`
+
+```sql
+DROP DATABASE IF EXISTS `db_data`;
+CREATE DATABASE `db_data`; 
+USE `db_data`;
+```
