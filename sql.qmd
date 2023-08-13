@@ -35,16 +35,92 @@ Essentially, it's a one-stop-shop for managing and working with MySQL databases.
 ## To do
 
 - Install [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
-
+- [Create a new connection](https://dev.mysql.com/doc/workbench/en/wb-mysql-connections-new.html) (use `local-connection` as "Connection Name"; click on "Store in Vault" and provide your password)
 :::
-
 
 ## Create a Database
 
 Use MySQL Workbench to create a new database called `db_data`
+
+- Open a connection (use local-connection)
+- Copy the SQL statement below and paste it into the open MySQL Query window
 
 ```sql
 DROP DATABASE IF EXISTS `db_data`;
 CREATE DATABASE `db_data`; 
 USE `db_data`;
 ```
+
+- Click on the ⚡ symbol to execute the script
+- Click on the refresh symbol 🔃 to display the database (on the top left next to `SCHEMAS`)
+
+
+## Create a Table
+
+Next, we include a table in our database.
+
+### Create a simple table
+
+We'll begin by creating a table named campaigns that will hold data about different marketing campaigns. 
+
+:::{.callout-note}
+The table has columns for:
+
+- id: A unique identifier for each campaign.
+- name: The name of the marketing campaign.
+- start_date & end_date: The time frame of the campaign.
+- budget: The budget allocated to the campaign.
+- channel: The channel used for the campaign (e.g., "Email", "Social Media", "TV").
+:::
+
+
+- Open a new query tab (File -> New Query Tab)
+- Copy the SQL statement below and paste it into the Query Tab
+
+```sql
+CREATE TABLE campaigns (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    start_date DATE,
+    end_date DATE,
+    budget DECIMAL(10, 2),
+    channel VARCHAR(255)
+);
+```
+
+- Click on the ⚡ symbol to execute the script
+- Click on the refresh symbol 🔃 to display the database (on the top left next to `SCHEMAS`)
+- Click on the database symbol "db_data" at the left sidebar below SCHEMAS
+- Expand "Tables" -> "campaigns" -> "Columns" to view the columns of the table
+
+
+### Insert values into the table
+
+Let's now insert some sample marketing campaigns into our table:
+
+- Open a new query tab (File -> New Query Tab)
+- Copy the SQL statement below and paste it into the Query Tab
+
+```sql
+INSERT INTO campaigns (name, start_date, end_date, budget, channel) VALUES
+('Winter Sale', '2023-12-01', '2023-12-31', 5000.00, 'Email'),
+('Summer Festival', '2023-06-01', '2023-06-15', 10000.00, 'Social Media'),
+('Back to School', '2023-08-01', '2023-08-20', 7500.00, 'TV');
+```
+
+- Click on the ⚡ symbol to execute the script
+
+### Retrieve values from the table
+
+After inserting the campaigns, you can retrieve them using a simple SELECT query. For instance:
+
+- Open a new query tab (File -> New Query Tab)
+- Copy the SQL statement below and paste it into the Query Tab
+
+```sql
+SELECT * 
+FROM campaigns;
+```
+
+
+
