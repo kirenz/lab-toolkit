@@ -1,0 +1,330 @@
+---
+title: "Python"
+---
+
+## Basics
+
+Python is an object-oriented language (an object is an entity that contains data along with associated metadata and/or functionality).
+
+One thing that distinguishes Python from many other programming languages is that it is interpreted rather than compiled. This means that it is executed line by line which is particular useful for data analysis, as well as the creation of interactive, executable documents like Jupyter Notebooks.
+
+:::{.callout-tip}
+Python is an interpreted language. The Python interpreter runs a program by executing one statement at a time.
+:::
+
+On top of this, there is a broad ecosystem of third-party tools and modules (like Jupyter Notebook) that offer more specialized data science functionality.
+
+
+## Jupyter Notebook
+
+[Jupyter Notebook](https://jupyter.org/) is an open-source application that allows you to create and share documents that contain code, equations, visualizations and narrative text. 
+
+<br>
+
+![](/images/jupyter.png){width="50%"}
+
+
+<br>
+
+A notebook is basically a list of cells and the cells contain either
+
+1. explanatory text (written in markdown)
+1. executable code
+1. code output
+
+Note that we will use Jupyter Notebook inside the coding editor Visual Studio Code or Google Colab.
+
+
+## Colab {#sec-colab}
+
+Colaboratory, or “Colab” for short, is a free to use product from Google Research. Colab allows anybody to write and execute python code through the browser, and is especially well suited to perform data analysis and machine learning.
+
+:::{.callout-tip}
+Colab is a free Jupyter notebook environment that requires no setup, and runs entirely on the Cloud.
+:::
+
+Watch this video to get a first impression of Colab:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/inN8seMm7UI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Let`s start your first Colab notebook to get an overview about some basic features:
+
+::: {.callout-warning}
+## To do
+- [Colab basic features overview](https://colab.research.google.com/notebooks/basic_features_overview.ipynb)
+:::
+
+
+## Markdown
+
+Markdown is one of the world’s most popular markup languages used in data science. Jupyter Notebooks use Markdown to provide an unified authoring framework for data science, combining code, its results, and commentary in Markdown. 
+
+:::{.callout-tip}
+Markdown is a simple way to format text that looks great on any device.
+:::
+
+Review this sites to learn more about Markdown:
+
+::: {.callout-warning}
+## To do
+- [Interactive Colab Markdown guide](https://colab.research.google.com/notebooks/markdown_guide.ipynb)
+
+- [Interactive 10 minute Markdown tutorial](https://commonmark.org/help/)
+:::
+
+
+## Anaconda {#sec-anaconda}
+
+### Basics
+
+The open-source [Anaconda Distribution](https://www.anaconda.com/download) is one of the easiest ways to get started with data science projects. It already includes Python and the most important data science modules. 
+
+:::{.callout-tip}
+Anaconda is a data science toolkit which already includes most of the data science modules we need.
+:::
+
+Anaconda's package manager `conda` makes it easy to manage multiple data environments that can be maintained and run separately without interference from each other (in so called virtual environments).
+
+::: {.callout-tip collapse="true"}
+## Expand to learn about conda
+
+*conda* analyses the current environment including everything currently installed, and, together with any version limitations specified (e.g. the user may wish to have TensorFlow version 2.0 or higher), works out how to install a compatible set of dependencies, and shows a warning if this cannot be done. 
+:::
+
+Instead of conda, you can also use `pip` (the standard package installer for Python) to install packages. 
+
+Note that you should only use either conda or pip in one environment (we usually use pip).
+
+### If you already have Anaconda
+
+If you already have Anaconda on your machine, make sure that you use the latest version (in our course, we use Python 3.11). 
+
+In your command line tool, type `python --version` to see which Python version you are using in your Anaconda base environment:
+
+
+- On *Windows* open the Start menu and open an ["Anaconda Command Prompt"](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html#starting-conda). Type `python --version` to see which Python version you are using in your Anaconda base environment.
+
+- On *macOS* or *Linux* open a [terminal window](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html#starting-conda). Type `python --version` to see which Python version you are using in your Anaconda base environment.
+
+*You may also uninstall your current Anaconda environment from your machine and install the latest version: here a guide of how to [uninstall Anaconda](https://docs.anaconda.com/anaconda/install/uninstall/).*
+
+
+### Installation
+
+Install the latest version of the Anaconda Distribution:
+
+::: {.callout-warning}
+## To do
+
+- [Anaconda installation](https://www.anaconda.com/download)
+
+:::
+
+After you have installed Anaconda, you can update it. The following commands will update all packages in the default "base" environment to the latest version but will not update Python:
+
+::: {.callout-warning}
+## To do
+
+- On *Windows* open the Start menu and open an ["Anaconda Command Prompt"](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html#starting-conda). 
+
+- On *macOS* or *Linux* open a [terminal window](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html#starting-conda).
+- In your terminal, type: `conda update --all`
+
+:::
+
+Now follow the steps described in the next section.
+
+
+### Anaconda environment
+
+After you have installed and updated Anaconda, you can install the modules you need for a specific lab in a new environment. 
+
+
+::: {.callout-warning}
+## To do
+- Go to [GitHub course environments](https://github.com/kirenz/environments)
+
+- Install the course environment stated in your lab
+:::
+
+
+## Working environment
+
+### Folder
+
+Before you start a lab, you should always first create a new folder on your machine with the name of the lab (e.g. `clustering`). 
+
+### Environment file
+
+In most labs we need to access a database or an API. Since we do not want to include passwords and API-keys in our Python scripts, we need to create an environment ("env") file.
+
+A `.env` file is a simple configuration file where environment-specific settings, such as database credentials or API keys, are stored in key-value pairs. 
+
+By separating these settings from the main application code, we can ensure that sensitive or environment-specific information is both easily configurable and not inadvertently shared or published. 
+
+The `.` before a filename serves a specific purpose in many operating systems: A filename that starts with a . is considered a "hidden" file. 
+
+We will use libraries like `python-dotenv` to load the variables from the file into our Python script automatically.
+
+
+#### env file in MacOS
+
+1. [Download the `env` file](/.env) 
+2. Open Finder and navigate to the Downloads folder 
+3. Move the file in your lab folder.
+4. Open the file and replace the relevant placeholder (e.g. `YOUR-PASSWORD`). 
+5. Save the changes.
+6. Rename the file from `env` to `.env` (this will hide the file)
+7. To view hidden files, you need to press the “Command” + “Shift” + “.” (period) keys at the same time. The hidden files will show up as translucent in the folder.
+8. If you want to obscure the files again, press the same “Command” + “Shift” + “.” (period) combination.
+
+
+#### env file in Windows 10
+
+1. [Download the `env` file](/.env) 
+2. Open File Explorer from the taskbar. 
+3. Move the file in your lab folder.
+4. Open the file and replace the relevant placeholder (e.g. `YOUR-PASSWORD`).
+5. Save the changes.
+6. Rename the file from `env` to `.env` (this will hide the file)
+7. To view the hidden file: Select View > Options > Change folder and search options.
+8. Select the View tab and, in Advanced settings, select Show hidden files, folders, and drives and OK.
+
+#### env file in Windows 11
+
+1. [Download the `env` file](/.env) 
+2. Open File Explorer from the taskbar. 
+4. Open the file and replace the relevant placeholder (e.g. `YOUR-PASSWORD`).
+5. Save the changes.
+6. Rename the file from `env` to `.env` (this will hide the file)
+7. To view the hidden file: Select View > Show > Hidden items.
+
+<!--
+
+#### Install or update Modules
+
+Take a look at all the modules in your environment:
+
+```bash
+conda list
+```
+
+Make sure that you use `scikit-learn` in version 1.0.2 or higher. If this is not the case, update Anaconda. If you only want to **update specific modules**, use conda update and the name of the module (e.g., scikit-learn)
+
+```bash
+conda update scikit-learn
+```
+
+If you want to **install new modules** in your environment, you should always use conda (and not the package installer for Python: [pip](https://pypi.org/project/pip/)). Here is an example of how to install scikit-learn [see conda documentation](https://anaconda.org/anaconda/scikit-learn)
+
+```bash
+conda install scikit-learn
+```
+
+Or, if you want to install a specific version
+
+```bash
+conda install scikit-learn=1.0.2
+```
+
+Finally, take a look at the [Anaconda Cheat Sheet](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf) which provides a list of useful commands.
+
+-->
+
+## Visual Studio Code {#sec-vscode}
+
+### Basics
+
+Visual Studio Code (also called Code) is a powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with a rich ecosystem of extensions for Python.
+
+:::{.callout-tip}
+Visual Studio Code is a code editor that can be used with a variety of programming languages including Python.
+:::
+
+<br>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/KMxo3T_MTvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+
+### Installation
+
+Install VS Code:
+
+::: {.callout-warning}
+## To do
+- [Install Code](https://code.visualstudio.com/)
+:::
+
+### Install extensions
+
+The features that Visual Studio Code includes out-of-the-box are just the start. VS Code extensions let you add languages, debuggers, and tools to your installation to support your development workflow.
+
+Let's install some important extensions:
+
+::: {.callout-warning}
+## To do
+
+- [Visual Studio Code Extensions](https://vscode.dev/profile/github/94d1b9a0184dec88655f9622c87b866d)
+
+:::
+
+### Jupyter Notebooks
+
+We usually work with Jupyter Notebook files in VS Code:
+
+::: {.callout-warning}
+## To do
+- [Learn how to use Jupyter Notebooks in VS Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)
+
+:::
+
+### Optional tutorials
+
+Here some resources to get familiar with VS Code:
+
+- [Take a look at the intro videos](https://code.visualstudio.com/docs/getstarted/introvideos)
+
+- [Data Science in VS Code tutorial](https://code.visualstudio.com/docs/datascience/data-science-tutorial)
+
+- Pro tips: [25 VS Code Productivity Tips and Speed Hacks](https://www.youtube.com/watch?v=ifTF3ags0XI)
+
+<!--
+
+#### Troubleshooting
+
+If you have troubles to use Anaconda in Visual Studio Code, follow these instructions: 
+
+- [Windows](https://stackoverflow.com/a/61937090/14796848)
+- [Mac](https://stackoverflow.com/a/55203534/14796848)
+
+-->
+
+
+<!--
+
+### Miniforge {#sec-miniforge}
+
+As an alternative to Anaconda, you can also use the open-source project [Miniforge](https://github.com/conda-forge/miniforge).
+
+Miniforge is a small, bootstrap version of the data science platform Anaconda that includes only Python, the open source package management system [conda](https://docs.conda.io/en/latest/) and a small number of other useful packages. 
+
+Miniforge also uses Anaconda's package manager `conda`, which makes it easy to manage multiple data environments that can be maintained and run separately without interference from each other (in so called virtual environments).
+
+:::{.callout-tip}
+Miniforge is an community-led alternative to the data science platforms Anaconda and Miniconda, provided by Anaconda, Inc.
+:::
+
+Compared to Anaconda, Miniforge provides more up-to-date packages, and is more user-friendly. Therefore, I recommend using Miniforge for data science projects.
+
+::: {.callout-tip}
+## To do
+
+Install the latest version of the Miniforge
+
+- [Miniforge installation tutorial](https://kirenz.github.io/codelabs/codelabs/miniforge-setup/#0)
+
+:::
+---
+
+-->
