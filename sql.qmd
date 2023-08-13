@@ -16,7 +16,7 @@ MySQL (pronounced "My S-Q-L" or sometimes "My Sequel") is a powerful open-source
 It uses a structured query language (SQL) to manage, manipulate, and retrieve data stored in relational databases.
 
 
-::: {.callout-tip}
+::: {.callout-warning}
 ## To do
 
 - Install MySQL (select "No thanks, just start my download")
@@ -31,7 +31,7 @@ MySQL Workbench is a unified visual tool and provides features like data modelin
 
 Essentially, it's a one-stop-shop for managing and working with MySQL databases.
 
-::: {.callout-tip}
+::: {.callout-warning}
 ## To do
 
 - Install [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
