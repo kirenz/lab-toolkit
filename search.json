@@ -95,7 +95,7 @@
     "href": "index.html",
     "title": "Welcome 👋",
     "section": "",
-    "text": "This lab contains instructions about the programming toolkit you will need for our course.\n\n\n\n\n\n\nTip\n\n\n\nIf you aren’t familiar with the command line, you should first take a look at this short introduction\n\n\nYou will need to set up a:\n\nSQL environment with a MySQL database and MySQL Workbench\nPython devolopment environemnt (we use Anaconda and Visual Studio Code)\nGitHub account for software development and version control)\n\nPlease read all the instructions and complete the tasks listed in the sections."
+    "text": "This tutorial contains instructions about the programming toolkit you will need for our course.\n\n\n\n\n\n\n\nTip\n\n\n\nIf you aren’t familiar with the command line, you should first take a look at this short introduction\n\n\nYou will need to set up a:\n\nSQL environment with a MySQL database and MySQL Workbench\nPython devolopment environemnt (we use Anaconda and Visual Studio Code)\nGitHub account for software development and version control)\n\nPlease read all the instructions and complete the tasks listed in the sections."
   },
   {
     "objectID": "slides/slides.html#text",
