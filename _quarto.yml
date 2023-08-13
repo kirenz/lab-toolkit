@@ -14,23 +14,23 @@ website:
     left: |
       © [Jan Kirenz](https://www.kirenz.com/), 2023
     center:
-      - text: "Slides"
-        href: slide.qmd
-      - text: "Resources"
-        href: resources.qmd  
-      - text: "Assignments"
-        href: assignments.qmd
+      - text: "Command-line"
+        href: cli.qmd
+      - text: "SQL"
+        href: sql.qmd  
+      - text: "Python"
+        href: python.qmd
     right:
       - icon: person-circle
-        href: https://e-learning.hdm-stuttgart.de/moodle/login/index.php
+        href: https://moodle.hdm-stuttgart.de/login/index.php
         aria-label: Moodle           
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - slide.qmd
-      - resources.qmd
-      - assignments.qmd
+      - cli.qmd
+      - sql.qmd
+      - python.qmd
 
 format:
   html:
