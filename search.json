@@ -32,14 +32,21 @@
     "href": "sql.html#mysql-workbench",
     "title": "SQL",
     "section": "MySQL Workbench",
-    "text": "MySQL Workbench\nMySQL Workbench is a unified visual tool and provides features like data modeling, SQL development, and comprehensive administration tools like user administration.\nEssentially, it’s a one-stop-shop for managing and working with MySQL databases.\n\n\n\n\n\n\nTo do\n\n\n\n\nInstall MySQL Workbench"
+    "text": "MySQL Workbench\nMySQL Workbench is a unified visual tool and provides features like data modeling, SQL development, and comprehensive administration tools like user administration.\nEssentially, it’s a one-stop-shop for managing and working with MySQL databases.\n\n\n\n\n\n\nTo do\n\n\n\n\nInstall MySQL Workbench\nCreate a new connection (use local-connection as “Connection Name”; click on “Store in Vault” and provide your password)"
   },
   {
     "objectID": "sql.html#create-a-database",
     "href": "sql.html#create-a-database",
     "title": "SQL",
     "section": "Create a Database",
-    "text": "Create a Database\nUse MySQL Workbench to create a new database called db_data\nDROP DATABASE IF EXISTS `db_data`;\nCREATE DATABASE `db_data`; \nUSE `db_data`;"
+    "text": "Create a Database\nUse MySQL Workbench to create a new database called db_data\n\nOpen a connection (use local-connection)\nCopy the SQL statement below and paste it into the open MySQL Query window\n\nDROP DATABASE IF EXISTS `db_data`;\nCREATE DATABASE `db_data`; \nUSE `db_data`;\n\nClick on the ⚡ symbol to execute the script\nClick on the refresh symbol 🔃 to display the database (on the top left next to SCHEMAS)"
+  },
+  {
+    "objectID": "sql.html#create-a-table",
+    "href": "sql.html#create-a-table",
+    "title": "SQL",
+    "section": "Create a Table",
+    "text": "Create a Table\nNext, we include a table in our database.\n\nCreate a simple table\nWe’ll begin by creating a table named campaigns that will hold data about different marketing campaigns.\n\n\n\n\n\n\nNote\n\n\n\nThe table has columns for:\n\nid: A unique identifier for each campaign.\nname: The name of the marketing campaign.\nstart_date & end_date: The time frame of the campaign.\nbudget: The budget allocated to the campaign.\nchannel: The channel used for the campaign (e.g., “Email”, “Social Media”, “TV”).\n\n\n\n\nOpen a new query tab (File -&gt; New Query Tab)\nCopy the SQL statement below and paste it into the Query Tab\n\nCREATE TABLE campaigns (\n    id INT AUTO_INCREMENT PRIMARY KEY,\n    name VARCHAR(255) NOT NULL,\n    start_date DATE,\n    end_date DATE,\n    budget DECIMAL(10, 2),\n    channel VARCHAR(255)\n);\n\nClick on the ⚡ symbol to execute the script\nClick on the refresh symbol 🔃 to display the database (on the top left next to SCHEMAS)\nClick on the database symbol “db_data” at the left sidebar below SCHEMAS\nExpand “Tables” -&gt; “campaigns” -&gt; “Columns” to view the columns of the table\n\n\n\nInsert values into the table\nLet’s now insert some sample marketing campaigns into our table:\n\nOpen a new query tab (File -&gt; New Query Tab)\nCopy the SQL statement below and paste it into the Query Tab\n\nINSERT INTO campaigns (name, start_date, end_date, budget, channel) VALUES\n('Winter Sale', '2023-12-01', '2023-12-31', 5000.00, 'Email'),\n('Summer Festival', '2023-06-01', '2023-06-15', 10000.00, 'Social Media'),\n('Back to School', '2023-08-01', '2023-08-20', 7500.00, 'TV');\n\nClick on the ⚡ symbol to execute the script\n\n\n\nRetrieve values from the table\nAfter inserting the campaigns, you can retrieve them using a simple SELECT query. For instance:\n\nOpen a new query tab (File -&gt; New Query Tab)\nCopy the SQL statement below and paste it into the Query Tab\n\nSELECT * \nFROM campaigns;"
   },
   {
     "objectID": "cli.html",
@@ -74,7 +81,7 @@
     "href": "github.html#github-account",
     "title": "GitHub",
     "section": "GitHub-account",
-    "text": "GitHub-account\nYou need a free GitHub-account for our course. Please follow the instructions below (in case you already have a GitHub account: please add your HdM-email address to your account):\n\n\n\n\n\n\nTo do\n\n\n\n\nCreate a GitHub account with your HdM-email\nVerify your GitHub email\nYou may also sign up fot the free student developer pack\n\nInstall the VS Code GitHub extension\nInstall GitHub desktop to synchronize your machine with GitHub"
+    "text": "GitHub-account\nYou need a free GitHub-account for our course. Please follow the instructions below (in case you already have a GitHub account: please add your HdM-email address to your account):\n\n\n\n\n\n\nTo do\n\n\n\n\nCreate a GitHub account with your HdM-email\nVerify your GitHub email\nYou may also sign up fot the free student developer pack\n\nInstall the VS Code GitHub extension\nInstall GitHub desktop to synchronize your machine with GitHub\n\n\n\nNext, learn how to set up, authenticate, and configure GitHub Desktop to allow you to contribute to projects directly from your machine.\n\n\n\n\n\n\nTo do\n\n\n\n\nGetting started with GitHub Desktop"
   },
   {
     "objectID": "slide.html",
@@ -86,7 +93,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Toolkit",
+    "title": "Welcome 👋",
     "section": "",
     "text": "This lab contains instructions about the programming toolkit you will need for our course.\n\n\n\n\n\n\nTip\n\n\n\nIf you aren’t familiar with the command line, you should first take a look at this short introduction\n\n\nYou will need to set up a:\n\nSQL environment with a MySQL database and MySQL Workbench\nPython platform to develop solutions (includes Anaconda and the code editor Visual Studio Code)\nGitHub account for software development and version control)\n\nPlease read all the instructions and complete the tasks listed in the sections."
   },

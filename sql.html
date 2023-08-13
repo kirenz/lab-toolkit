@@ -156,6 +156,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#mysql" id="toc-mysql" class="nav-link" data-scroll-target="#mysql">MySQL</a></li>
   <li><a href="#mysql-workbench" id="toc-mysql-workbench" class="nav-link" data-scroll-target="#mysql-workbench">MySQL Workbench</a></li>
   <li><a href="#create-a-database" id="toc-create-a-database" class="nav-link" data-scroll-target="#create-a-database">Create a Database</a></li>
+  <li><a href="#create-a-table" id="toc-create-a-table" class="nav-link" data-scroll-target="#create-a-table">Create a Table</a>
+  <ul class="collapse">
+  <li><a href="#create-a-simple-table" id="toc-create-a-simple-table" class="nav-link" data-scroll-target="#create-a-simple-table">Create a simple table</a></li>
+  <li><a href="#insert-values-into-the-table" id="toc-insert-values-into-the-table" class="nav-link" data-scroll-target="#insert-values-into-the-table">Insert values into the table</a></li>
+  <li><a href="#retrieve-values-from-the-table" id="toc-retrieve-values-from-the-table" class="nav-link" data-scroll-target="#retrieve-values-from-the-table">Retrieve values from the table</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -224,6 +230,7 @@ To do
 <div class="callout-body-container callout-body">
 <ul>
 <li>Install <a href="https://dev.mysql.com/downloads/workbench/">MySQL Workbench</a></li>
+<li><a href="https://dev.mysql.com/doc/workbench/en/wb-mysql-connections-new.html">Create a new connection</a> (use <code>local-connection</code> as “Connection Name”; click on “Store in Vault” and provide your password)</li>
 </ul>
 </div>
 </div>
@@ -231,11 +238,90 @@ To do
 <section id="create-a-database" class="level2">
 <h2 class="anchored" data-anchor-id="create-a-database">Create a Database</h2>
 <p>Use MySQL Workbench to create a new database called <code>db_data</code></p>
+<ul>
+<li>Open a connection (use local-connection)</li>
+<li>Copy the SQL statement below and paste it into the open MySQL Query window</li>
+</ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">DROP</span> <span class="kw">DATABASE</span> <span class="cf">IF</span> <span class="kw">EXISTS</span> `db_data`;</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">DATABASE</span> `db_data`; </span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">USE</span> `db_data`;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Click on the ⚡ symbol to execute the script</li>
+<li>Click on the refresh symbol 🔃 to display the database (on the top left next to <code>SCHEMAS</code>)</li>
+</ul>
+</section>
+<section id="create-a-table" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-table">Create a Table</h2>
+<p>Next, we include a table in our database.</p>
+<section id="create-a-simple-table" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-simple-table">Create a simple table</h3>
+<p>We’ll begin by creating a table named campaigns that will hold data about different marketing campaigns.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The table has columns for:</p>
+<ul>
+<li>id: A unique identifier for each campaign.</li>
+<li>name: The name of the marketing campaign.</li>
+<li>start_date &amp; end_date: The time frame of the campaign.</li>
+<li>budget: The budget allocated to the campaign.</li>
+<li>channel: The channel used for the campaign (e.g., “Email”, “Social Media”, “TV”).</li>
+</ul>
+</div>
+</div>
+<ul>
+<li>Open a new query tab (File -&gt; New Query Tab)</li>
+<li>Copy the SQL statement below and paste it into the Query Tab</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> campaigns (</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">id</span> <span class="dt">INT</span> AUTO_INCREMENT <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    name <span class="dt">VARCHAR</span>(<span class="dv">255</span>) <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    start_date <span class="dt">DATE</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    end_date <span class="dt">DATE</span>,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    budget <span class="dt">DECIMAL</span>(<span class="dv">10</span>, <span class="dv">2</span>),</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    channel <span class="dt">VARCHAR</span>(<span class="dv">255</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Click on the ⚡ symbol to execute the script</li>
+<li>Click on the refresh symbol 🔃 to display the database (on the top left next to <code>SCHEMAS</code>)</li>
+<li>Click on the database symbol “db_data” at the left sidebar below SCHEMAS</li>
+<li>Expand “Tables” -&gt; “campaigns” -&gt; “Columns” to view the columns of the table</li>
+</ul>
+</section>
+<section id="insert-values-into-the-table" class="level3">
+<h3 class="anchored" data-anchor-id="insert-values-into-the-table">Insert values into the table</h3>
+<p>Let’s now insert some sample marketing campaigns into our table:</p>
+<ul>
+<li>Open a new query tab (File -&gt; New Query Tab)</li>
+<li>Copy the SQL statement below and paste it into the Query Tab</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> campaigns (name, start_date, end_date, budget, channel) <span class="kw">VALUES</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>(<span class="st">'Winter Sale'</span>, <span class="st">'2023-12-01'</span>, <span class="st">'2023-12-31'</span>, <span class="fl">5000.00</span>, <span class="st">'Email'</span>),</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>(<span class="st">'Summer Festival'</span>, <span class="st">'2023-06-01'</span>, <span class="st">'2023-06-15'</span>, <span class="fl">10000.00</span>, <span class="st">'Social Media'</span>),</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>(<span class="st">'Back to School'</span>, <span class="st">'2023-08-01'</span>, <span class="st">'2023-08-20'</span>, <span class="fl">7500.00</span>, <span class="st">'TV'</span>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Click on the ⚡ symbol to execute the script</li>
+</ul>
+</section>
+<section id="retrieve-values-from-the-table" class="level3">
+<h3 class="anchored" data-anchor-id="retrieve-values-from-the-table">Retrieve values from the table</h3>
+<p>After inserting the campaigns, you can retrieve them using a simple SELECT query. For instance:</p>
+<ul>
+<li>Open a new query tab (File -&gt; New Query Tab)</li>
+<li>Copy the SQL statement below and paste it into the Query Tab</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> campaigns;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
