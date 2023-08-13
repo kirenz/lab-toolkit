@@ -144,7 +144,7 @@ After you have installed and updated Anaconda, you can install the modules you n
 ## To do
 - Go to [GitHub course environments](https://github.com/kirenz/environments)
 
-- Install the course environment stated in your lab
+- Follow the instructions in the GitHub repo and install the environment `env-lab` 
 :::
 
 
