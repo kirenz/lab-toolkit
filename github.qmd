@@ -4,11 +4,13 @@ title: "GitHub"
 
 ## Basics
 
-[GitHub](https://github.com/) is a provider of internet hosting for software development and version control using Git. We will use GitHub as a platform for web hosting and collaboration.
+[GitHub](https://github.com/) is a provider of internet hosting for software development and version control using Git. 
 
-:::{.callout-tip}
-Git is a version control system -- like the “Track Changes” features from Microsoft Word with many more additional features.
+:::{.callout-note}
+ We will use GitHub as a platform for web hosting and collaboration.
 :::
+
+Git is a version control system -- like the "Track Changes" features from Microsoft Word with many more additional features.
 
 - Git can be used to store content 
 - Code can be changed and other developers can add code in parallel.
