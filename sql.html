@@ -256,15 +256,31 @@ To do
 <section id="create-a-simple-table" class="level3">
 <h3 class="anchored" data-anchor-id="create-a-simple-table">Create a simple table</h3>
 <p>We’ll begin by creating a table named campaigns that will hold data about different marketing campaigns.</p>
-<p>:::{.callout-note, collapse=“true”} # Columns in marketing campaigns table</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Columns in marketing campaigns table
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <ul>
-<li><p>id: A unique identifier for each campaign.</p></li>
-<li><p>name: The name of the marketing campaign.</p></li>
-<li><p>start_date &amp; end_date: The time frame of the campaign.</p></li>
-<li><p>budget: The budget allocated to the campaign.</p></li>
-<li><p>channel: The channel used for the campaign (e.g., “Email”, “Social Media”, “TV”). :::</p></li>
-<li><p>Open a new query tab (File -&gt; New Query Tab) in MySQL Workbench</p></li>
-<li><p>Copy the SQL statement below and paste it into the Query Tab</p></li>
+<li>id: A unique identifier for each campaign.</li>
+<li>name: The name of the marketing campaign.</li>
+<li>start_date &amp; end_date: The time frame of the campaign.</li>
+<li>budget: The budget allocated to the campaign.</li>
+<li>channel: The channel used for the campaign (e.g., “Email”, “Social Media”, “TV”).</li>
+</ul>
+</div>
+</div>
+</div>
+<ul>
+<li>Open a new query tab (File &gt; New Query Tab) in MySQL Workbench</li>
+<li>Copy the SQL statement below and paste it into the Query Tab</li>
 </ul>
 <div class="sourceCode" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> campaigns (</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">id</span> <span class="dt">INT</span> AUTO_INCREMENT <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
@@ -285,7 +301,7 @@ To do
 <h3 class="anchored" data-anchor-id="insert-values-into-the-table">Insert values into the table</h3>
 <p>Let’s now insert some sample marketing campaigns into our table:</p>
 <ul>
-<li>Open a new query tab (File -&gt; New Query Tab) in MySQL Workbench</li>
+<li>Open a new query tab (File &gt; New Query Tab) in MySQL Workbench</li>
 <li>Copy the SQL statement below and paste it into the Query Tab</li>
 </ul>
 <div class="sourceCode" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> campaigns (name, start_date, end_date, budget, channel) <span class="kw">VALUES</span></span>
