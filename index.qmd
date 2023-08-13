@@ -11,7 +11,7 @@ If you aren't familiar with the command line, you should first take a look at th
 You will need to set up a:
 
 1. [SQL](/sql.qmd) environment with a *MySQL database* and *MySQL Workbench*
-2. [Python](/python.qmd) platform to develop solutions (includes Anaconda and the code editor Visual Studio Code)
+2. [Python](/python.qmd) devolopment environemnt (we use Anaconda and Visual Studio Code)
 3. [GitHub](/github.qmd) account for software development and version control)
 
 Please read all the instructions and complete the tasks listed in the sections. 
