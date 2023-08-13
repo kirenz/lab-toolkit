@@ -36,6 +36,15 @@ You need a free GitHub-account for our course. Please follow the instructions be
 
 :::
 
+Next, learn how to set up, authenticate, and configure GitHub Desktop to allow you to contribute to projects directly from your machine.
+
+::: {.callout-warning}
+## To do
+
+- [Getting started with GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop)
+:::
+
+
 
 <!--
 ### GitHub SSH Key
