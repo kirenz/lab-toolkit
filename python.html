@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lab - Python</title>
+<title>Toolkit - Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Lab</span>
+    <span class="navbar-title">Toolkit</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -125,11 +125,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
   <li><a href="#anaconda-environment" id="toc-anaconda-environment" class="nav-link" data-scroll-target="#anaconda-environment">Anaconda environment</a></li>
   </ul></li>
-  <li><a href="#working-environment" id="toc-working-environment" class="nav-link" data-scroll-target="#working-environment">Working environment</a>
-  <ul class="collapse">
-  <li><a href="#folder" id="toc-folder" class="nav-link" data-scroll-target="#folder">Folder</a></li>
-  <li><a href="#environment-file" id="toc-environment-file" class="nav-link" data-scroll-target="#environment-file">Environment file</a></li>
-  </ul></li>
   <li><a href="#sec-vscode" id="toc-sec-vscode" class="nav-link" data-scroll-target="#sec-vscode">Visual Studio Code</a>
   <ul class="collapse">
   <li><a href="#basics-2" id="toc-basics-2" class="nav-link" data-scroll-target="#basics-2">Basics</a></li>
@@ -137,6 +132,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#install-extensions" id="toc-install-extensions" class="nav-link" data-scroll-target="#install-extensions">Install extensions</a></li>
   <li><a href="#jupyter-notebooks" id="toc-jupyter-notebooks" class="nav-link" data-scroll-target="#jupyter-notebooks">Jupyter Notebooks</a></li>
   <li><a href="#optional-tutorials" id="toc-optional-tutorials" class="nav-link" data-scroll-target="#optional-tutorials">Optional tutorials</a></li>
+  </ul></li>
+  <li><a href="#working-environment" id="toc-working-environment" class="nav-link" data-scroll-target="#working-environment">Working environment</a>
+  <ul class="collapse">
+  <li><a href="#folder" id="toc-folder" class="nav-link" data-scroll-target="#folder">Folder</a></li>
+  <li><a href="#environment-file" id="toc-environment-file" class="nav-link" data-scroll-target="#environment-file">Environment file</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -369,57 +369,6 @@ To do
 </ul>
 </div>
 </div>
-</section>
-</section>
-<section id="working-environment" class="level2">
-<h2 class="anchored" data-anchor-id="working-environment">Working environment</h2>
-<section id="folder" class="level3">
-<h3 class="anchored" data-anchor-id="folder">Folder</h3>
-<p>Before you start a lab, you should always first create a new folder on your machine with the name of the lab (e.g.&nbsp;<code>clustering</code>).</p>
-</section>
-<section id="environment-file" class="level3">
-<h3 class="anchored" data-anchor-id="environment-file">Environment file</h3>
-<p>In most labs we need to access a database or an API. Since we do not want to include passwords and API-keys in our Python scripts, we need to create an environment (“env”) file.</p>
-<p>A <code>.env</code> file is a simple configuration file where environment-specific settings, such as database credentials or API keys, are stored in key-value pairs.</p>
-<p>By separating these settings from the main application code, we can ensure that sensitive or environment-specific information is both easily configurable and not inadvertently shared or published.</p>
-<p>The <code>.</code> before a filename serves a specific purpose in many operating systems: A filename that starts with a . is considered a “hidden” file.</p>
-<p>We will use libraries like <code>python-dotenv</code> to load the variables from the file into our Python script automatically.</p>
-<section id="env-file-in-macos" class="level4">
-<h4 class="anchored" data-anchor-id="env-file-in-macos">env file in MacOS</h4>
-<ol type="1">
-<li><a href="./.env">Download the <code>env</code> file</a></li>
-<li>Open Finder and navigate to the Downloads folder</li>
-<li>Move the file in your lab folder.</li>
-<li>Open the file and replace the relevant placeholder (e.g.&nbsp;<code>YOUR-PASSWORD</code>).</li>
-<li>Save the changes.</li>
-<li>Rename the file from <code>env</code> to <code>.env</code> (this will hide the file)</li>
-<li>To view hidden files, you need to press the “Command” + “Shift” + “.” (period) keys at the same time. The hidden files will show up as translucent in the folder.</li>
-<li>If you want to obscure the files again, press the same “Command” + “Shift” + “.” (period) combination.</li>
-</ol>
-</section>
-<section id="env-file-in-windows-10" class="level4">
-<h4 class="anchored" data-anchor-id="env-file-in-windows-10">env file in Windows 10</h4>
-<ol type="1">
-<li><a href="./.env">Download the <code>env</code> file</a></li>
-<li>Open File Explorer from the taskbar.</li>
-<li>Move the file in your lab folder.</li>
-<li>Open the file and replace the relevant placeholder (e.g.&nbsp;<code>YOUR-PASSWORD</code>).</li>
-<li>Save the changes.</li>
-<li>Rename the file from <code>env</code> to <code>.env</code> (this will hide the file)</li>
-<li>To view the hidden file: Select View &gt; Options &gt; Change folder and search options.</li>
-<li>Select the View tab and, in Advanced settings, select Show hidden files, folders, and drives and OK.</li>
-</ol>
-</section>
-<section id="env-file-in-windows-11" class="level4">
-<h4 class="anchored" data-anchor-id="env-file-in-windows-11">env file in Windows 11</h4>
-<ol type="1">
-<li><a href="./.env">Download the <code>env</code> file</a></li>
-<li>Open File Explorer from the taskbar.</li>
-<li>Open the file and replace the relevant placeholder (e.g.&nbsp;<code>YOUR-PASSWORD</code>).</li>
-<li>Save the changes.</li>
-<li>Rename the file from <code>env</code> to <code>.env</code> (this will hide the file)</li>
-<li>To view the hidden file: Select View &gt; Show &gt; Hidden items.</li>
-</ol>
 <!--
 
 #### Install or update Modules
@@ -451,7 +400,33 @@ conda install scikit-learn=1.0.2
 Finally, take a look at the [Anaconda Cheat Sheet](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf) which provides a list of useful commands.
 
 -->
-</section>
+<!--
+
+### Miniforge {#sec-miniforge}
+
+As an alternative to Anaconda, you can also use the open-source project [Miniforge](https://github.com/conda-forge/miniforge).
+
+Miniforge is a small, bootstrap version of the data science platform Anaconda that includes only Python, the open source package management system [conda](https://docs.conda.io/en/latest/) and a small number of other useful packages. 
+
+Miniforge also uses Anaconda's package manager `conda`, which makes it easy to manage multiple data environments that can be maintained and run separately without interference from each other (in so called virtual environments).
+
+:::{.callout-tip}
+Miniforge is an community-led alternative to the data science platforms Anaconda and Miniconda, provided by Anaconda, Inc.
+:::
+
+Compared to Anaconda, Miniforge provides more up-to-date packages, and is more user-friendly. Therefore, I recommend using Miniforge for data science projects.
+
+::: {.callout-tip}
+## To do
+
+Install the latest version of the Miniforge
+
+- [Miniforge installation tutorial](https://kirenz.github.io/codelabs/codelabs/miniforge-setup/#0)
+
+:::
+
+
+-->
 </section>
 </section>
 <section id="sec-vscode" class="level2">
@@ -553,36 +528,60 @@ If you have troubles to use Anaconda in Visual Studio Code, follow these instruc
 - [Mac](https://stackoverflow.com/a/55203534/14796848)
 
 -->
-<!--
+</section>
+</section>
+<section id="working-environment" class="level2">
+<h2 class="anchored" data-anchor-id="working-environment">Working environment</h2>
+<section id="folder" class="level3">
+<h3 class="anchored" data-anchor-id="folder">Folder</h3>
+<p>Before you start a lab, you should always first create a new folder on your machine with the name of the lab (e.g.&nbsp;<code>clustering</code>).</p>
+</section>
+<section id="environment-file" class="level3">
+<h3 class="anchored" data-anchor-id="environment-file">Environment file</h3>
+<p>In most labs we need to access a database or an API. Since we do not want to include passwords and API-keys in our Python scripts, we need to create an environment (“env”) file.</p>
+<p>A <code>.env</code> file is a simple configuration file where environment-specific settings, such as database credentials or API keys, are stored in key-value pairs.</p>
+<p>By separating these settings from the main application code, we can ensure that sensitive or environment-specific information is both easily configurable and not inadvertently shared or published.</p>
+<p>The <code>.</code> before a filename serves a specific purpose in many operating systems: A filename that starts with a . is considered a “hidden” file.</p>
+<p>We will use libraries like <code>python-dotenv</code> to load the variables from the file into our Python script automatically.</p>
+<section id="env-file-in-macos" class="level4">
+<h4 class="anchored" data-anchor-id="env-file-in-macos">env file in MacOS</h4>
+<ol type="1">
+<li><a href="./.env">Download the <code>env</code> file</a></li>
+<li>Open Finder and navigate to the Downloads folder</li>
+<li>Move the file in your lab folder.</li>
+<li>Open the file and replace the relevant placeholder (e.g.&nbsp;<code>YOUR-PASSWORD</code>).</li>
+<li>Save the changes.</li>
+<li>Rename the file from <code>env</code> to <code>.env</code> (this will hide the file)</li>
+<li>To view hidden files, you need to press the “Command” + “Shift” + “.” (period) keys at the same time. The hidden files will show up as translucent in the folder.</li>
+<li>If you want to obscure the files again, press the same “Command” + “Shift” + “.” (period) combination.</li>
+</ol>
+</section>
+<section id="env-file-in-windows-10" class="level4">
+<h4 class="anchored" data-anchor-id="env-file-in-windows-10">env file in Windows 10</h4>
+<ol type="1">
+<li><a href="./.env">Download the <code>env</code> file</a></li>
+<li>Open File Explorer from the taskbar.</li>
+<li>Move the file in your lab folder.</li>
+<li>Open the file and replace the relevant placeholder (e.g.&nbsp;<code>YOUR-PASSWORD</code>).</li>
+<li>Save the changes.</li>
+<li>Rename the file from <code>env</code> to <code>.env</code> (this will hide the file)</li>
+<li>To view the hidden file: Select View &gt; Options &gt; Change folder and search options.</li>
+<li>Select the View tab and, in Advanced settings, select Show hidden files, folders, and drives and OK.</li>
+</ol>
+</section>
+<section id="env-file-in-windows-11" class="level4">
+<h4 class="anchored" data-anchor-id="env-file-in-windows-11">env file in Windows 11</h4>
+<ol type="1">
+<li><a href="./.env">Download the <code>env</code> file</a></li>
+<li>Open File Explorer from the taskbar.</li>
+<li>Open the file and replace the relevant placeholder (e.g.&nbsp;<code>YOUR-PASSWORD</code>).</li>
+<li>Save the changes.</li>
+<li>Rename the file from <code>env</code> to <code>.env</code> (this will hide the file)</li>
+<li>To view the hidden file: Select View &gt; Show &gt; Hidden items.</li>
+</ol>
 
-### Miniforge {#sec-miniforge}
 
-As an alternative to Anaconda, you can also use the open-source project [Miniforge](https://github.com/conda-forge/miniforge).
-
-Miniforge is a small, bootstrap version of the data science platform Anaconda that includes only Python, the open source package management system [conda](https://docs.conda.io/en/latest/) and a small number of other useful packages. 
-
-Miniforge also uses Anaconda's package manager `conda`, which makes it easy to manage multiple data environments that can be maintained and run separately without interference from each other (in so called virtual environments).
-
-:::{.callout-tip}
-Miniforge is an community-led alternative to the data science platforms Anaconda and Miniconda, provided by Anaconda, Inc.
-:::
-
-Compared to Anaconda, Miniforge provides more up-to-date packages, and is more user-friendly. Therefore, I recommend using Miniforge for data science projects.
-
-::: {.callout-tip}
-## To do
-
-Install the latest version of the Miniforge
-
-- [Miniforge installation tutorial](https://kirenz.github.io/codelabs/codelabs/miniforge-setup/#0)
-
-:::
-
----
-
--->
-
-
+</section>
 </section>
 </section>
 
