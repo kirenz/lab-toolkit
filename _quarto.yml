@@ -20,6 +20,8 @@ website:
         href: sql.qmd  
       - text: "Python"
         href: python.qmd
+      - text: "GitHub"
+        href: github.qmd        
     right:
       - icon: person-circle
         href: https://moodle.hdm-stuttgart.de/login/index.php
@@ -31,6 +33,7 @@ website:
       - cli.qmd
       - sql.qmd
       - python.qmd
+      - github.qmd
 
 format:
   html:
