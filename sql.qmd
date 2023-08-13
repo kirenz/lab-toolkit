@@ -63,7 +63,7 @@ Next, we include a table in our database.
 
 We'll begin by creating a table named campaigns that will hold data about different marketing campaigns. 
 
-:::{.callout-note, collapse="true"}
+:::{.callout-note collapse="true"}
 # Columns in marketing campaigns table
 
 - id: A unique identifier for each campaign.
@@ -74,7 +74,7 @@ We'll begin by creating a table named campaigns that will hold data about differ
 :::
 
 
-- Open a new query tab (File -> New Query Tab) in MySQL Workbench
+- Open a new query tab (File > New Query Tab) in MySQL Workbench
 - Copy the SQL statement below and paste it into the Query Tab
 
 ```sql
@@ -98,7 +98,7 @@ CREATE TABLE campaigns (
 
 Let's now insert some sample marketing campaigns into our table:
 
-- Open a new query tab (File -> New Query Tab) in MySQL Workbench
+- Open a new query tab (File > New Query Tab) in MySQL Workbench
 - Copy the SQL statement below and paste it into the Query Tab
 
 ```sql
