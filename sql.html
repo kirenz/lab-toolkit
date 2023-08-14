@@ -153,14 +153,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#basics" id="toc-basics" class="nav-link active" data-scroll-target="#basics">Basics</a></li>
-  <li><a href="#mysql" id="toc-mysql" class="nav-link" data-scroll-target="#mysql">MySQL</a></li>
+  <li><a href="#mysql" id="toc-mysql" class="nav-link" data-scroll-target="#mysql">MySQL</a>
+  <ul class="collapse">
   <li><a href="#mysql-workbench" id="toc-mysql-workbench" class="nav-link" data-scroll-target="#mysql-workbench">MySQL Workbench</a></li>
   <li><a href="#create-a-database" id="toc-create-a-database" class="nav-link" data-scroll-target="#create-a-database">Create a Database</a></li>
-  <li><a href="#create-a-table" id="toc-create-a-table" class="nav-link" data-scroll-target="#create-a-table">Create a Table</a>
+  <li><a href="#create-a-table" id="toc-create-a-table" class="nav-link" data-scroll-target="#create-a-table">Create a Table</a></li>
+  </ul></li>
+  <li><a href="#postgresql" id="toc-postgresql" class="nav-link" data-scroll-target="#postgresql">PostgreSQL</a>
   <ul class="collapse">
-  <li><a href="#create-a-simple-table" id="toc-create-a-simple-table" class="nav-link" data-scroll-target="#create-a-simple-table">Create a simple table</a></li>
-  <li><a href="#insert-values-into-the-table" id="toc-insert-values-into-the-table" class="nav-link" data-scroll-target="#insert-values-into-the-table">Insert values into the table</a></li>
-  <li><a href="#retrieve-values-from-the-table" id="toc-retrieve-values-from-the-table" class="nav-link" data-scroll-target="#retrieve-values-from-the-table">Retrieve values from the table</a></li>
+  <li><a href="#pgadmin4" id="toc-pgadmin4" class="nav-link" data-scroll-target="#pgadmin4">PgAdmin4</a></li>
+  <li><a href="#create-a-database-1" id="toc-create-a-database-1" class="nav-link" data-scroll-target="#create-a-database-1">Create a Database</a></li>
+  <li><a href="#create-a-table-1" id="toc-create-a-table-1" class="nav-link" data-scroll-target="#create-a-table-1">Create a Table</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -187,12 +190,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="basics" class="level2">
 <h2 class="anchored" data-anchor-id="basics">Basics</h2>
-<p>SQL (Structured Query Language, pronounced “S-Q-L” or sometimes “Sequel”) is a standardized database language specifically used for managing and manipulating relational databases.</p>
-<p>Through SQL, users can create, retrieve, update, and delete data, as well as design and manage database structures. Widely adopted across various database systems, SQL serves as the foundation for many modern data operations and applications.</p>
+<p><em>SQL</em> (Structured Query Language, pronounced “S-Q-L” or sometimes “Sequel”) is a standardized database language specifically used for managing and manipulating relational databases. Through SQL, users can create, retrieve, update, and delete data, as well as design and manage database structures.</p>
+<p>A Relational Database Management System (RDBMS) is a type of database system where data is stored in structured tables with rows and columns, facilitating complex queries and transactions. Popular open source examples include <em>MySQL</em> and <em>PostgreSQL</em>.</p>
 </section>
 <section id="mysql" class="level2">
 <h2 class="anchored" data-anchor-id="mysql">MySQL</h2>
-<p>MySQL (pronounced “My S-Q-L” or sometimes “My Sequel”) is a powerful open-source relational database management system (RDBMS).</p>
+<p><em>MySQL</em> (pronounced “My S-Q-L” or sometimes “My Sequel”) is a powerful open-source relational database management system (RDBMS).</p>
 <p>It uses a structured query language (SQL) to manage, manipulate, and retrieve data stored in relational databases.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -213,10 +216,9 @@ To do
 </ul>
 </div>
 </div>
-</section>
-<section id="mysql-workbench" class="level2">
-<h2 class="anchored" data-anchor-id="mysql-workbench">MySQL Workbench</h2>
-<p>MySQL Workbench is a unified visual tool and provides features like data modeling, SQL development, and comprehensive administration tools like user administration.</p>
+<section id="mysql-workbench" class="level3">
+<h3 class="anchored" data-anchor-id="mysql-workbench">MySQL Workbench</h3>
+<p><em>MySQL Workbench</em> is a unified visual tool and provides features like data modeling, SQL development, and comprehensive administration tools like user administration.</p>
 <p>Essentially, it’s a one-stop-shop for managing and working with MySQL databases.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -235,9 +237,9 @@ To do
 </div>
 </div>
 </section>
-<section id="create-a-database" class="level2">
-<h2 class="anchored" data-anchor-id="create-a-database">Create a Database</h2>
-<p>Use MySQL Workbench to create a new database called <code>db_data</code></p>
+<section id="create-a-database" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-database">Create a Database</h3>
+<p>Use <em>MySQL Workbench</em> to create a new database called <code>db_data</code></p>
 <ul>
 <li>Open a connection (use local-connection)</li>
 <li>Copy the SQL statement below and paste it into the open MySQL Query window</li>
@@ -250,11 +252,11 @@ To do
 <li>Click on the refresh symbol 🔃 to display the database (on the top left next to <code>SCHEMAS</code>)</li>
 </ul>
 </section>
-<section id="create-a-table" class="level2">
-<h2 class="anchored" data-anchor-id="create-a-table">Create a Table</h2>
+<section id="create-a-table" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-table">Create a Table</h3>
 <p>Next, we include a table in our database.</p>
-<section id="create-a-simple-table" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-simple-table">Create a simple table</h3>
+<section id="create-a-simple-table" class="level4">
+<h4 class="anchored" data-anchor-id="create-a-simple-table">Create a simple table</h4>
 <p>We’ll begin by creating a table named campaigns that will hold data about different marketing campaigns.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
@@ -294,11 +296,11 @@ Columns in marketing campaigns table
 <li>Click on the ⚡ symbol to execute the script</li>
 <li>Click on the refresh symbol 🔃 to display the database (on the top left next to <code>SCHEMAS</code>)</li>
 <li>Click on the database symbol “db_data” at the left sidebar below <code>SCHEMAS</code></li>
-<li>Expand “Tables” -&gt; “campaigns” -&gt; “Columns” to view the columns of the table</li>
+<li>Expand “Tables” &gt; “campaigns” &gt; “Columns” to view the columns of the table</li>
 </ul>
 </section>
-<section id="insert-values-into-the-table" class="level3">
-<h3 class="anchored" data-anchor-id="insert-values-into-the-table">Insert values into the table</h3>
+<section id="insert-values-into-the-table" class="level4">
+<h4 class="anchored" data-anchor-id="insert-values-into-the-table">Insert values into the table</h4>
 <p>Let’s now insert some sample marketing campaigns into our table:</p>
 <ul>
 <li>Open a new query tab (File &gt; New Query Tab) in MySQL Workbench</li>
@@ -312,17 +314,143 @@ Columns in marketing campaigns table
 <li>Click on the ⚡ symbol to execute the script</li>
 </ul>
 </section>
-<section id="retrieve-values-from-the-table" class="level3">
-<h3 class="anchored" data-anchor-id="retrieve-values-from-the-table">Retrieve values from the table</h3>
+<section id="retrieve-values-from-the-table" class="level4">
+<h4 class="anchored" data-anchor-id="retrieve-values-from-the-table">Retrieve values from the table</h4>
 <p>After inserting the campaigns, you can retrieve them using a simple SELECT query. For instance:</p>
 <ul>
-<li>Open a new query tab (File -&gt; New Query Tab) in MySQL Workbench</li>
+<li>Open a new query tab (File -&gt; New Query Tab) in <em>MySQL Workbench</em></li>
 <li>Copy the SQL statement below and paste it into the Query Tab</li>
 </ul>
 <div class="sourceCode" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> </span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> campaigns;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+</section>
+<section id="postgresql" class="level2">
+<h2 class="anchored" data-anchor-id="postgresql">PostgreSQL</h2>
+<p><em>PostgreSQL</em> (often pronounced “Post-gress-Q-L”) is an advanced, open-source relational database management system (RDBMS).</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+To do
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p><a href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads">Install PostgreSQL</a></p></li>
+<li><p>During the installation process, select “PostgreSQL Server”, “pgAdmin4” and “Command Line Tools”</p></li>
+<li><p><code>Password</code>: Provide a password (make sure to make a note - you can no longer change the password)</p></li>
+<li><p><code>Port</code>: Use the suggested port</p></li>
+<li><p><code>Locale</code>: Use [Default Locale]</p></li>
+</ul>
+</div>
+</div>
+<section id="pgadmin4" class="level3">
+<h3 class="anchored" data-anchor-id="pgadmin4">PgAdmin4</h3>
+<p><em>pgAdmin4</em> is a popular open-source administration and management tool for the PostgreSQL relational database (it has already been installed together with PostgreSQL).</p>
+<section id="add-new-server" class="level4">
+<h4 class="anchored" data-anchor-id="add-new-server">Add New Server</h4>
+<p>First, let’s create a new connection to a PostgreSQL database instance. We will call this instance <code>local-connection</code>.</p>
+<p>Once added, this server will appear in your list of servers in <em>pgAdmin4’s</em> interface, allowing you to quickly connect, manage, and query that database instance.</p>
+<ul>
+<li>Open <em>pgAdmin4</em></li>
+<li>Click on <code>Servers</code> on the left sidebar</li>
+<li>Select <code>Add New Server</code> (in the main window below “Quick Links”)</li>
+<li>Provide the name: <code>local-connection</code></li>
+<li>Move to the tab <code>Connection</code>
+<ul>
+<li>Host name/address: localhost</li>
+<li>Password: enter the password you used during the installation process and choose “Save password”</li>
+</ul></li>
+<li>We are done and you can select <code>Save</code></li>
+</ul>
+</section>
+</section>
+<section id="create-a-database-1" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-database-1">Create a Database</h3>
+<p>Use <em>pgadmin4</em> to create a new database called <code>db_data</code></p>
+<ul>
+<li>Right click on our new connection <code>local-connection</code> in the left sidebar and select: Create &gt; Database</li>
+<li>In the tab “General”, provide as “Database”: <code>db_data</code></li>
+<li>We are done and you can select <code>Save</code></li>
+</ul>
+</section>
+<section id="create-a-table-1" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-table-1">Create a Table</h3>
+<p>Next, we include a table in our database.</p>
+<section id="create-a-simple-table-1" class="level4">
+<h4 class="anchored" data-anchor-id="create-a-simple-table-1">Create a simple table</h4>
+<p>We’ll begin by creating a table named campaigns that will hold data about different marketing campaigns.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Columns in marketing campaigns table
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>id: A unique identifier for each campaign.</li>
+<li>name: The name of the marketing campaign.</li>
+<li>start_date &amp; end_date: The time frame of the campaign.</li>
+<li>budget: The budget allocated to the campaign.</li>
+<li>channel: The channel used for the campaign (e.g., “Email”, “Social Media”, “TV”).</li>
+</ul>
+</div>
+</div>
+</div>
+<ul>
+<li>Click on the database <code>db_data</code></li>
+<li>Open a new query tab (Tools &gt; Query Tool) in <em>pgAdmin4</em></li>
+<li>Copy the SQL statement below and paste it into the Query Tab</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> campaigns (</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">id</span> BIGSERIAL <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    name <span class="dt">VARCHAR</span>(<span class="dv">255</span>) <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    start_date <span class="dt">DATE</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    end_date <span class="dt">DATE</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    budget <span class="dt">DECIMAL</span>(<span class="dv">10</span>, <span class="dv">2</span>),</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    channel <span class="dt">VARCHAR</span>(<span class="dv">255</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Click on the ▶️ symbol to execute the script</li>
+<li>Select the database “db_data” at the left sidebar and expand “Schemas” &gt; “Tables” &gt; “campaigns” &gt; “Columns” to view the columns of the table</li>
+</ul>
+</section>
+<section id="insert-values-into-the-table-1" class="level4">
+<h4 class="anchored" data-anchor-id="insert-values-into-the-table-1">Insert values into the table</h4>
+<p>Let’s now insert some sample marketing campaigns into our table:</p>
+<ul>
+<li>Open a new query tab (Tools &gt; Query Tool) in <em>pgAdmin4</em></li>
+<li>Copy the SQL statement below and paste it into the Query Tab</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> campaigns (name, start_date, end_date, budget, channel) <span class="kw">VALUES</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>(<span class="st">'Winter Sale'</span>, <span class="st">'2023-12-01'</span>, <span class="st">'2023-12-31'</span>, <span class="fl">5000.00</span>, <span class="st">'Email'</span>),</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>(<span class="st">'Summer Festival'</span>, <span class="st">'2023-06-01'</span>, <span class="st">'2023-06-15'</span>, <span class="fl">10000.00</span>, <span class="st">'Social Media'</span>),</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>(<span class="st">'Back to School'</span>, <span class="st">'2023-08-01'</span>, <span class="st">'2023-08-20'</span>, <span class="fl">7500.00</span>, <span class="st">'TV'</span>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Click on the ▶️ symbol to execute the script</li>
+</ul>
+</section>
+<section id="retrieve-values-from-the-table-1" class="level4">
+<h4 class="anchored" data-anchor-id="retrieve-values-from-the-table-1">Retrieve values from the table</h4>
+<p>After inserting the campaigns, you can retrieve them using a simple SELECT query. For instance:</p>
+<ul>
+<li>Open a new query tab (Tools &gt; Query Tool) in <em>pgAdmin4</em></li>
+<li>Copy the SQL statement below and paste it into the Query Tab</li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> campaigns;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
+</section>
 </section>
 </section>
 
