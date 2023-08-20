@@ -77,6 +77,34 @@
     "text": "Most of the slides are made with the open source solutions Quarto (scientific and technical publishing system) and Revealjs (HTML presentation framework).\n\n\n\n\n\n\nTo do\n\n\n\n\n🖥️ Read this tutorial to learn how to\n\nNavigate through the slides\nShow all slides\nSave slides as PDF\nPrint slides"
   },
   {
+    "objectID": "environments.html",
+    "href": "environments.html",
+    "title": "Environments",
+    "section": "",
+    "text": "Before you start a lab, you should always first create a new folder on your machine with the name of the lab (e.g. clustering). Here, we create a parent directory called “labs” where we can store the different labs. Usually we also create some subdirectories like “code” and “data”.\nBelow is a tutorial on how to create a new folder called “labs” using the command line interface for both Windows and macOS.\n\n\n\nPress Windows + R keys simultaneously to open the Run dialog.\nType cmd and press Enter to open the Command Prompt.\nNavigate to the directory where you want to create the new folder using the cd (change directory) command.\n\nFor example (replace YourUsername and \\your\\path):\ncd C:\\Users\\YourUsername\\your\\path\n\nOnce you are in the desired directory, create a new folder named “labs” using the following command:\n\nmkdir labs\n\n\n\n\nOpen the Terminal application. You can find it in the Applications &gt; Utilities folder or search for it using Spotlight.\nNavigate to the directory where you want to create the new folder using the cd (change directory) command.\n\nFor example For example (replace YourUsername and /your/path):\ncd /Users/YourUsername/your/path\n\nOnce you are in the desired directory, create a new folder named “labs” using the following command:\n\nmkdir labs"
+  },
+  {
+    "objectID": "environments.html#working-environment",
+    "href": "environments.html#working-environment",
+    "title": "Environments",
+    "section": "",
+    "text": "Before you start a lab, you should always first create a new folder on your machine with the name of the lab (e.g. clustering). Here, we create a parent directory called “labs” where we can store the different labs. Usually we also create some subdirectories like “code” and “data”.\nBelow is a tutorial on how to create a new folder called “labs” using the command line interface for both Windows and macOS.\n\n\n\nPress Windows + R keys simultaneously to open the Run dialog.\nType cmd and press Enter to open the Command Prompt.\nNavigate to the directory where you want to create the new folder using the cd (change directory) command.\n\nFor example (replace YourUsername and \\your\\path):\ncd C:\\Users\\YourUsername\\your\\path\n\nOnce you are in the desired directory, create a new folder named “labs” using the following command:\n\nmkdir labs\n\n\n\n\nOpen the Terminal application. You can find it in the Applications &gt; Utilities folder or search for it using Spotlight.\nNavigate to the directory where you want to create the new folder using the cd (change directory) command.\n\nFor example For example (replace YourUsername and /your/path):\ncd /Users/YourUsername/your/path\n\nOnce you are in the desired directory, create a new folder named “labs” using the following command:\n\nmkdir labs"
+  },
+  {
+    "objectID": "environments.html#environment-file",
+    "href": "environments.html#environment-file",
+    "title": "Environments",
+    "section": "Environment file",
+    "text": "Environment file\nIn some labs we need to access a database or an API. Since we do not want to include passwords and API-keys in our Python scripts, we need to create an environment (“env”) file. A .env file is a simple configuration file where environment-specific settings, such as database credentials or API keys, are stored in key-value pairs.\nBy separating these settings from the main application code, we can ensure that sensitive or environment-specific information is both easily configurable and not inadvertently shared or published. The . before a filename serves a specific purpose in many operating systems: A filename that starts with a . is considered a “hidden” file.\n\n\n\n\n\n\nNote\n\n\n\nWe will use libraries like python-dotenv to load the variables from the file into our Python script automatically.\n\n\nBelow are tutorials on how to create a .env file.\n\nmacOS\n\nDownload the env file template\nOpen Finder and navigate to the “Downloads” folder\nMove the file in your “labs” folder (in the same folder as the Jupyter Notebook).\nOpen the file and replace the relevant placeholder (e.g. YOUR-PASSWORD).\nSave the changes.\nRename the file from env to .env (this will hide the file)\nTo view hidden files, you need to press the “Command” + “Shift” + “.” (period) keys at the same time. The hidden files will show up as translucent in the folder.\nIf you want to obscure the files again, press the same “Command” + “Shift” + “.” (period) combination.\n\n\n\nWindows 10\n\nDownload the env file template\nOpen File Explorer from the taskbar.\nMove the file in your “labs” folder (in the same folder as the Jupyter Notebook).\nOpen the file and replace the relevant placeholder (e.g. YOUR-PASSWORD).\nSave the changes.\nRename the file from env to .env (this will hide the file)\nTo view the hidden file: Select View &gt; Options &gt; Change folder and search options.\nSelect the View tab and, in Advanced settings, select Show hidden files, folders, and drives and OK.\n\n\n\nWindows 11\n\nDownload the env file template\nOpen File Explorer from the taskbar.\nMove the file in your “labs” folder (in the same folder as the Jupyter Notebook).\nOpen the file and replace the relevant placeholder (e.g. YOUR-PASSWORD).\nSave the changes.\nRename the file from env to .env (this will hide the file)\nTo view the hidden file: Select View &gt; Show &gt; Hidden items."
+  },
+  {
+    "objectID": "environments.html#anaconda-environment",
+    "href": "environments.html#anaconda-environment",
+    "title": "Environments",
+    "section": "Anaconda environment",
+    "text": "Anaconda environment\nAfter you have installed and updated Anaconda (see these instructions), you can install the modules you need for a specific lab in a new environment.\n\n\n\n\n\n\nTo do\n\n\n\n\nGo to GitHub course environments\nFollow the instructions in the GitHub repo and install the environment env-lab"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Welcome 👋",
