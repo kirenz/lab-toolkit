@@ -165,6 +165,20 @@
     "href": "slides/slides.html#jump-to-slides",
     "title": "Slides",
     "section": "Jump to slides",
-    "text": "Jump to slides\n\nClicking the button opens a slide navigation menu that enables you to easily jump to any slide"
+    "text": "Jump to slides\n\nClicking the button (or press m) opens a slide navigation menu that enables you to easily jump to any slide"
+  },
+  {
+    "objectID": "slides/slides.html#zoom-into-slide",
+    "href": "slides/slides.html#zoom-into-slide",
+    "title": "Slides",
+    "section": "Zoom into slide",
+    "text": "Zoom into slide\n\nHold down the Alt key (or Ctrl) and click on any element to zoom towards it."
+  },
+  {
+    "objectID": "slides/slides.html#chalkboard-and-notes-canvas",
+    "href": "slides/slides.html#chalkboard-and-notes-canvas",
+    "title": "Slides",
+    "section": "Chalkboard and notes canvas",
+    "text": "Chalkboard and notes canvas\n\nPress b to toggle the chalkboard.\nPress c to toggle the notes canvas.\n\n\n\nJan Kirenz"
   }
 ]
