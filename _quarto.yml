@@ -20,6 +20,8 @@ website:
         href: sql.qmd  
       - text: "Python"
         href: python.qmd
+      - text: "Environments"
+        href: environments.qmd
       - text: "GitHub"
         href: github.qmd
       - text: "Slides"
@@ -35,6 +37,7 @@ website:
       - cli.qmd
       - sql.qmd
       - python.qmd
+      - environments.qmd
       - github.qmd
       - slide.qmd
 
