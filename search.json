@@ -81,7 +81,7 @@
     "href": "slide.html",
     "title": "Slides",
     "section": "",
-    "text": "Most of the slides are made with the open source solutions Quarto (scientific and technical publishing system) and Revealjs (HTML presentation framework).\n\n\n\n\n\n\nTo do\n\n\n\n\n🖥️ Read this tutorial{:target=“_blank”} to learn how to\n\nNavigate through the slides\nShow all slides\nSave slides as PDF\nPrint slides"
+    "text": "Most of the slides are made with the open source solutions Quarto (scientific and technical publishing system) and Revealjs (HTML presentation framework).\n\n\n\n\n\n\nTo do\n\n\n\n\n🖥️ Read this tutorial to learn how to\n\nNavigate through the slides\nShow all slides\nSave slides as PDF\nPrint slides"
   },
   {
     "objectID": "cli.html",
