@@ -1,5 +1,117 @@
 [
   {
+    "objectID": "assignments.html",
+    "href": "assignments.html",
+    "title": "Assignments",
+    "section": "",
+    "text": "This is a Quarto slidedeck."
+  },
+  {
+    "objectID": "sql.html",
+    "href": "sql.html",
+    "title": "SQL",
+    "section": "",
+    "text": "SQL (Structured Query Language, pronounced “S-Q-L” or sometimes “Sequel”) is a standardized database language specifically used for managing and manipulating relational databases. Through SQL, users can create, retrieve, update, and delete data, as well as design and manage database structures.\nA Relational Database Management System (RDBMS) is a type of database system where data is stored in structured tables with rows and columns, facilitating complex queries and transactions. Popular open source examples include MySQL and PostgreSQL."
+  },
+  {
+    "objectID": "sql.html#basics",
+    "href": "sql.html#basics",
+    "title": "SQL",
+    "section": "",
+    "text": "SQL (Structured Query Language, pronounced “S-Q-L” or sometimes “Sequel”) is a standardized database language specifically used for managing and manipulating relational databases. Through SQL, users can create, retrieve, update, and delete data, as well as design and manage database structures.\nA Relational Database Management System (RDBMS) is a type of database system where data is stored in structured tables with rows and columns, facilitating complex queries and transactions. Popular open source examples include MySQL and PostgreSQL."
+  },
+  {
+    "objectID": "sql.html#mysql",
+    "href": "sql.html#mysql",
+    "title": "SQL",
+    "section": "MySQL",
+    "text": "MySQL\nMySQL (pronounced “My S-Q-L” or sometimes “My Sequel”) is a powerful open-source relational database management system (RDBMS).\nIt uses a structured query language (SQL) to manage, manipulate, and retrieve data stored in relational databases.\n\n\n\n\n\n\nTo do\n\n\n\n\nInstall MySQL (select “No thanks, just start my download”)\n\nWindows\nMac\n\n\n\n\n\nMySQL Workbench\nMySQL Workbench is a unified visual tool and provides features like data modeling, SQL development, and comprehensive administration tools like user administration.\nEssentially, it’s a one-stop-shop for managing and working with MySQL databases.\n\n\n\n\n\n\nTo do\n\n\n\n\nInstall MySQL Workbench\nCreate a new connection (use local-connection as “Connection Name”; click on “Store in Vault” and provide your password)\n\n\n\n\n\nCreate a Database\nUse MySQL Workbench to create a new database called db_data\n\nOpen a connection (use local-connection)\nCopy the SQL statement below and paste it into the open MySQL Query window\n\nDROP DATABASE IF EXISTS `db_data`;\nCREATE DATABASE `db_data`; \nUSE `db_data`;\n\nClick on the ⚡ symbol to execute the script\nClick on the refresh symbol 🔃 to display the database (on the top left next to SCHEMAS)\n\n\n\nCreate a Table\nNext, we include a table in our database.\n\nCreate a simple table\nWe’ll begin by creating a table named campaigns that will hold data about different marketing campaigns.\n\n\n\n\n\n\nColumns in marketing campaigns table\n\n\n\n\n\n\nid: A unique identifier for each campaign.\nname: The name of the marketing campaign.\nstart_date & end_date: The time frame of the campaign.\nbudget: The budget allocated to the campaign.\nchannel: The channel used for the campaign (e.g., “Email”, “Social Media”, “TV”).\n\n\n\n\n\nOpen a new query tab (File &gt; New Query Tab) in MySQL Workbench\nCopy the SQL statement below and paste it into the Query Tab\n\nCREATE TABLE campaigns (\n    id INT AUTO_INCREMENT PRIMARY KEY,\n    name VARCHAR(255) NOT NULL,\n    start_date DATE,\n    end_date DATE,\n    budget DECIMAL(10, 2),\n    channel VARCHAR(255)\n);\n\nClick on the ⚡ symbol to execute the script\nClick on the refresh symbol 🔃 to display the database (on the top left next to SCHEMAS)\nClick on the database symbol “db_data” at the left sidebar below SCHEMAS\nExpand “Tables” &gt; “campaigns” &gt; “Columns” to view the columns of the table\n\n\n\nInsert values into the table\nLet’s now insert some sample marketing campaigns into our table:\n\nOpen a new query tab (File &gt; New Query Tab) in MySQL Workbench\nCopy the SQL statement below and paste it into the Query Tab\n\nINSERT INTO campaigns (name, start_date, end_date, budget, channel) VALUES\n('Winter Sale', '2023-12-01', '2023-12-31', 5000.00, 'Email'),\n('Summer Festival', '2023-06-01', '2023-06-15', 10000.00, 'Social Media'),\n('Back to School', '2023-08-01', '2023-08-20', 7500.00, 'TV');\n\nClick on the ⚡ symbol to execute the script\n\n\n\nRetrieve values from the table\nAfter inserting the campaigns, you can retrieve them using a simple SELECT query. For instance:\n\nOpen a new query tab (File -&gt; New Query Tab) in MySQL Workbench\nCopy the SQL statement below and paste it into the Query Tab\n\nSELECT * \nFROM campaigns;"
+  },
+  {
+    "objectID": "sql.html#postgresql",
+    "href": "sql.html#postgresql",
+    "title": "SQL",
+    "section": "PostgreSQL",
+    "text": "PostgreSQL\nPostgreSQL (often pronounced “Post-gress-Q-L”) is an advanced, open-source relational database management system (RDBMS).\n\n\n\n\n\n\nTo do\n\n\n\n\nInstall PostgreSQL\nDuring the installation process, select “PostgreSQL Server”, “pgAdmin4” and “Command Line Tools”\nPassword: Provide a password (make sure to make a note - you can no longer change the password)\nPort: Use the suggested port\nLocale: Use [Default Locale]\n\n\n\n\nPgAdmin4\npgAdmin4 is a popular open-source administration and management tool for the PostgreSQL relational database (it has already been installed together with PostgreSQL).\n\nAdd New Server\nFirst, let’s create a new connection to a PostgreSQL database instance. We will call this instance local-connection.\nOnce added, this server will appear in your list of servers in pgAdmin4’s interface, allowing you to quickly connect, manage, and query that database instance.\n\nOpen pgAdmin4\nClick on Servers on the left sidebar\nSelect Add New Server (in the main window below “Quick Links”)\nProvide the name: local-connection\nMove to the tab Connection\n\nHost name/address: localhost\nPassword: enter the password you used during the installation process and choose “Save password”\n\nWe are done and you can select Save\n\n\n\n\nCreate a Database\nUse pgadmin4 to create a new database called db_data\n\nRight click on our new connection local-connection in the left sidebar and select: Create &gt; Database\nIn the tab “General”, provide as “Database”: db_data\nWe are done and you can select Save\n\n\n\nCreate a Table\nNext, we include a table in our database.\n\nCreate a simple table\nWe’ll begin by creating a table named campaigns that will hold data about different marketing campaigns.\n\n\n\n\n\n\nColumns in marketing campaigns table\n\n\n\n\n\n\nid: A unique identifier for each campaign.\nname: The name of the marketing campaign.\nstart_date & end_date: The time frame of the campaign.\nbudget: The budget allocated to the campaign.\nchannel: The channel used for the campaign (e.g., “Email”, “Social Media”, “TV”).\n\n\n\n\n\nClick on the database db_data\nOpen a new query tab (Tools &gt; Query Tool) in pgAdmin4\nCopy the SQL statement below and paste it into the Query Tab\n\nCREATE TABLE campaigns (\n    id BIGSERIAL PRIMARY KEY,\n    name VARCHAR(255) NOT NULL,\n    start_date DATE,\n    end_date DATE,\n    budget DECIMAL(10, 2),\n    channel VARCHAR(255)\n);\n\nClick on the ▶️ symbol to execute the script\nSelect the database “db_data” at the left sidebar and expand “Schemas” &gt; “Tables” &gt; “campaigns” &gt; “Columns” to view the columns of the table\n\n\n\nInsert values into the table\nLet’s now insert some sample marketing campaigns into our table:\n\nOpen a new query tab (Tools &gt; Query Tool) in pgAdmin4\nCopy the SQL statement below and paste it into the Query Tab\n\nINSERT INTO campaigns (name, start_date, end_date, budget, channel) VALUES\n('Winter Sale', '2023-12-01', '2023-12-31', 5000.00, 'Email'),\n('Summer Festival', '2023-06-01', '2023-06-15', 10000.00, 'Social Media'),\n('Back to School', '2023-08-01', '2023-08-20', 7500.00, 'TV');\n\nClick on the ▶️ symbol to execute the script\n\n\n\nRetrieve values from the table\nAfter inserting the campaigns, you can retrieve them using a simple SELECT query. For instance:\n\nOpen a new query tab (Tools &gt; Query Tool) in pgAdmin4\nCopy the SQL statement below and paste it into the Query Tab\n\nSELECT * \nFROM campaigns;"
+  },
+  {
+    "objectID": "cli.html",
+    "href": "cli.html",
+    "title": "Command-line",
+    "section": "",
+    "text": "Operating systems like Windows and macOS implement a command-line interface (other names for the command line are: cmd, CLI, prompt, console or terminal) in a shell for interactive access to operating system functions or services.\n\n\n\n\n\n\nTip\n\n\n\nA command-line interface (CLI) processes commands to a computer program in the form of lines of text.\n\n\nWe sometimes use the command line interface so you should be familiar with basic commands. If you aren’t familiar with the terminal, read this short introduction to the command-line interface:\n\n\n\n\n\n\nTo do\n\n\n\n\nIntroduction to the command-line interface\n\n\n\nHere is a summary of some useful commands:\n\n\n\n\n\n\n\n\n\nCommand (Windows)\nCommand (Mac OS / Linux)\nDescription\nExample\n\n\n\n\nexit\nexit\nclose the window\nexit\n\n\ncd\ncd\nchange directory\ncd test, cd.. (Windows) or cd .. (Mac)\n\n\ncd\npwd\nshow the current directory\ncd (Windows) or pwd (Mac OS / Linux)\n\n\ndir\nls\nlist directories/files\ndir\n\n\ncopy\ncp\ncopy file\ncopy c:.txt c:.txt\n\n\nmove\nmv\nmove file\nmove c:.txt c:.txt\n\n\nmkdir\nmkdir\ncreate a new directory\nmkdir testdirectory\n\n\nrmdir (or del)\nrm\ndelete a file\ndel c:.txt\n\n\nrmdir /S\nrm -r\ndelete a directory\nrm -r testdirectory\n\n\n[CMD] /?\nman [CMD]\nget help for a command\ncd /? (Windows) or man cd (Mac OS / Linux)"
+  },
+  {
+    "objectID": "cli.html#basics",
+    "href": "cli.html#basics",
+    "title": "Command-line",
+    "section": "",
+    "text": "Operating systems like Windows and macOS implement a command-line interface (other names for the command line are: cmd, CLI, prompt, console or terminal) in a shell for interactive access to operating system functions or services.\n\n\n\n\n\n\nTip\n\n\n\nA command-line interface (CLI) processes commands to a computer program in the form of lines of text.\n\n\nWe sometimes use the command line interface so you should be familiar with basic commands. If you aren’t familiar with the terminal, read this short introduction to the command-line interface:\n\n\n\n\n\n\nTo do\n\n\n\n\nIntroduction to the command-line interface\n\n\n\nHere is a summary of some useful commands:\n\n\n\n\n\n\n\n\n\nCommand (Windows)\nCommand (Mac OS / Linux)\nDescription\nExample\n\n\n\n\nexit\nexit\nclose the window\nexit\n\n\ncd\ncd\nchange directory\ncd test, cd.. (Windows) or cd .. (Mac)\n\n\ncd\npwd\nshow the current directory\ncd (Windows) or pwd (Mac OS / Linux)\n\n\ndir\nls\nlist directories/files\ndir\n\n\ncopy\ncp\ncopy file\ncopy c:.txt c:.txt\n\n\nmove\nmv\nmove file\nmove c:.txt c:.txt\n\n\nmkdir\nmkdir\ncreate a new directory\nmkdir testdirectory\n\n\nrmdir (or del)\nrm\ndelete a file\ndel c:.txt\n\n\nrmdir /S\nrm -r\ndelete a directory\nrm -r testdirectory\n\n\n[CMD] /?\nman [CMD]\nget help for a command\ncd /? (Windows) or man cd (Mac OS / Linux)"
+  },
+  {
+    "objectID": "github.html",
+    "href": "github.html",
+    "title": "GitHub",
+    "section": "",
+    "text": "GitHub is a provider of internet hosting for software development and version control using Git.\n\n\n\n\n\n\nNote\n\n\n\nWe will use GitHub as a platform for web hosting and collaboration.\n\n\nGit is a version control system – like the “Track Changes” features from Microsoft Word with many more additional features.\n\nGit can be used to store content \nCode can be changed and other developers can add code in parallel.\nGit has a remote repository which is stored in a server and a local repository which is stored in the computer of each developer."
+  },
+  {
+    "objectID": "github.html#basics",
+    "href": "github.html#basics",
+    "title": "GitHub",
+    "section": "",
+    "text": "GitHub is a provider of internet hosting for software development and version control using Git.\n\n\n\n\n\n\nNote\n\n\n\nWe will use GitHub as a platform for web hosting and collaboration.\n\n\nGit is a version control system – like the “Track Changes” features from Microsoft Word with many more additional features.\n\nGit can be used to store content \nCode can be changed and other developers can add code in parallel.\nGit has a remote repository which is stored in a server and a local repository which is stored in the computer of each developer."
+  },
+  {
+    "objectID": "github.html#github-account",
+    "href": "github.html#github-account",
+    "title": "GitHub",
+    "section": "GitHub-account",
+    "text": "GitHub-account\nYou need a free GitHub-account for our course. Please follow the instructions below (in case you already have a GitHub account: please add your HdM-email address to your account):\n\n\n\n\n\n\nTo do\n\n\n\n\nCreate a GitHub account with your HdM-email\nVerify your GitHub email\nYou may also sign up fot the free student developer pack\n\nInstall the VS Code GitHub extension\nInstall GitHub desktop to synchronize your machine with GitHub\n\n\n\nNext, learn how to set up, authenticate, and configure GitHub Desktop to allow you to contribute to projects directly from your machine.\n\n\n\n\n\n\nTo do\n\n\n\n\nGetting started with GitHub Desktop"
+  },
+  {
+    "objectID": "slide.html",
+    "href": "slide.html",
+    "title": "Slides",
+    "section": "",
+    "text": "Most of the slides are made with the open source solutions Quarto (scientific and technical publishing system) and Revealjs (HTML presentation framework).\n\n\n\n\n\n\nTo do\n\n\n\n\n🖥️ Read this tutorial to learn how to\n\nNavigate through the slides\nShow all slides\nSave slides as PDF\nPrint slides"
+  },
+  {
+    "objectID": "environments.html",
+    "href": "environments.html",
+    "title": "Environments",
+    "section": "",
+    "text": "Before you start a lab, you should always first create a new folder on your machine with the name of the lab (e.g. clustering). Here, we create a parent directory called “labs” where we can store the different labs. Usually we also create some subdirectories like “code” and “data”.\nBelow is a tutorial on how to create a new folder called “labs” using the command line interface for both Windows and macOS.\n\n\n\nPress Windows + R keys simultaneously to open the Run dialog.\nType cmd and press Enter to open the Command Prompt.\nNavigate to the directory where you want to create the new folder using the cd (change directory) command.\n\nFor example (replace YourUsername and \\your\\path):\ncd C:\\Users\\YourUsername\\your\\path\n\nOnce you are in the desired directory, create a new folder named “labs” using the following command:\n\nmkdir labs\n\n\n\n\nOpen the Terminal application. You can find it in the Applications &gt; Utilities folder or search for it using Spotlight.\nNavigate to the directory where you want to create the new folder using the cd (change directory) command.\n\nFor example For example (replace YourUsername and /your/path):\ncd /Users/YourUsername/your/path\n\nOnce you are in the desired directory, create a new folder named “labs” using the following command:\n\nmkdir labs"
+  },
+  {
+    "objectID": "environments.html#working-environment",
+    "href": "environments.html#working-environment",
+    "title": "Environments",
+    "section": "",
+    "text": "Before you start a lab, you should always first create a new folder on your machine with the name of the lab (e.g. clustering). Here, we create a parent directory called “labs” where we can store the different labs. Usually we also create some subdirectories like “code” and “data”.\nBelow is a tutorial on how to create a new folder called “labs” using the command line interface for both Windows and macOS.\n\n\n\nPress Windows + R keys simultaneously to open the Run dialog.\nType cmd and press Enter to open the Command Prompt.\nNavigate to the directory where you want to create the new folder using the cd (change directory) command.\n\nFor example (replace YourUsername and \\your\\path):\ncd C:\\Users\\YourUsername\\your\\path\n\nOnce you are in the desired directory, create a new folder named “labs” using the following command:\n\nmkdir labs\n\n\n\n\nOpen the Terminal application. You can find it in the Applications &gt; Utilities folder or search for it using Spotlight.\nNavigate to the directory where you want to create the new folder using the cd (change directory) command.\n\nFor example For example (replace YourUsername and /your/path):\ncd /Users/YourUsername/your/path\n\nOnce you are in the desired directory, create a new folder named “labs” using the following command:\n\nmkdir labs"
+  },
+  {
+    "objectID": "environments.html#environment-file",
+    "href": "environments.html#environment-file",
+    "title": "Environments",
+    "section": "Environment file",
+    "text": "Environment file\nIn some labs we need to access a database or an API. Since we do not want to include passwords and API-keys in our Python scripts, we need to create an environment (“env”) file. A .env file is a simple configuration file where environment-specific settings, such as database credentials or API keys, are stored in key-value pairs.\nBy separating these settings from the main application code, we can ensure that sensitive or environment-specific information is both easily configurable and not inadvertently shared or published. The . before a filename serves a specific purpose in many operating systems: A filename that starts with a . is considered a “hidden” file.\n\n\n\n\n\n\nNote\n\n\n\nWe will use libraries like python-dotenv to load the variables from the file into our Python script automatically.\n\n\nBelow are tutorials on how to create a .env file.\n\nmacOS\n\nDownload the env file template\nOpen Finder and navigate to the “Downloads” folder\nMove the file in your “labs” folder (in the same folder as the Jupyter Notebook).\nOpen the file and replace the relevant placeholder (e.g. YOUR-PASSWORD).\nSave the changes.\nRename the file from env to .env (this will hide the file)\nTo view hidden files, you need to press the “Command” + “Shift” + “.” (period) keys at the same time. The hidden files will show up as translucent in the folder.\nIf you want to obscure the files again, press the same “Command” + “Shift” + “.” (period) combination.\n\n\n\nWindows 10\n\nDownload the env file template\nOpen File Explorer from the taskbar.\nMove the file in your “labs” folder (in the same folder as the Jupyter Notebook).\nOpen the file and replace the relevant placeholder (e.g. YOUR-PASSWORD).\nSave the changes.\nRename the file from env to .env (this will hide the file)\nTo view the hidden file: Select View &gt; Options &gt; Change folder and search options.\nSelect the View tab and, in Advanced settings, select Show hidden files, folders, and drives and OK.\n\n\n\nWindows 11\n\nDownload the env file template\nOpen File Explorer from the taskbar.\nMove the file in your “labs” folder (in the same folder as the Jupyter Notebook).\nOpen the file and replace the relevant placeholder (e.g. YOUR-PASSWORD).\nSave the changes.\nRename the file from env to .env (this will hide the file)\nTo view the hidden file: Select View &gt; Show &gt; Hidden items."
+  },
+  {
+    "objectID": "environments.html#anaconda-environment",
+    "href": "environments.html#anaconda-environment",
+    "title": "Environments",
+    "section": "Anaconda environment",
+    "text": "Anaconda environment\nAfter you have installed and updated Anaconda (see these instructions), you can install the modules you need for a specific lab in a new environment.\n\n\n\n\n\n\nTo do\n\n\n\n\nGo to GitHub course environments\nFollow the instructions in the GitHub repo and install the environment env-lab"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome 👋",
+    "section": "",
+    "text": "This tutorial contains instructions about the programming toolkit you will need for our course.\n\n\n\n\n\n\n\nTip\n\n\n\nIf you aren’t familiar with the command line, you should first take a look at this short introduction\n\n\nYou will need to:\n\nInstall a SQL environment with a MySQL database and MySQL Workbench\nSet up a Python devolopment environment (we use Anaconda and Visual Studio Code)\nPrepare a working environment (create folders and a .env file)\nCreate a GitHub account for software development and version control)\nMake yourself familiar with the slide toolkit.\n\nPlease read all the instructions and complete the tasks listed in the sections."
+  },
+  {
     "objectID": "slides/slides.html#jump-to-slides",
     "href": "slides/slides.html#jump-to-slides",
     "title": "Slides",
@@ -70,13 +182,6 @@
     "text": "Visual Studio Code\n\nBasics\nVisual Studio Code (also called Code) is a powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with a rich ecosystem of extensions for Python.\n\n\n\n\n\n\nNote\n\n\n\nVisual Studio Code is a code editor that can be used with a variety of programming languages including Python.\n\n\n\n\n\n\n\n\nInstallation\nInstall VS Code:\n\n\n\n\n\n\nTo do\n\n\n\n\nInstall Code\n\n\n\n\n\nInstall extensions\nThe features that Visual Studio Code includes out-of-the-box are just the start. VS Code extensions let you add languages, debuggers, and tools to your installation to support your development workflow.\nLet’s install some important extensions:\n\n\n\n\n\n\nTo do\n\n\n\n\nVisual Studio Code Extensions\n\n\n\n\n\nJupyter Notebooks\nWe usually work with Jupyter Notebook files in VS Code:\n\n\n\n\n\n\nTo do\n\n\n\n\nLearn how to use Jupyter Notebooks in VS Code\n\n\n\nTo use a specific Anaconda environment as Jupyter kernel, select the kernel (e.g. lab) using the kernel picker in the top right of VS Code.\n\n\nOptional tutorials\nSome resources to get familiar with VS Code:\n\nTake a look at the intro videos\nData Science in VS Code tutorial\nPro tips: 25 VS Code Productivity Tips and Speed Hacks"
   },
   {
-    "objectID": "python.html#working-environment",
-    "href": "python.html#working-environment",
-    "title": "Python",
-    "section": "Working environment",
-    "text": "Working environment\n\nFolder structure\nBefore you start a lab, you should always first create a new folder on your machine with the name of the lab (e.g. clustering). Here, we create a parent directory called “labs” where we can store the different labs.\nBelow is a tutorial on how to create a new folder called “labs” using the command line interface for both Windows and macOS.\n\nWindows\n\nPress Windows + R keys simultaneously to open the Run dialog.\nType cmd and press Enter to open the Command Prompt.\nNavigate to the directory where you want to create the new folder using the cd (change directory) command.\n\nFor example (replace YourUsername and \\your\\path):\ncd C:\\Users\\YourUsername\\your\\path\n\nOnce you are in the desired directory, create a new folder named “labs” using the following command:\n\nmkdir labs\n\n\nmacOS/Linux\n\nOpen the Terminal application. You can find it in the Applications &gt; Utilities folder or search for it using Spotlight.\nNavigate to the directory where you want to create the new folder using the cd (change directory) command.\n\nFor example For example (replace YourUsername and /your/path):\ncd /Users/YourUsername/your/path\n\nOnce you are in the desired directory, create a new folder named “labs” using the following command:\n\nmkdir labs\n\n\n\nEnvironment file\nIn most labs we need to access a database or an API. Since we do not want to include passwords and API-keys in our Python scripts, we need to create an environment (“env”) file. A .env file is a simple configuration file where environment-specific settings, such as database credentials or API keys, are stored in key-value pairs.\nBy separating these settings from the main application code, we can ensure that sensitive or environment-specific information is both easily configurable and not inadvertently shared or published. The . before a filename serves a specific purpose in many operating systems: A filename that starts with a . is considered a “hidden” file.\n\n\n\n\n\n\nNote\n\n\n\nWe will use libraries like python-dotenv to load the variables from the file into our Python script automatically.\n\n\nBelow are tutorials on how to create a .env file.\n\nmacOS\n\nDownload the env file template\nOpen Finder and navigate to the “Downloads” folder\nMove the file in your “labs” folder.\nOpen the file and replace the relevant placeholder (e.g. YOUR-PASSWORD).\nSave the changes.\nRename the file from env to .env (this will hide the file)\nTo view hidden files, you need to press the “Command” + “Shift” + “.” (period) keys at the same time. The hidden files will show up as translucent in the folder.\nIf you want to obscure the files again, press the same “Command” + “Shift” + “.” (period) combination.\n\n\n\nWindows 10\n\nDownload the env file template\nOpen File Explorer from the taskbar.\nMove the file in your “labs” folder.\nOpen the file and replace the relevant placeholder (e.g. YOUR-PASSWORD).\nSave the changes.\nRename the file from env to .env (this will hide the file)\nTo view the hidden file: Select View &gt; Options &gt; Change folder and search options.\nSelect the View tab and, in Advanced settings, select Show hidden files, folders, and drives and OK.\n\n\n\nWindows 11\n\nDownload the env file template\nOpen File Explorer from the taskbar.\nMove the file in your “labs” folder.\nOpen the file and replace the relevant placeholder (e.g. YOUR-PASSWORD).\nSave the changes.\nRename the file from env to .env (this will hide the file)\nTo view the hidden file: Select View &gt; Show &gt; Hidden items."
-  },
-  {
     "objectID": "code/notebook.html",
     "href": "code/notebook.html",
     "title": "Notebook",
@@ -96,117 +201,5 @@
     "title": "Notebook",
     "section": "Data",
     "text": "Data"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome 👋",
-    "section": "",
-    "text": "This tutorial contains instructions about the programming toolkit you will need for our course.\n\n\n\n\n\n\n\nTip\n\n\n\nIf you aren’t familiar with the command line, you should first take a look at this short introduction\n\n\nYou will need to:\n\nInstall a SQL environment with a MySQL database and MySQL Workbench\nSet up a Python devolopment environemnt (we use Anaconda and Visual Studio Code)\nCreate a GitHub account for software development and version control)\nMake yourself familiar with the slide toolkit.\n\nPlease read all the instructions and complete the tasks listed in the sections."
-  },
-  {
-    "objectID": "cli.html",
-    "href": "cli.html",
-    "title": "Command-line",
-    "section": "",
-    "text": "Operating systems like Windows and macOS implement a command-line interface (other names for the command line are: cmd, CLI, prompt, console or terminal) in a shell for interactive access to operating system functions or services.\n\n\n\n\n\n\nTip\n\n\n\nA command-line interface (CLI) processes commands to a computer program in the form of lines of text.\n\n\nWe sometimes use the command line interface so you should be familiar with basic commands. If you aren’t familiar with the terminal, read this short introduction to the command-line interface:\n\n\n\n\n\n\nTo do\n\n\n\n\nIntroduction to the command-line interface\n\n\n\nHere is a summary of some useful commands:\n\n\n\n\n\n\n\n\n\nCommand (Windows)\nCommand (Mac OS / Linux)\nDescription\nExample\n\n\n\n\nexit\nexit\nclose the window\nexit\n\n\ncd\ncd\nchange directory\ncd test, cd.. (Windows) or cd .. (Mac)\n\n\ncd\npwd\nshow the current directory\ncd (Windows) or pwd (Mac OS / Linux)\n\n\ndir\nls\nlist directories/files\ndir\n\n\ncopy\ncp\ncopy file\ncopy c:.txt c:.txt\n\n\nmove\nmv\nmove file\nmove c:.txt c:.txt\n\n\nmkdir\nmkdir\ncreate a new directory\nmkdir testdirectory\n\n\nrmdir (or del)\nrm\ndelete a file\ndel c:.txt\n\n\nrmdir /S\nrm -r\ndelete a directory\nrm -r testdirectory\n\n\n[CMD] /?\nman [CMD]\nget help for a command\ncd /? (Windows) or man cd (Mac OS / Linux)"
-  },
-  {
-    "objectID": "cli.html#basics",
-    "href": "cli.html#basics",
-    "title": "Command-line",
-    "section": "",
-    "text": "Operating systems like Windows and macOS implement a command-line interface (other names for the command line are: cmd, CLI, prompt, console or terminal) in a shell for interactive access to operating system functions or services.\n\n\n\n\n\n\nTip\n\n\n\nA command-line interface (CLI) processes commands to a computer program in the form of lines of text.\n\n\nWe sometimes use the command line interface so you should be familiar with basic commands. If you aren’t familiar with the terminal, read this short introduction to the command-line interface:\n\n\n\n\n\n\nTo do\n\n\n\n\nIntroduction to the command-line interface\n\n\n\nHere is a summary of some useful commands:\n\n\n\n\n\n\n\n\n\nCommand (Windows)\nCommand (Mac OS / Linux)\nDescription\nExample\n\n\n\n\nexit\nexit\nclose the window\nexit\n\n\ncd\ncd\nchange directory\ncd test, cd.. (Windows) or cd .. (Mac)\n\n\ncd\npwd\nshow the current directory\ncd (Windows) or pwd (Mac OS / Linux)\n\n\ndir\nls\nlist directories/files\ndir\n\n\ncopy\ncp\ncopy file\ncopy c:.txt c:.txt\n\n\nmove\nmv\nmove file\nmove c:.txt c:.txt\n\n\nmkdir\nmkdir\ncreate a new directory\nmkdir testdirectory\n\n\nrmdir (or del)\nrm\ndelete a file\ndel c:.txt\n\n\nrmdir /S\nrm -r\ndelete a directory\nrm -r testdirectory\n\n\n[CMD] /?\nman [CMD]\nget help for a command\ncd /? (Windows) or man cd (Mac OS / Linux)"
-  },
-  {
-    "objectID": "slide.html",
-    "href": "slide.html",
-    "title": "Slides",
-    "section": "",
-    "text": "Most of the slides are made with the open source solutions Quarto (scientific and technical publishing system) and Revealjs (HTML presentation framework).\n\n\n\n\n\n\nTo do\n\n\n\n\n🖥️ Read this tutorial to learn how to\n\nNavigate through the slides\nShow all slides\nSave slides as PDF\nPrint slides"
-  },
-  {
-    "objectID": "assignments.html",
-    "href": "assignments.html",
-    "title": "Assignments",
-    "section": "",
-    "text": "This is a Quarto slidedeck."
-  },
-  {
-    "objectID": "sql.html",
-    "href": "sql.html",
-    "title": "SQL",
-    "section": "",
-    "text": "SQL (Structured Query Language, pronounced “S-Q-L” or sometimes “Sequel”) is a standardized database language specifically used for managing and manipulating relational databases. Through SQL, users can create, retrieve, update, and delete data, as well as design and manage database structures.\nA Relational Database Management System (RDBMS) is a type of database system where data is stored in structured tables with rows and columns, facilitating complex queries and transactions. Popular open source examples include MySQL and PostgreSQL."
-  },
-  {
-    "objectID": "sql.html#basics",
-    "href": "sql.html#basics",
-    "title": "SQL",
-    "section": "",
-    "text": "SQL (Structured Query Language, pronounced “S-Q-L” or sometimes “Sequel”) is a standardized database language specifically used for managing and manipulating relational databases. Through SQL, users can create, retrieve, update, and delete data, as well as design and manage database structures.\nA Relational Database Management System (RDBMS) is a type of database system where data is stored in structured tables with rows and columns, facilitating complex queries and transactions. Popular open source examples include MySQL and PostgreSQL."
-  },
-  {
-    "objectID": "sql.html#mysql",
-    "href": "sql.html#mysql",
-    "title": "SQL",
-    "section": "MySQL",
-    "text": "MySQL\nMySQL (pronounced “My S-Q-L” or sometimes “My Sequel”) is a powerful open-source relational database management system (RDBMS).\nIt uses a structured query language (SQL) to manage, manipulate, and retrieve data stored in relational databases.\n\n\n\n\n\n\nTo do\n\n\n\n\nInstall MySQL (select “No thanks, just start my download”)\n\nWindows\nMac\n\n\n\n\n\nMySQL Workbench\nMySQL Workbench is a unified visual tool and provides features like data modeling, SQL development, and comprehensive administration tools like user administration.\nEssentially, it’s a one-stop-shop for managing and working with MySQL databases.\n\n\n\n\n\n\nTo do\n\n\n\n\nInstall MySQL Workbench\nCreate a new connection (use local-connection as “Connection Name”; click on “Store in Vault” and provide your password)\n\n\n\n\n\nCreate a Database\nUse MySQL Workbench to create a new database called db_data\n\nOpen a connection (use local-connection)\nCopy the SQL statement below and paste it into the open MySQL Query window\n\nDROP DATABASE IF EXISTS `db_data`;\nCREATE DATABASE `db_data`; \nUSE `db_data`;\n\nClick on the ⚡ symbol to execute the script\nClick on the refresh symbol 🔃 to display the database (on the top left next to SCHEMAS)\n\n\n\nCreate a Table\nNext, we include a table in our database.\n\nCreate a simple table\nWe’ll begin by creating a table named campaigns that will hold data about different marketing campaigns.\n\n\n\n\n\n\nColumns in marketing campaigns table\n\n\n\n\n\n\nid: A unique identifier for each campaign.\nname: The name of the marketing campaign.\nstart_date & end_date: The time frame of the campaign.\nbudget: The budget allocated to the campaign.\nchannel: The channel used for the campaign (e.g., “Email”, “Social Media”, “TV”).\n\n\n\n\n\nOpen a new query tab (File &gt; New Query Tab) in MySQL Workbench\nCopy the SQL statement below and paste it into the Query Tab\n\nCREATE TABLE campaigns (\n    id INT AUTO_INCREMENT PRIMARY KEY,\n    name VARCHAR(255) NOT NULL,\n    start_date DATE,\n    end_date DATE,\n    budget DECIMAL(10, 2),\n    channel VARCHAR(255)\n);\n\nClick on the ⚡ symbol to execute the script\nClick on the refresh symbol 🔃 to display the database (on the top left next to SCHEMAS)\nClick on the database symbol “db_data” at the left sidebar below SCHEMAS\nExpand “Tables” &gt; “campaigns” &gt; “Columns” to view the columns of the table\n\n\n\nInsert values into the table\nLet’s now insert some sample marketing campaigns into our table:\n\nOpen a new query tab (File &gt; New Query Tab) in MySQL Workbench\nCopy the SQL statement below and paste it into the Query Tab\n\nINSERT INTO campaigns (name, start_date, end_date, budget, channel) VALUES\n('Winter Sale', '2023-12-01', '2023-12-31', 5000.00, 'Email'),\n('Summer Festival', '2023-06-01', '2023-06-15', 10000.00, 'Social Media'),\n('Back to School', '2023-08-01', '2023-08-20', 7500.00, 'TV');\n\nClick on the ⚡ symbol to execute the script\n\n\n\nRetrieve values from the table\nAfter inserting the campaigns, you can retrieve them using a simple SELECT query. For instance:\n\nOpen a new query tab (File -&gt; New Query Tab) in MySQL Workbench\nCopy the SQL statement below and paste it into the Query Tab\n\nSELECT * \nFROM campaigns;"
-  },
-  {
-    "objectID": "sql.html#postgresql",
-    "href": "sql.html#postgresql",
-    "title": "SQL",
-    "section": "PostgreSQL",
-    "text": "PostgreSQL\nPostgreSQL (often pronounced “Post-gress-Q-L”) is an advanced, open-source relational database management system (RDBMS).\n\n\n\n\n\n\nTo do\n\n\n\n\nInstall PostgreSQL\nDuring the installation process, select “PostgreSQL Server”, “pgAdmin4” and “Command Line Tools”\nPassword: Provide a password (make sure to make a note - you can no longer change the password)\nPort: Use the suggested port\nLocale: Use [Default Locale]\n\n\n\n\nPgAdmin4\npgAdmin4 is a popular open-source administration and management tool for the PostgreSQL relational database (it has already been installed together with PostgreSQL).\n\nAdd New Server\nFirst, let’s create a new connection to a PostgreSQL database instance. We will call this instance local-connection.\nOnce added, this server will appear in your list of servers in pgAdmin4’s interface, allowing you to quickly connect, manage, and query that database instance.\n\nOpen pgAdmin4\nClick on Servers on the left sidebar\nSelect Add New Server (in the main window below “Quick Links”)\nProvide the name: local-connection\nMove to the tab Connection\n\nHost name/address: localhost\nPassword: enter the password you used during the installation process and choose “Save password”\n\nWe are done and you can select Save\n\n\n\n\nCreate a Database\nUse pgadmin4 to create a new database called db_data\n\nRight click on our new connection local-connection in the left sidebar and select: Create &gt; Database\nIn the tab “General”, provide as “Database”: db_data\nWe are done and you can select Save\n\n\n\nCreate a Table\nNext, we include a table in our database.\n\nCreate a simple table\nWe’ll begin by creating a table named campaigns that will hold data about different marketing campaigns.\n\n\n\n\n\n\nColumns in marketing campaigns table\n\n\n\n\n\n\nid: A unique identifier for each campaign.\nname: The name of the marketing campaign.\nstart_date & end_date: The time frame of the campaign.\nbudget: The budget allocated to the campaign.\nchannel: The channel used for the campaign (e.g., “Email”, “Social Media”, “TV”).\n\n\n\n\n\nClick on the database db_data\nOpen a new query tab (Tools &gt; Query Tool) in pgAdmin4\nCopy the SQL statement below and paste it into the Query Tab\n\nCREATE TABLE campaigns (\n    id BIGSERIAL PRIMARY KEY,\n    name VARCHAR(255) NOT NULL,\n    start_date DATE,\n    end_date DATE,\n    budget DECIMAL(10, 2),\n    channel VARCHAR(255)\n);\n\nClick on the ▶️ symbol to execute the script\nSelect the database “db_data” at the left sidebar and expand “Schemas” &gt; “Tables” &gt; “campaigns” &gt; “Columns” to view the columns of the table\n\n\n\nInsert values into the table\nLet’s now insert some sample marketing campaigns into our table:\n\nOpen a new query tab (Tools &gt; Query Tool) in pgAdmin4\nCopy the SQL statement below and paste it into the Query Tab\n\nINSERT INTO campaigns (name, start_date, end_date, budget, channel) VALUES\n('Winter Sale', '2023-12-01', '2023-12-31', 5000.00, 'Email'),\n('Summer Festival', '2023-06-01', '2023-06-15', 10000.00, 'Social Media'),\n('Back to School', '2023-08-01', '2023-08-20', 7500.00, 'TV');\n\nClick on the ▶️ symbol to execute the script\n\n\n\nRetrieve values from the table\nAfter inserting the campaigns, you can retrieve them using a simple SELECT query. For instance:\n\nOpen a new query tab (Tools &gt; Query Tool) in pgAdmin4\nCopy the SQL statement below and paste it into the Query Tab\n\nSELECT * \nFROM campaigns;"
-  },
-  {
-    "objectID": "github.html",
-    "href": "github.html",
-    "title": "GitHub",
-    "section": "",
-    "text": "GitHub is a provider of internet hosting for software development and version control using Git.\n\n\n\n\n\n\nNote\n\n\n\nWe will use GitHub as a platform for web hosting and collaboration.\n\n\nGit is a version control system – like the “Track Changes” features from Microsoft Word with many more additional features.\n\nGit can be used to store content \nCode can be changed and other developers can add code in parallel.\nGit has a remote repository which is stored in a server and a local repository which is stored in the computer of each developer."
-  },
-  {
-    "objectID": "github.html#basics",
-    "href": "github.html#basics",
-    "title": "GitHub",
-    "section": "",
-    "text": "GitHub is a provider of internet hosting for software development and version control using Git.\n\n\n\n\n\n\nNote\n\n\n\nWe will use GitHub as a platform for web hosting and collaboration.\n\n\nGit is a version control system – like the “Track Changes” features from Microsoft Word with many more additional features.\n\nGit can be used to store content \nCode can be changed and other developers can add code in parallel.\nGit has a remote repository which is stored in a server and a local repository which is stored in the computer of each developer."
-  },
-  {
-    "objectID": "github.html#github-account",
-    "href": "github.html#github-account",
-    "title": "GitHub",
-    "section": "GitHub-account",
-    "text": "GitHub-account\nYou need a free GitHub-account for our course. Please follow the instructions below (in case you already have a GitHub account: please add your HdM-email address to your account):\n\n\n\n\n\n\nTo do\n\n\n\n\nCreate a GitHub account with your HdM-email\nVerify your GitHub email\nYou may also sign up fot the free student developer pack\n\nInstall the VS Code GitHub extension\nInstall GitHub desktop to synchronize your machine with GitHub\n\n\n\nNext, learn how to set up, authenticate, and configure GitHub Desktop to allow you to contribute to projects directly from your machine.\n\n\n\n\n\n\nTo do\n\n\n\n\nGetting started with GitHub Desktop"
-  },
-  {
-    "objectID": "environments.html",
-    "href": "environments.html",
-    "title": "Environments",
-    "section": "",
-    "text": "Before you start a lab, you should always first create a new folder on your machine with the name of the lab (e.g. clustering). Here, we create a parent directory called “labs” where we can store the different labs. Usually we also create some subdirectories like “code” and “data”.\nBelow is a tutorial on how to create a new folder called “labs” using the command line interface for both Windows and macOS.\n\n\n\nPress Windows + R keys simultaneously to open the Run dialog.\nType cmd and press Enter to open the Command Prompt.\nNavigate to the directory where you want to create the new folder using the cd (change directory) command.\n\nFor example (replace YourUsername and \\your\\path):\ncd C:\\Users\\YourUsername\\your\\path\n\nOnce you are in the desired directory, create a new folder named “labs” using the following command:\n\nmkdir labs\n\n\n\n\nOpen the Terminal application. You can find it in the Applications &gt; Utilities folder or search for it using Spotlight.\nNavigate to the directory where you want to create the new folder using the cd (change directory) command.\n\nFor example For example (replace YourUsername and /your/path):\ncd /Users/YourUsername/your/path\n\nOnce you are in the desired directory, create a new folder named “labs” using the following command:\n\nmkdir labs"
-  },
-  {
-    "objectID": "environments.html#working-environment",
-    "href": "environments.html#working-environment",
-    "title": "Environments",
-    "section": "",
-    "text": "Before you start a lab, you should always first create a new folder on your machine with the name of the lab (e.g. clustering). Here, we create a parent directory called “labs” where we can store the different labs. Usually we also create some subdirectories like “code” and “data”.\nBelow is a tutorial on how to create a new folder called “labs” using the command line interface for both Windows and macOS.\n\n\n\nPress Windows + R keys simultaneously to open the Run dialog.\nType cmd and press Enter to open the Command Prompt.\nNavigate to the directory where you want to create the new folder using the cd (change directory) command.\n\nFor example (replace YourUsername and \\your\\path):\ncd C:\\Users\\YourUsername\\your\\path\n\nOnce you are in the desired directory, create a new folder named “labs” using the following command:\n\nmkdir labs\n\n\n\n\nOpen the Terminal application. You can find it in the Applications &gt; Utilities folder or search for it using Spotlight.\nNavigate to the directory where you want to create the new folder using the cd (change directory) command.\n\nFor example For example (replace YourUsername and /your/path):\ncd /Users/YourUsername/your/path\n\nOnce you are in the desired directory, create a new folder named “labs” using the following command:\n\nmkdir labs"
-  },
-  {
-    "objectID": "environments.html#environment-file",
-    "href": "environments.html#environment-file",
-    "title": "Environments",
-    "section": "Environment file",
-    "text": "Environment file\nIn some labs we need to access a database or an API. Since we do not want to include passwords and API-keys in our Python scripts, we need to create an environment (“env”) file. A .env file is a simple configuration file where environment-specific settings, such as database credentials or API keys, are stored in key-value pairs.\nBy separating these settings from the main application code, we can ensure that sensitive or environment-specific information is both easily configurable and not inadvertently shared or published. The . before a filename serves a specific purpose in many operating systems: A filename that starts with a . is considered a “hidden” file.\n\n\n\n\n\n\nNote\n\n\n\nWe will use libraries like python-dotenv to load the variables from the file into our Python script automatically.\n\n\nBelow are tutorials on how to create a .env file.\n\nmacOS\n\nDownload the env file template\nOpen Finder and navigate to the “Downloads” folder\nMove the file in your “labs” folder (in the same folder as the Jupyter Notebook).\nOpen the file and replace the relevant placeholder (e.g. YOUR-PASSWORD).\nSave the changes.\nRename the file from env to .env (this will hide the file)\nTo view hidden files, you need to press the “Command” + “Shift” + “.” (period) keys at the same time. The hidden files will show up as translucent in the folder.\nIf you want to obscure the files again, press the same “Command” + “Shift” + “.” (period) combination.\n\n\n\nWindows 10\n\nDownload the env file template\nOpen File Explorer from the taskbar.\nMove the file in your “labs” folder (in the same folder as the Jupyter Notebook).\nOpen the file and replace the relevant placeholder (e.g. YOUR-PASSWORD).\nSave the changes.\nRename the file from env to .env (this will hide the file)\nTo view the hidden file: Select View &gt; Options &gt; Change folder and search options.\nSelect the View tab and, in Advanced settings, select Show hidden files, folders, and drives and OK.\n\n\n\nWindows 11\n\nDownload the env file template\nOpen File Explorer from the taskbar.\nMove the file in your “labs” folder (in the same folder as the Jupyter Notebook).\nOpen the file and replace the relevant placeholder (e.g. YOUR-PASSWORD).\nSave the changes.\nRename the file from env to .env (this will hide the file)\nTo view the hidden file: Select View &gt; Show &gt; Hidden items."
-  },
-  {
-    "objectID": "environments.html#anaconda-environment",
-    "href": "environments.html#anaconda-environment",
-    "title": "Environments",
-    "section": "Anaconda environment",
-    "text": "Anaconda environment\nAfter you have installed and updated Anaconda (see these instructions), you can install the modules you need for a specific lab in a new environment.\n\n\n\n\n\n\nTo do\n\n\n\n\nGo to GitHub course environments\nFollow the instructions in the GitHub repo and install the environment env-lab"
   }
 ]
