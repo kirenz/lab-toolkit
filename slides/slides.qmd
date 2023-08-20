@@ -49,7 +49,7 @@ Basic navigation is done using the following keyboard shortcuts:
 
 - You can access the navigation menu using the button located in the bottom left corner of the presentation.
 
-- You can also press `m` to toggle the menu open and closed.
+- You can also press `m` to toggle the menu open and `Esc` to close.
 
 ![](/images/menu.png)
 
