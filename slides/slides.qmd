@@ -41,7 +41,7 @@ Basic navigation is done using the following keyboard shortcuts:
 |----------------------------|--------------------------------------------|
 | Next slide                 | `→` or `SPACE` or `N` |
 | Previous slide             | `←` or `P`                  |
-| Navigate without fragments | Windows `Alt→` and `Alt←`, Mac: `Ctrl→` and `Ctrl←`           |
+| Navigate without fragments | Windows `Alt→` and `Alt←`, Mac: `option→` and `option←`           |
 | Jump to first/last slide   | `Shift→` and `Shift←`      |
 | Overview of all slides     | `Esc` or `o`       |
 
@@ -82,7 +82,7 @@ Basic navigation is done using the following keyboard shortcuts:
 
 ## Zoom into slide
 
-- Hold down the `Alt` key (or `Ctrl`) and click on any element to zoom towards it.
+- Hold down the `Alt` key (or `option`) and click on any element to zoom towards it.
 
 ## Chalkboard and notes canvas
 
