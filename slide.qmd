@@ -7,7 +7,7 @@ Most of the slides are made with the open source solutions [Quarto](https://quar
 ::: {.callout-note}
 ## To do
 
-- [Read this tutorial](/slides/slides.qmd) to learn how to
+- [🖥️ Read this tutorial](/slides/slides.qmd) to learn how to
   - Navigate through the slides
   - Show all slides
   - Save slides as PDF
