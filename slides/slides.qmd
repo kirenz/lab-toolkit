@@ -41,19 +41,21 @@ Basic navigation is done using the following keyboard shortcuts:
 |----------------------------|--------------------------------------------|
 | Next slide                 | `→` or `SPACE` or `N` |
 | Previous slide             | `←` or `P`                  |
-| Navigate without fragments | `Alt→` or `Alt←`          |
-| Jump to first/last slide   | `Shift→` or `Shift←`      |
+| Navigate without fragments | Windows `Alt→` and `Alt←`, Mac: `Ctrl→` and `Ctrl←`           |
+| Jump to first/last slide   | `Shift→` and `Shift←`      |
 | Overview of all slides     | `Esc` or `o`       |
 
 # Navigation Menu {background-color="white"}
 
-- You can access the navigation menu using the button located in the bottom left corner of the presentation. 
+- You can access the navigation menu using the button located in the bottom left corner of the presentation.
+
+- You can also press `m` to toggle the menu open and closed.
 
 ![](/images/menu.png)
 
 ## Jump to slides
 
-- Clicking the button opens a slide navigation menu that enables you to easily jump to any slide
+- Clicking the button (or press `m`) opens a slide navigation menu that enables you to easily jump to any slide
 
 ![](/images/navigation.png)
 
@@ -75,3 +77,17 @@ Basic navigation is done using the following keyboard shortcuts:
 
 - Simply follow the steps described in "Save presention as PDF" 
 - Print the PDF  
+
+# More options
+
+## Zoom into slide
+
+- Hold down the `Alt` key (or `Ctrl`) and click on any element to zoom towards it.
+
+## Chalkboard and notes canvas
+
+- Press `b` to toggle the chalkboard.
+- Press `c` to toggle the notes canvas.
+
+
+
