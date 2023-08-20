@@ -4,7 +4,7 @@
     "href": "slide.html",
     "title": "Slides",
     "section": "",
-    "text": "Most of the slides are made with the open source solutions Quarto (scientific and technical publishing system) and Revealjs (HTML presentation framework).\n\n\n\n\n\n\nTo do\n\n\n\n\nRead this tutorial to learn how to\n\nNavigate through the slides\nShow all slides\nSave slides as PDF\nPrint slides"
+    "text": "Most of the slides are made with the open source solutions Quarto (scientific and technical publishing system) and Revealjs (HTML presentation framework).\n\n\n\n\n\n\nTo do\n\n\n\n\n🖥️ Read this tutorial to learn how to\n\nNavigate through the slides\nShow all slides\nSave slides as PDF\nPrint slides"
   },
   {
     "objectID": "index.html",
@@ -172,7 +172,7 @@
     "href": "slides/slides.html#zoom-into-slide",
     "title": "Slides",
     "section": "Zoom into slide",
-    "text": "Zoom into slide\n\nHold down the Alt key (or Ctrl) and click on any element to zoom towards it."
+    "text": "Zoom into slide\n\nHold down the Alt key (or option) and click on any element to zoom towards it."
   },
   {
     "objectID": "slides/slides.html#chalkboard-and-notes-canvas",
