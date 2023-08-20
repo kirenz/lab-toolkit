@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.268">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Toolkit - SQL</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href=".//images/logo.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "keyboard-shortcut": [
+    null
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Toolkit</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./cli.html" rel="" target="">
+ <span class="menu-text">Command-line</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./sql.html" rel="" target="" aria-current="page">
+ <span class="menu-text">SQL</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./python.html" rel="" target="">
+ <span class="menu-text">Python</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./github.html" rel="" target="">
+ <span class="menu-text">GitHub</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./slide.html" rel="" target="">
+ <span class="menu-text">Slides</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#basics" id="toc-basics" class="nav-link active" data-scroll-target="#basics">Basics</a></li>
+  <li><a href="#mysql" id="toc-mysql" class="nav-link" data-scroll-target="#mysql">MySQL</a>
+  <ul class="collapse">
+  <li><a href="#mysql-workbench" id="toc-mysql-workbench" class="nav-link" data-scroll-target="#mysql-workbench">MySQL Workbench</a></li>
+  <li><a href="#create-a-database" id="toc-create-a-database" class="nav-link" data-scroll-target="#create-a-database">Create a Database</a></li>
+  <li><a href="#create-a-table" id="toc-create-a-table" class="nav-link" data-scroll-target="#create-a-table">Create a Table</a></li>
+  </ul></li>
+  <li><a href="#postgresql" id="toc-postgresql" class="nav-link" data-scroll-target="#postgresql">PostgreSQL</a>
+  <ul class="collapse">
+  <li><a href="#pgadmin4" id="toc-pgadmin4" class="nav-link" data-scroll-target="#pgadmin4">PgAdmin4</a></li>
+  <li><a href="#create-a-database-1" id="toc-create-a-database-1" class="nav-link" data-scroll-target="#create-a-database-1">Create a Database</a></li>
+  <li><a href="#create-a-table-1" id="toc-create-a-table-1" class="nav-link" data-scroll-target="#create-a-table-1">Create a Table</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">SQL</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+<section id="basics" class="level2">
+<h2 class="anchored" data-anchor-id="basics">Basics</h2>
+<p><em>SQL</em> (Structured Query Language, pronounced “S-Q-L” or sometimes “Sequel”) is a standardized database language specifically used for managing and manipulating relational databases. Through SQL, users can create, retrieve, update, and delete data, as well as design and manage database structures.</p>
+<p>A Relational Database Management System (RDBMS) is a type of database system where data is stored in structured tables with rows and columns, facilitating complex queries and transactions. Popular open source examples include <em>MySQL</em> and <em>PostgreSQL</em>.</p>
+</section>
+<section id="mysql" class="level2">
+<h2 class="anchored" data-anchor-id="mysql">MySQL</h2>
+<p><em>MySQL</em> (pronounced “My S-Q-L” or sometimes “My Sequel”) is a powerful open-source relational database management system (RDBMS).</p>
+<p>It uses a structured query language (SQL) to manage, manipulate, and retrieve data stored in relational databases.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+To do
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Install MySQL (select “No thanks, just start my download”)
+<ul>
+<li><a href="https://dev.mysql.com/downloads/installer/">Windows</a></li>
+<li><a href="https://dev.mysql.com/downloads/mysql/">Mac</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<section id="mysql-workbench" class="level3">
+<h3 class="anchored" data-anchor-id="mysql-workbench">MySQL Workbench</h3>
+<p><em>MySQL Workbench</em> is a unified visual tool and provides features like data modeling, SQL development, and comprehensive administration tools like user administration.</p>
+<p>Essentially, it’s a one-stop-shop for managing and working with MySQL databases.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+To do
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Install <a href="https://dev.mysql.com/downloads/workbench/">MySQL Workbench</a></li>
+<li><a href="https://dev.mysql.com/doc/workbench/en/wb-mysql-connections-new.html">Create a new connection</a> (use <code>local-connection</code> as “Connection Name”; click on “Store in Vault” and provide your password)</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="create-a-database" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-database">Create a Database</h3>
+<p>Use <em>MySQL Workbench</em> to create a new database called <code>db_data</code></p>
+<ul>
+<li>Open a connection (use local-connection)</li>
+<li>Copy the SQL statement below and paste it into the open MySQL Query window</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">DROP</span> <span class="kw">DATABASE</span> <span class="cf">IF</span> <span class="kw">EXISTS</span> `db_data`;</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">DATABASE</span> `db_data`; </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">USE</span> `db_data`;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Click on the ⚡ symbol to execute the script</li>
+<li>Click on the refresh symbol 🔃 to display the database (on the top left next to <code>SCHEMAS</code>)</li>
+</ul>
+</section>
+<section id="create-a-table" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-table">Create a Table</h3>
+<p>Next, we include a table in our database.</p>
+<section id="create-a-simple-table" class="level4">
+<h4 class="anchored" data-anchor-id="create-a-simple-table">Create a simple table</h4>
+<p>We’ll begin by creating a table named campaigns that will hold data about different marketing campaigns.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Columns in marketing campaigns table
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>id: A unique identifier for each campaign.</li>
+<li>name: The name of the marketing campaign.</li>
+<li>start_date &amp; end_date: The time frame of the campaign.</li>
+<li>budget: The budget allocated to the campaign.</li>
+<li>channel: The channel used for the campaign (e.g., “Email”, “Social Media”, “TV”).</li>
+</ul>
+</div>
+</div>
+</div>
+<ul>
+<li>Open a new query tab (File &gt; New Query Tab) in MySQL Workbench</li>
+<li>Copy the SQL statement below and paste it into the Query Tab</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> campaigns (</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">id</span> <span class="dt">INT</span> AUTO_INCREMENT <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    name <span class="dt">VARCHAR</span>(<span class="dv">255</span>) <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    start_date <span class="dt">DATE</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    end_date <span class="dt">DATE</span>,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    budget <span class="dt">DECIMAL</span>(<span class="dv">10</span>, <span class="dv">2</span>),</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    channel <span class="dt">VARCHAR</span>(<span class="dv">255</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Click on the ⚡ symbol to execute the script</li>
+<li>Click on the refresh symbol 🔃 to display the database (on the top left next to <code>SCHEMAS</code>)</li>
+<li>Click on the database symbol “db_data” at the left sidebar below <code>SCHEMAS</code></li>
+<li>Expand “Tables” &gt; “campaigns” &gt; “Columns” to view the columns of the table</li>
+</ul>
+</section>
+<section id="insert-values-into-the-table" class="level4">
+<h4 class="anchored" data-anchor-id="insert-values-into-the-table">Insert values into the table</h4>
+<p>Let’s now insert some sample marketing campaigns into our table:</p>
+<ul>
+<li>Open a new query tab (File &gt; New Query Tab) in MySQL Workbench</li>
+<li>Copy the SQL statement below and paste it into the Query Tab</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> campaigns (name, start_date, end_date, budget, channel) <span class="kw">VALUES</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>(<span class="st">'Winter Sale'</span>, <span class="st">'2023-12-01'</span>, <span class="st">'2023-12-31'</span>, <span class="fl">5000.00</span>, <span class="st">'Email'</span>),</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>(<span class="st">'Summer Festival'</span>, <span class="st">'2023-06-01'</span>, <span class="st">'2023-06-15'</span>, <span class="fl">10000.00</span>, <span class="st">'Social Media'</span>),</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>(<span class="st">'Back to School'</span>, <span class="st">'2023-08-01'</span>, <span class="st">'2023-08-20'</span>, <span class="fl">7500.00</span>, <span class="st">'TV'</span>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Click on the ⚡ symbol to execute the script</li>
+</ul>
+</section>
+<section id="retrieve-values-from-the-table" class="level4">
+<h4 class="anchored" data-anchor-id="retrieve-values-from-the-table">Retrieve values from the table</h4>
+<p>After inserting the campaigns, you can retrieve them using a simple SELECT query. For instance:</p>
+<ul>
+<li>Open a new query tab (File -&gt; New Query Tab) in <em>MySQL Workbench</em></li>
+<li>Copy the SQL statement below and paste it into the Query Tab</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> campaigns;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+</section>
+<section id="postgresql" class="level2">
+<h2 class="anchored" data-anchor-id="postgresql">PostgreSQL</h2>
+<p><em>PostgreSQL</em> (often pronounced “Post-gress-Q-L”) is an advanced, open-source relational database management system (RDBMS).</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+To do
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p><a href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads">Install PostgreSQL</a></p></li>
+<li><p>During the installation process, select “PostgreSQL Server”, “pgAdmin4” and “Command Line Tools”</p></li>
+<li><p><code>Password</code>: Provide a password (make sure to make a note - you can no longer change the password)</p></li>
+<li><p><code>Port</code>: Use the suggested port</p></li>
+<li><p><code>Locale</code>: Use [Default Locale]</p></li>
+</ul>
+</div>
+</div>
+<section id="pgadmin4" class="level3">
+<h3 class="anchored" data-anchor-id="pgadmin4">PgAdmin4</h3>
+<p><em>pgAdmin4</em> is a popular open-source administration and management tool for the PostgreSQL relational database (it has already been installed together with PostgreSQL).</p>
+<section id="add-new-server" class="level4">
+<h4 class="anchored" data-anchor-id="add-new-server">Add New Server</h4>
+<p>First, let’s create a new connection to a PostgreSQL database instance. We will call this instance <code>local-connection</code>.</p>
+<p>Once added, this server will appear in your list of servers in <em>pgAdmin4’s</em> interface, allowing you to quickly connect, manage, and query that database instance.</p>
+<ul>
+<li>Open <em>pgAdmin4</em></li>
+<li>Click on <code>Servers</code> on the left sidebar</li>
+<li>Select <code>Add New Server</code> (in the main window below “Quick Links”)</li>
+<li>Provide the name: <code>local-connection</code></li>
+<li>Move to the tab <code>Connection</code>
+<ul>
+<li>Host name/address: localhost</li>
+<li>Password: enter the password you used during the installation process and choose “Save password”</li>
+</ul></li>
+<li>We are done and you can select <code>Save</code></li>
+</ul>
+</section>
+</section>
+<section id="create-a-database-1" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-database-1">Create a Database</h3>
+<p>Use <em>pgadmin4</em> to create a new database called <code>db_data</code></p>
+<ul>
+<li>Right click on our new connection <code>local-connection</code> in the left sidebar and select: Create &gt; Database</li>
+<li>In the tab “General”, provide as “Database”: <code>db_data</code></li>
+<li>We are done and you can select <code>Save</code></li>
+</ul>
+</section>
+<section id="create-a-table-1" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-table-1">Create a Table</h3>
+<p>Next, we include a table in our database.</p>
+<section id="create-a-simple-table-1" class="level4">
+<h4 class="anchored" data-anchor-id="create-a-simple-table-1">Create a simple table</h4>
+<p>We’ll begin by creating a table named campaigns that will hold data about different marketing campaigns.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Columns in marketing campaigns table
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>id: A unique identifier for each campaign.</li>
+<li>name: The name of the marketing campaign.</li>
+<li>start_date &amp; end_date: The time frame of the campaign.</li>
+<li>budget: The budget allocated to the campaign.</li>
+<li>channel: The channel used for the campaign (e.g., “Email”, “Social Media”, “TV”).</li>
+</ul>
+</div>
+</div>
+</div>
+<ul>
+<li>Click on the database <code>db_data</code></li>
+<li>Open a new query tab (Tools &gt; Query Tool) in <em>pgAdmin4</em></li>
+<li>Copy the SQL statement below and paste it into the Query Tab</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> campaigns (</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">id</span> BIGSERIAL <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    name <span class="dt">VARCHAR</span>(<span class="dv">255</span>) <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    start_date <span class="dt">DATE</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    end_date <span class="dt">DATE</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    budget <span class="dt">DECIMAL</span>(<span class="dv">10</span>, <span class="dv">2</span>),</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    channel <span class="dt">VARCHAR</span>(<span class="dv">255</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Click on the ▶️ symbol to execute the script</li>
+<li>Select the database “db_data” at the left sidebar and expand “Schemas” &gt; “Tables” &gt; “campaigns” &gt; “Columns” to view the columns of the table</li>
+</ul>
+</section>
+<section id="insert-values-into-the-table-1" class="level4">
+<h4 class="anchored" data-anchor-id="insert-values-into-the-table-1">Insert values into the table</h4>
+<p>Let’s now insert some sample marketing campaigns into our table:</p>
+<ul>
+<li>Open a new query tab (Tools &gt; Query Tool) in <em>pgAdmin4</em></li>
+<li>Copy the SQL statement below and paste it into the Query Tab</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> campaigns (name, start_date, end_date, budget, channel) <span class="kw">VALUES</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>(<span class="st">'Winter Sale'</span>, <span class="st">'2023-12-01'</span>, <span class="st">'2023-12-31'</span>, <span class="fl">5000.00</span>, <span class="st">'Email'</span>),</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>(<span class="st">'Summer Festival'</span>, <span class="st">'2023-06-01'</span>, <span class="st">'2023-06-15'</span>, <span class="fl">10000.00</span>, <span class="st">'Social Media'</span>),</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>(<span class="st">'Back to School'</span>, <span class="st">'2023-08-01'</span>, <span class="st">'2023-08-20'</span>, <span class="fl">7500.00</span>, <span class="st">'TV'</span>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Click on the ▶️ symbol to execute the script</li>
+</ul>
+</section>
+<section id="retrieve-values-from-the-table-1" class="level4">
+<h4 class="anchored" data-anchor-id="retrieve-values-from-the-table-1">Retrieve values from the table</h4>
+<p>After inserting the campaigns, you can retrieve them using a simple SELECT query. For instance:</p>
+<ul>
+<li>Open a new query tab (Tools &gt; Query Tool) in <em>pgAdmin4</em></li>
+<li>Copy the SQL statement below and paste it into the Query Tab</li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> campaigns;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        return container.innerHTML
+      } else {
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© <a href="https://www.kirenz.com/">Jan Kirenz</a>, 2023</p>
+</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="./cli.html">
+<p>Command-line</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./sql.html">
+<p>SQL</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./python.html">
+<p>Python</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./github.html">
+<p>GitHub</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./slide.html">
+<p>Slides</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://moodle.hdm-stuttgart.de/login/index.php">
+      <i class="bi bi-person-circle" role="img" aria-label="Moodle">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lab - Workflow</title>
+<title>Toolkit - Command-line</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -76,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Lab</span>
+    <span class="navbar-title">Toolkit</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -90,16 +90,24 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link active" href="./cli.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Command-line</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./sql.html" rel="" target="">
+ <span class="menu-text">SQL</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./python.html" rel="" target="">
+ <span class="menu-text">Python</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./github.html" rel="" target="">
+ <span class="menu-text">GitHub</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./slide.html" rel="" target="">
  <span class="menu-text">Slides</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./resources.html" rel="" target="">
- <span class="menu-text">Resources</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./assignments.html" rel="" target="">
- <span class="menu-text">Assignments</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -113,14 +121,20 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#basics" id="toc-basics" class="nav-link active" data-scroll-target="#basics">Basics</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Workflow</h1>
+<h1 class="title">Command-line</h1>
 </div>
 
 
@@ -136,18 +150,120 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>This is a Quarto slidedeck.</p>
-<ol type="1">
-<li>Create new labs GitHub-Repo</li>
-<li>Create new branch <code>gh-pages</code></li>
-<li>Change settings in page: gh-pages and root</li>
-<li>Open VS Code</li>
-<li>Change Quarto seetings in files</li>
-<li>Render all in terminal: quarto render</li>
-<li>Push to GitHub</li>
-</ol>
+<section id="basics" class="level2">
+<h2 class="anchored" data-anchor-id="basics">Basics</h2>
+<p>Operating systems like Windows and macOS implement a command-line interface (other names for the command line are: cmd, CLI, prompt, console or terminal) in a shell for interactive access to operating system functions or services.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A command-line interface (CLI) processes commands to a computer program in the form of lines of text.</p>
+</div>
+</div>
+<p>We sometimes use the command line interface so you should be familiar with basic commands. If you aren’t familiar with the terminal, read this short introduction to the command-line interface:</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+To do
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><a href="https://tutorial.djangogirls.org/en/intro_to_command_line/">Introduction to the command-line interface</a></li>
+</ul>
+</div>
+</div>
+<p>Here is a summary of some useful commands:</p>
+<table class="table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 21%">
+<col style="width: 23%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Command (Windows)</th>
+<th>Command (Mac OS / Linux)</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>exit</td>
+<td>exit</td>
+<td>close the window</td>
+<td><strong>exit</strong></td>
+</tr>
+<tr class="even">
+<td>cd</td>
+<td>cd</td>
+<td>change directory</td>
+<td><strong>cd test</strong>, <strong>cd..</strong> (Windows) or <strong>cd ..</strong> (Mac)</td>
+</tr>
+<tr class="odd">
+<td>cd</td>
+<td>pwd</td>
+<td>show the current directory</td>
+<td><strong>cd</strong> (Windows) or <strong>pwd</strong> (Mac OS / Linux)</td>
+</tr>
+<tr class="even">
+<td>dir</td>
+<td>ls</td>
+<td>list directories/files</td>
+<td><strong>dir</strong></td>
+</tr>
+<tr class="odd">
+<td>copy</td>
+<td>cp</td>
+<td>copy file</td>
+<td><strong>copy c:.txt c:.txt</strong></td>
+</tr>
+<tr class="even">
+<td>move</td>
+<td>mv</td>
+<td>move file</td>
+<td><strong>move c:.txt c:.txt</strong></td>
+</tr>
+<tr class="odd">
+<td>mkdir</td>
+<td>mkdir</td>
+<td>create a new directory</td>
+<td><strong>mkdir testdirectory</strong></td>
+</tr>
+<tr class="even">
+<td>rmdir (or del)</td>
+<td>rm</td>
+<td>delete a file</td>
+<td><strong>del c:.txt</strong></td>
+</tr>
+<tr class="odd">
+<td>rmdir /S</td>
+<td>rm -r</td>
+<td>delete a directory</td>
+<td><strong>rm -r testdirectory</strong></td>
+</tr>
+<tr class="even">
+<td>[CMD] /?</td>
+<td>man [CMD]</td>
+<td>get help for a command</td>
+<td><strong>cd /?</strong> (Windows) or <strong>man cd</strong> (Mac OS / Linux)</td>
+</tr>
+</tbody>
+</table>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -476,18 +592,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
+    <a class="nav-link" href="./cli.html">
+<p>Command-line</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./sql.html">
+<p>SQL</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./python.html">
+<p>Python</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./github.html">
+<p>GitHub</p>
+</a>
+  </li>  
+    <li class="nav-item">
     <a class="nav-link" href="./slide.html">
 <p>Slides</p>
-</a>
-  </li>  
-    <li class="nav-item">
-    <a class="nav-link" href="./resources.html">
-<p>Resources</p>
-</a>
-  </li>  
-    <li class="nav-item">
-    <a class="nav-link" href="./assignments.html">
-<p>Assignments</p>
 </a>
   </li>  
 </ul>
@@ -495,7 +621,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
-    <a class="nav-link" href="https://e-learning.hdm-stuttgart.de/moodle/login/index.php">
+    <a class="nav-link" href="https://moodle.hdm-stuttgart.de/login/index.php">
       <i class="bi bi-person-circle" role="img" aria-label="Moodle">
 </i> 
     </a>

@@ -2,4 +2,16 @@
 title: "Slides"
 ---
 
-This is a Quarto slidedeck. 
+Most of the slides are made with the open source solutions [Quarto](https://quarto.org/) (scientific and technical publishing system) and [Revealjs](https://revealjs.com/) (HTML presentation framework).
+
+::: {.callout-note}
+## To do
+
+- [Read this tutorial](/slides/slides.qmd) to learn how to
+  - Navigate through the slides
+  - Show all slides
+  - Save slides as PDF
+  - Print slides
+
+:::
+

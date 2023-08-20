@@ -21,7 +21,9 @@ website:
       - text: "Python"
         href: python.qmd
       - text: "GitHub"
-        href: github.qmd        
+        href: github.qmd
+      - text: "Slides"
+        href: slide.qmd         
     right:
       - icon: person-circle
         href: https://moodle.hdm-stuttgart.de/login/index.php
@@ -34,6 +36,7 @@ website:
       - sql.qmd
       - python.qmd
       - github.qmd
+      - slide.qmd
 
 format:
   html:

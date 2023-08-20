@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lab - Resources</title>
+<title>Toolkit - GitHub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -110,7 +76,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Lab</span>
+    <span class="navbar-title">Toolkit</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -124,16 +90,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./cli.html" rel="" target="">
+ <span class="menu-text">Command-line</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./sql.html" rel="" target="">
+ <span class="menu-text">SQL</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./python.html" rel="" target="">
+ <span class="menu-text">Python</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./github.html" rel="" target="" aria-current="page">
+ <span class="menu-text">GitHub</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./slide.html" rel="" target="">
  <span class="menu-text">Slides</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./resources.html" rel="" target="" aria-current="page">
- <span class="menu-text">Resources</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./assignments.html" rel="" target="">
- <span class="menu-text">Assignments</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -151,9 +125,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
-  <li><a href="#anaconda-environment" id="toc-anaconda-environment" class="nav-link" data-scroll-target="#anaconda-environment">Anaconda Environment</a></li>
+  <li><a href="#basics" id="toc-basics" class="nav-link active" data-scroll-target="#basics">Basics</a></li>
+  <li><a href="#github-account" id="toc-github-account" class="nav-link" data-scroll-target="#github-account">GitHub-account</a></li>
   </ul>
 </nav>
     </div>
@@ -162,7 +135,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Resources</h1>
+<h1 class="title">GitHub</h1>
 </div>
 
 
@@ -178,48 +151,82 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="prerequisites" class="level2">
-<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
-<p>To start this lab, you’ll need:</p>
+<section id="basics" class="level2">
+<h2 class="anchored" data-anchor-id="basics">Basics</h2>
+<p><a href="https://github.com/">GitHub</a> is a provider of internet hosting for software development and version control using Git.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We will use GitHub as a platform for web hosting and collaboration.</p>
+</div>
+</div>
+<p>Git is a version control system – like the “Track Changes” features from Microsoft Word with many more additional features.</p>
 <ul>
-<li>MySQL, MySQL Workbench and a database called <code>db_ecommerce</code></li>
-<li>Anaconda</li>
-<li>Visual Studio Code</li>
-<li>Visual Studio Code Extensions</li>
+<li>Git can be used to store content </li>
+<li>Code can be changed and other developers can add code in parallel.</li>
+<li>Git has a remote repository which is stored in a server and a local repository which is stored in the computer of each developer.</li>
 </ul>
-<p>Use MySQL Workbench to create a new database called <code>db_ecommerce</code></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">DROP</span> <span class="kw">DATABASE</span> <span class="cf">IF</span> <span class="kw">EXISTS</span> `db_ecommerce`;</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">DATABASE</span> `db_ecommerce`; </span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">USE</span> `db_ecommerce`;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w3jLJU7DT5E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+<p><br></p>
 </section>
-<section id="installation" class="level2">
-<h2 class="anchored" data-anchor-id="installation">Installation</h2>
+<section id="github-account" class="level2">
+<h2 class="anchored" data-anchor-id="github-account">GitHub-account</h2>
+<p>You need a free GitHub-account for our course. Please follow the instructions below (<em>in case you already have a GitHub account: please add your HdM-email address to your account</em>):</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+To do
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
-<li><p>MySQL (select “No thanks, just start my download”)</p>
-<ul>
-<li><a href="https://dev.mysql.com/downloads/installer/">Windows</a></li>
-<li><a href="https://dev.mysql.com/downloads/mysql/">Mac</a></li>
-</ul></li>
-<li><p><a href="https://dev.mysql.com/downloads/workbench/">MySQL Workbench</a></p></li>
-<li><p><a href="https://www.anaconda.com/download">Anaconda</a></p></li>
-<li><p><a href="https://code.visualstudio.com/">Visual Studio Code</a></p></li>
-<li><p><a href="https://vscode.dev/profile/github/94d1b9a0184dec88655f9622c87b866d">Visual Studio Code Extensions</a></p></li>
+<li><a href="https://github.com/join">Create a GitHub account with your HdM-email</a></li>
+<li>Verify your GitHub email</li>
+<li>You may also sign up fot the free <a href="https://education.github.com/pack">student developer pack</a><br>
+</li>
+<li>Install the <a href="https://code.visualstudio.com/docs/editor/github">VS Code GitHub extension</a></li>
+<li><a href="https://desktop.github.com/">Install GitHub desktop to synchronize your machine with GitHub</a></li>
 </ul>
-</section>
-<section id="anaconda-environment" class="level2">
-<h2 class="anchored" data-anchor-id="anaconda-environment">Anaconda Environment</h2>
-<p>Install the Anaconda Environment <code>env-mr-pip.yml</code></p>
+</div>
+</div>
+<p>Next, learn how to set up, authenticate, and configure GitHub Desktop to allow you to contribute to projects directly from your machine.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+To do
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
-<li><p><a href="https://github.com/kirenz/environments">💾 Anaconda Environment</a></p></li>
-<li><p><a href="">🖥 Slides</a></p></li>
-<li><p><a href="">📑 Slides</a></p></li>
-<li><p><a href="https://github.com/kirenz/environments">💾 Anaconda Environment</a></p></li>
-<li><p><a href="">💻 Notebook</a></p></li>
-<li><p><a href="">📚 Reading</a></p></li>
-<li><p><a href="">☑️ Questions</a></p></li>
-<li><p><a href="">Mindmap</a></p></li>
-<li><p><a href="">Weekly feedback</a></p></li>
+<li><a href="https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop">Getting started with GitHub Desktop</a></li>
 </ul>
+</div>
+</div>
+<!--
+### GitHub SSH Key
+
+Using the SSH protocol, you can connect and authenticate to remote servers and services from your terminal. With SSH keys, you can connect to GitHub without supplying your username and personal access token at each visit.
+
+1. [Check for existing SSH keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys)
+1. [Generate a SSH-Key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+1. [Add a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+1. [Test connection](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection)
+-->
 
 
 </section>
@@ -551,18 +558,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
+    <a class="nav-link" href="./cli.html">
+<p>Command-line</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./sql.html">
+<p>SQL</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./python.html">
+<p>Python</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./github.html">
+<p>GitHub</p>
+</a>
+  </li>  
+    <li class="nav-item">
     <a class="nav-link" href="./slide.html">
 <p>Slides</p>
-</a>
-  </li>  
-    <li class="nav-item">
-    <a class="nav-link" href="./resources.html">
-<p>Resources</p>
-</a>
-  </li>  
-    <li class="nav-item">
-    <a class="nav-link" href="./assignments.html">
-<p>Assignments</p>
 </a>
   </li>  
 </ul>
@@ -570,7 +587,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
-    <a class="nav-link" href="https://e-learning.hdm-stuttgart.de/moodle/login/index.php">
+    <a class="nav-link" href="https://moodle.hdm-stuttgart.de/login/index.php">
       <i class="bi bi-person-circle" role="img" aria-label="Moodle">
 </i> 
     </a>
