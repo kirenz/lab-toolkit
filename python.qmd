@@ -50,7 +50,7 @@ Watch this video to get a first impression of Colab:
 
 Let`s start your first Colab notebook to get an overview about some basic features:
 
-::: {.callout-warning}
+::: {.callout-important}
 ## To do
 - [Colab basic features overview](https://colab.research.google.com/notebooks/basic_features_overview.ipynb)
 :::
@@ -66,7 +66,7 @@ Markdown is a simple way to format text that looks great on any device.
 
 Review this sites to learn more about Markdown:
 
-::: {.callout-warning}
+::: {.callout-important}
 ## To do
 - [Interactive Colab Markdown guide](https://colab.research.google.com/notebooks/markdown_guide.ipynb)
 
@@ -89,7 +89,7 @@ Anaconda's package manager `conda` makes it easy to manage multiple data environ
 ::: {.callout-note collapse="true"}
 ## Expand to learn about conda
 
-*conda* analyses the current environment including everything currently installed, and, together with any version limitations specified (e.g. the user may wish to have TensorFlow version 2.0 or higher), works out how to install a compatible set of dependencies, and shows a warning if this cannot be done. 
+*conda* analyses the current environment including everything currently installed, and, together with any version limitations specified (e.g. the user may wish to have TensorFlow version 2.0 or higher), works out how to install a compatible set of dependencies, and shows a important if this cannot be done. 
 :::
 
 Instead of conda, you can also use `pip` (the standard package installer for Python) to install packages. 
@@ -114,7 +114,7 @@ In your command line tool, type `python --version` to see which Python version y
 
 Install the latest version of the Anaconda Distribution:
 
-::: {.callout-warning}
+::: {.callout-important}
 ## To do
 
 - [Anaconda installation](https://www.anaconda.com/download)
@@ -123,7 +123,7 @@ Install the latest version of the Anaconda Distribution:
 
 After you have installed Anaconda, you can update it. The following commands will update all packages in the default "base" environment to the latest version but will not update Python:
 
-::: {.callout-warning}
+::: {.callout-important}
 ## To do
 
 - On *Windows* open the Start menu and open an ["Anaconda Command Prompt"](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html#starting-conda). 
@@ -141,7 +141,7 @@ Now follow the steps described in the next section.
 After you have installed and updated Anaconda, you can install the modules you need for a specific lab in a new environment. 
 
 
-::: {.callout-warning}
+::: {.callout-important}
 ## To do
 - Go to [GitHub course environments](https://github.com/kirenz/environments)
 
@@ -229,7 +229,7 @@ Visual Studio Code is a code editor that can be used with a variety of programmi
 
 Install VS Code:
 
-::: {.callout-warning}
+::: {.callout-important}
 ## To do
 - [Install Code](https://code.visualstudio.com/)
 :::
@@ -240,7 +240,7 @@ The features that Visual Studio Code includes out-of-the-box are just the start.
 
 Let's install some important extensions:
 
-::: {.callout-warning}
+::: {.callout-important}
 ## To do
 
 - [Visual Studio Code Extensions](https://vscode.dev/profile/github/94d1b9a0184dec88655f9622c87b866d)
@@ -251,7 +251,7 @@ Let's install some important extensions:
 
 We usually work with Jupyter Notebook files in VS Code:
 
-::: {.callout-warning}
+::: {.callout-important}
 ## To do
 - [Learn how to use Jupyter Notebooks in VS Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)
 
