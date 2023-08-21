@@ -1,16 +1,15 @@
 ---
 title: "Environments"
+number-sections: true
 ---
-
 
 ## Working environment
 
 ### Folder structure
 
-Before you start a lab, you should always first create a new folder on your machine with the name of the lab (e.g. `clustering`). 
-Here, we create a parent directory called "labs" where we can store the different labs. Usually we also create some subdirectories like "code" and "data".
+Before you start a lab, you should always first create a new folder on your machine with the name of the lab (e.g. `clustering`). Usually we also create some subdirectories like "code" and "data".
 
-Below is a tutorial on how to create a new folder called "labs" using the command line interface for both Windows and macOS.
+Here, we create a parent directory called "labs" where we can store the different labs. Below is a tutorial on how to create a new folder called "labs" using the command line interface for both Windows and macOS.
 
 #### Windows
 
@@ -48,7 +47,19 @@ mkdir labs
 ```
 
 
-## Environment file
+## Create OpenAI API Key
+
+If you need access to models from OpenAI, proceed as follows:
+
+- Go to the [OpenAI website](https://openai.com/api/) and create an account
+- If you login to your account, choose the *API* menu
+- Click on the name of your account at the top right corner of the page
+- Select "View API Keys"
+- Choose: "Create new secret key"
+- Copy this key and use it in an environment file (see @sec-envfile)
+
+
+## Environment file {#sec-envfile}
 
 In some labs we need to access a database or an API. Since we do not want to include passwords and API-keys in our Python scripts, we need to create an environment ("env") file. A `.env` file is a simple configuration file where environment-specific settings, such as database credentials or API keys, are stored in key-value pairs. 
 
@@ -100,7 +111,7 @@ Below are tutorials on how to create a `.env` file.
 After you have installed and updated Anaconda (see [these instructions](/python.qmd)), you can install the modules you need for a specific lab in a new environment. 
 
 
-::: {.callout-warning}
+::: {.callout-important}
 ## To do
 - Go to [GitHub course environments](https://github.com/kirenz/environments)
 
