@@ -114,6 +114,5 @@ After you have installed and updated Anaconda (see [these instructions](/python.
 ::: {.callout-important}
 ## To do
 - Go to [GitHub course environments](https://github.com/kirenz/environments)
-
 - Follow the instructions in the GitHub repo and install the environment `env-lab` 
 :::
