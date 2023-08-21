@@ -17,7 +17,7 @@ A Relational Database Management System (RDBMS) is a type of database system whe
 It uses a structured query language (SQL) to manage, manipulate, and retrieve data stored in relational databases.
 
 
-::: {.callout-warning}
+::: {.callout-important}
 ## To do
 
 - Install MySQL (select "No thanks, just start my download")
@@ -32,7 +32,7 @@ It uses a structured query language (SQL) to manage, manipulate, and retrieve da
 
 Essentially, it's a one-stop-shop for managing and working with MySQL databases.
 
-::: {.callout-warning}
+::: {.callout-important}
 ## To do
 
 - Install [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
@@ -128,7 +128,7 @@ FROM campaigns;
 
 *PostgreSQL* (often pronounced "Post-gress-Q-L") is an advanced, open-source relational database management system (RDBMS). 
 
-::: {.callout-warning}
+::: {.callout-important}
 ## To do
 
 - [Install PostgreSQL](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
