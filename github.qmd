@@ -44,7 +44,7 @@ You should use a `.gitignore` file in your repository's root directory to tell G
 ::: {.callout-important}
 ## To do
 
-- [Download this .gitgnore template](/.gitgnore)
+- [Download this .gitgnore template](https://raw.githubusercontent.com/kirenz/lab-toolkit/main/.gitignore)
 - Place the file in your repository's root directory
 - Rename the file to `.gitgnore`
 
