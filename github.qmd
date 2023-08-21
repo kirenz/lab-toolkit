@@ -23,7 +23,7 @@ Git is a version control system -- like the "Track Changes" features from Micros
 
 <br>
 
-## Create account
+# Create account
 
 You need a free GitHub-account for our course. Please follow the instructions below (*in case you already have a GitHub account: please add your HdM-email address to your account*):
 
@@ -37,7 +37,7 @@ You need a free GitHub-account for our course. Please follow the instructions be
 
 :::
 
-## Use .gitgnore 
+# Use .gitgnore 
 
 You should use a `.gitignore` file in your repository's root directory to tell Git which files and directories to ignore when you make a commit. This means that these files will only exist on your local machine and not in your remote GitHub repository. For example, we don't want to commit our API-keys stored in `.env` to our remote GitHub repository.
 
@@ -53,7 +53,7 @@ You should use a `.gitignore` file in your repository's root directory to tell G
 <!-- To learn more about API saftey, review [this information]( https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety). -->
 
 
-## GitHub Desktop
+# GitHub Desktop
 
 Next, learn how to set up, authenticate, and configure GitHub Desktop to allow you to contribute to projects directly from your machine.
 
