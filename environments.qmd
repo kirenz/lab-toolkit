@@ -3,15 +3,13 @@ title: "Environments"
 number-sections: true
 ---
 
-## Working environment
-
-### Folder structure
+# Folder structure
 
 Before you start a lab, you should always first create a new folder on your machine with the name of the lab (e.g. `clustering`). Usually we also create some subdirectories like "code" and "data".
 
 Here, we create a parent directory called "labs" where we can store the different labs. Below is a tutorial on how to create a new folder called "labs" using the command line interface for both Windows and macOS.
 
-#### Windows
+## Windows
 
 1. Press `Windows + R` keys simultaneously to open the Run dialog.
 2. Type `cmd` and press `Enter` to open the Command Prompt.
@@ -29,7 +27,7 @@ cd C:\Users\YourUsername\your\path
 mkdir labs
 ```
 
-#### macOS/Linux
+## macOS/Linux
 
 1. Open the Terminal application. You can find it in the Applications > Utilities folder or search for it using Spotlight.
 2. Navigate to the directory where you want to create the new folder using the cd (change directory) command.
@@ -46,8 +44,7 @@ cd /Users/YourUsername/your/path
 mkdir labs
 ```
 
-
-## Create OpenAI API Key
+# Create OpenAI API Key
 
 If you need access to models from OpenAI, proceed as follows:
 
@@ -59,19 +56,24 @@ If you need access to models from OpenAI, proceed as follows:
 - Copy this key and use it in an environment file (see @sec-envfile)
 
 
-## Environment file {#sec-envfile}
+# Environment file {#sec-envfile}
 
-In some labs we need to access a database or an API. Since we do not want to include passwords and API-keys in our Python scripts, we need to create an environment ("env") file. A `.env` file is a simple configuration file where environment-specific settings, such as database credentials or API keys, are stored in key-value pairs. 
+In some labs we need to access a database or an API. Since we do not want to include passwords and API-keys in our Python scripts, we need to create an environment ("env") file. 
+
+A `.env` file is a simple configuration file where environment-specific settings, such as database credentials or API keys, are stored in key-value pairs. 
 
 By separating these settings from the main application code, we can ensure that sensitive or environment-specific information is both easily configurable and not inadvertently shared or published. The `.` before a filename serves a specific purpose in many operating systems: A filename that starts with a `.` is considered a "hidden" file. 
 
-:::{.callout-note}
 We will use libraries like [python-dotenv](https://pypi.org/project/python-dotenv/) to load the variables from the file into our Python script automatically.
+
+:::{.callout-warning}
+If you use *GitHub*, make sure to ignore the `.env` file (see [use .gitgnore](/github.qmd)) 
 :::
 
 Below are tutorials on how to create a `.env` file.
 
-#### macOS
+
+## macOS
 
 1. [Download the `env` file template](/.env) 
 2. Open Finder and navigate to the "Downloads" folder 
@@ -83,7 +85,7 @@ Below are tutorials on how to create a `.env` file.
 8. If you want to obscure the files again, press the same "Command" + "Shift" + "." (period) combination.
 
 
-#### Windows 10
+## Windows 10
 
 1. [Download the `env` file template](/.env) 
 2. Open File Explorer from the taskbar. 
@@ -94,7 +96,7 @@ Below are tutorials on how to create a `.env` file.
 7. To view the hidden file: Select View > Options > Change folder and search options.
 8. Select the View tab and, in Advanced settings, select Show hidden files, folders, and drives and OK.
 
-#### Windows 11
+## Windows 11
 
 1. [Download the `env` file template](/.env) 
 2. Open File Explorer from the taskbar. 
@@ -106,7 +108,9 @@ Below are tutorials on how to create a `.env` file.
 
 
 
-## Anaconda environment
+
+
+# Anaconda environment
 
 After you have installed and updated Anaconda (see [these instructions](/python.qmd)), you can install the modules you need for a specific lab in a new environment. 
 
