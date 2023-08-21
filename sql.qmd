@@ -12,6 +12,8 @@ A Relational Database Management System (RDBMS) is a type of database system whe
 
 # MySQL
 
+## MySQL RDBMS
+
 *MySQL* (pronounced "My S-Q-L" or sometimes "My Sequel") is a powerful open-source relational database management system (RDBMS). 
 
 It uses a structured query language (SQL) to manage, manipulate, and retrieve data stored in relational databases.
@@ -126,13 +128,15 @@ FROM campaigns;
 
 # PostgreSQL
 
+## PostgreSQL RDBMS
+
+
 *PostgreSQL* (often pronounced "Post-gress-Q-L") is an advanced, open-source relational database management system (RDBMS). 
 
 ::: {.callout-important}
 ## To do
 
 - [Install PostgreSQL](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
-
 - During the installation process, select "PostgreSQL Server", "pgAdmin4" and "Command Line Tools"
 - `Password`: Provide a password (make sure to make a note - you can no longer change the password)
 - `Port`: Use the suggested port
