@@ -1,9 +1,11 @@
+# ignore environment files
+.env
+code/.env
+*/.env
 
+# ignore macOS folder attribute files
 .DS_Store
 */.DS_Store
-code/.env
+
+# other files to ignore
 /.quarto/
-workflow.qmd
-quiz.txt
-howto.qmd
-.env
