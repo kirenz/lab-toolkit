@@ -44,16 +44,56 @@ cd /Users/YourUsername/your/path
 mkdir labs
 ```
 
-# Create OpenAI API Key
+# OpenAI 
 
-If you need access to models from OpenAI, proceed as follows:
+In some of our labs, we use GPT-3.5 Turbo or GPT-4 from OpenAI in Python applications with. Therefore, we need access to OpenAI's API. 
 
+:::{.callout-warning}
+Note that you need to provide a payment method in order to get access to OpenAI services. However, we will typically stay below the billing limit so you don't have to pay anything. We also define an upper limit for invoices so that no unexpected costs can arise (see @sec-invoice).
+:::
+
+## Create API Key
+
+
+If you need access to services from *OpenAI*, proceed as follows 
+
+:::{.callout-important}
+## To do
 - Go to the [OpenAI website](https://openai.com/api/) and create an account
-- If you login to your account, choose the *API* menu
+- If you log in to your account, choose the *API* menu
 - Click on the name of your account at the top right corner of the page
 - Select "View API Keys"
 - Choose: "Create new secret key"
 - Copy this key and use it in an environment file (see @sec-envfile)
+:::
+
+## Invoice limit {#sec-invoice}
+
+Define an upper limit for invoices so that no unexpected costs can arise:
+
+:::{.callout-important}
+## To do
+- Go to the  and create an account
+- [Log in](https://openai.com/api/) to your account and choose the *API* menu
+- Click on the name of your account at the top right corner of the page
+- Select "Manage Account" > "Billing" > "Usage Limits"
+- Provide a "Hard Limit" and "Soft Limit" (e.g., $10.00 and $5.00)
+:::
+
+
+# HuggingFace API Key
+
+If you need access to services from *HuggingFace*, proceed as follows:
+
+:::{.callout-important}
+## To do
+- Go to the [HuggingFace website](https://huggingface.co/join) and create an account
+- [Log in](https://huggingface.co/login) to your account
+- Click on the name of your account at the top right corner of the page
+- Select "Settings"
+- Choose: "Access Tokens" and select "New token"
+- Copy this token and use it in an environment file (see @sec-envfile)
+:::
 
 
 # Environment file {#sec-envfile}
@@ -71,7 +111,6 @@ If you use *GitHub*, make sure to ignore the `.env` file (see [use .gitgnore](/g
 :::
 
 Below are tutorials on how to create a `.env` file.
-
 
 ## macOS
 
@@ -105,8 +144,6 @@ Below are tutorials on how to create a `.env` file.
 5. Save the changes.
 6. Rename the file from `env` to `.env` (this will hide the file)
 7. To view the hidden file: Select View > Show > Hidden items.
-
-
 
 
 
