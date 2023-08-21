@@ -16,7 +16,7 @@ You will need to:
 
 1. Install a [SQL](/sql.qmd) environment with a *MySQL database* and *MySQL Workbench*
 2. Set up a [Python](/python.qmd) devolopment environment (we use Anaconda and Visual Studio Code)
-3. Prepare a [working environment](/environments.qmd) (create folders and a .env file) 
+3. Prepare a [working environment](/environments.qmd) (create folders and --if necessary-- obtain API keays and create a .env file) 
 4. Create a [GitHub](/github.qmd) account for software development and version control)
 5. Make yourself familiar with the [slide toolkit](/slide.qmd). 
 
