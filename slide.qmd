@@ -4,7 +4,7 @@ title: "Slides"
 
 Most of the slides are made with the open source solutions [Quarto](https://quarto.org/) (scientific and technical publishing system) and [Revealjs](https://revealjs.com/) (HTML presentation framework).
 
-::: {.callout-note}
+::: {.callout-important}
 ## To do
 
 - [🖥️ Read this tutorial](/slides/slides.qmd) to learn how to
