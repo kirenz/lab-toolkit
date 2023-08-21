@@ -126,8 +126,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#basics" id="toc-basics" class="nav-link active" data-scroll-target="#basics">Basics</a></li>
-  <li><a href="#github-account" id="toc-github-account" class="nav-link" data-scroll-target="#github-account">GitHub-account</a></li>
+  <li><a href="#basics" id="toc-basics" class="nav-link active" data-scroll-target="#basics"><span class="header-section-number">1</span> Basics</a>
+  <ul class="collapse">
+  <li><a href="#create-account" id="toc-create-account" class="nav-link" data-scroll-target="#create-account"><span class="header-section-number">1.1</span> Create account</a></li>
+  <li><a href="#use-.gitgnore" id="toc-use-.gitgnore" class="nav-link" data-scroll-target="#use-.gitgnore"><span class="header-section-number">1.2</span> Use .gitgnore</a></li>
+  <li><a href="#github-desktop" id="toc-github-desktop" class="nav-link" data-scroll-target="#github-desktop"><span class="header-section-number">1.3</span> GitHub Desktop</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -151,8 +155,8 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="basics" class="level2">
-<h2 class="anchored" data-anchor-id="basics">Basics</h2>
+<section id="basics" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Basics</h1>
 <p><a href="https://github.com/">GitHub</a> is a provider of internet hosting for software development and version control using Git.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -167,7 +171,7 @@ Note
 <p>We will use GitHub as a platform for web hosting and collaboration.</p>
 </div>
 </div>
-<p>Git is a version control system – like the “Track Changes” features from Microsoft Word with many more additional features.</p>
+<p>Git is a version control system – like the “Track Changes” features from Microsoft Word with many more additional features:</p>
 <ul>
 <li>Git can be used to store content </li>
 <li>Code can be changed and other developers can add code in parallel.</li>
@@ -177,11 +181,10 @@ Note
 <iframe width="560" height="315" src="https://www.youtube.com/embed/w3jLJU7DT5E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 <p><br></p>
-</section>
-<section id="github-account" class="level2">
-<h2 class="anchored" data-anchor-id="github-account">GitHub-account</h2>
+<section id="create-account" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="create-account"><span class="header-section-number">1.1</span> Create account</h2>
 <p>You need a free GitHub-account for our course. Please follow the instructions below (<em>in case you already have a GitHub account: please add your HdM-email address to your account</em>):</p>
-<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -197,12 +200,14 @@ To do
 <li>You may also sign up fot the free <a href="https://education.github.com/pack">student developer pack</a><br>
 </li>
 <li>Install the <a href="https://code.visualstudio.com/docs/editor/github">VS Code GitHub extension</a></li>
-<li><a href="https://desktop.github.com/">Install GitHub desktop to synchronize your machine with GitHub</a></li>
 </ul>
 </div>
 </div>
-<p>Next, learn how to set up, authenticate, and configure GitHub Desktop to allow you to contribute to projects directly from your machine.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
+</section>
+<section id="use-.gitgnore" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="use-.gitgnore"><span class="header-section-number">1.2</span> Use .gitgnore</h2>
+<p>You should use a <code>.gitignore</code> file in your repository’s root directory to tell Git which files and directories to ignore when you make a commit. This means that these files will only exist on your local machine and not in your remote GitHub repository. For example, we don’t want to commit our API-keys stored in <code>.env</code> to our remote GitHub repository.</p>
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -213,6 +218,29 @@ To do
 </div>
 <div class="callout-body-container callout-body">
 <ul>
+<li><a href="./.gitgnore">Download this .gitgnore template</a></li>
+<li>Place the file in your repository’s root directory</li>
+<li>Rename the file to <code>.gitgnore</code></li>
+</ul>
+</div>
+</div>
+<!-- To learn more about API saftey, review [this information]( https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety). -->
+</section>
+<section id="github-desktop" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="github-desktop"><span class="header-section-number">1.3</span> GitHub Desktop</h2>
+<p>Next, learn how to set up, authenticate, and configure GitHub Desktop to allow you to contribute to projects directly from your machine.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+To do
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><a href="https://desktop.github.com/">Install GitHub desktop to synchronize your machine with GitHub</a></li>
 <li><a href="https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop">Getting started with GitHub Desktop</a></li>
 </ul>
 </div>
@@ -229,6 +257,7 @@ Using the SSH protocol, you can connect and authenticate to remote servers and s
 -->
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -160,18 +160,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#basics" id="toc-basics" class="nav-link active" data-scroll-target="#basics">Basics</a></li>
-  <li><a href="#mysql" id="toc-mysql" class="nav-link" data-scroll-target="#mysql">MySQL</a>
+  <li><a href="#basics" id="toc-basics" class="nav-link active" data-scroll-target="#basics"><span class="header-section-number">1</span> Basics</a></li>
+  <li><a href="#mysql" id="toc-mysql" class="nav-link" data-scroll-target="#mysql"><span class="header-section-number">2</span> MySQL</a>
   <ul class="collapse">
-  <li><a href="#mysql-workbench" id="toc-mysql-workbench" class="nav-link" data-scroll-target="#mysql-workbench">MySQL Workbench</a></li>
-  <li><a href="#create-a-database" id="toc-create-a-database" class="nav-link" data-scroll-target="#create-a-database">Create a Database</a></li>
-  <li><a href="#create-a-table" id="toc-create-a-table" class="nav-link" data-scroll-target="#create-a-table">Create a Table</a></li>
+  <li><a href="#mysql-workbench" id="toc-mysql-workbench" class="nav-link" data-scroll-target="#mysql-workbench"><span class="header-section-number">2.1</span> MySQL Workbench</a></li>
+  <li><a href="#create-a-database" id="toc-create-a-database" class="nav-link" data-scroll-target="#create-a-database"><span class="header-section-number">2.2</span> Create a Database</a></li>
+  <li><a href="#create-a-table" id="toc-create-a-table" class="nav-link" data-scroll-target="#create-a-table"><span class="header-section-number">2.3</span> Create a Table</a>
+  <ul class="collapse">
+  <li><a href="#create-a-simple-table" id="toc-create-a-simple-table" class="nav-link" data-scroll-target="#create-a-simple-table"><span class="header-section-number">2.3.1</span> Create a simple table</a></li>
+  <li><a href="#insert-values-into-the-table" id="toc-insert-values-into-the-table" class="nav-link" data-scroll-target="#insert-values-into-the-table"><span class="header-section-number">2.3.2</span> Insert values into the table</a></li>
+  <li><a href="#retrieve-values-from-the-table" id="toc-retrieve-values-from-the-table" class="nav-link" data-scroll-target="#retrieve-values-from-the-table"><span class="header-section-number">2.3.3</span> Retrieve values from the table</a></li>
   </ul></li>
-  <li><a href="#postgresql" id="toc-postgresql" class="nav-link" data-scroll-target="#postgresql">PostgreSQL</a>
+  </ul></li>
+  <li><a href="#postgresql" id="toc-postgresql" class="nav-link" data-scroll-target="#postgresql"><span class="header-section-number">3</span> PostgreSQL</a>
   <ul class="collapse">
-  <li><a href="#pgadmin4" id="toc-pgadmin4" class="nav-link" data-scroll-target="#pgadmin4">PgAdmin4</a></li>
-  <li><a href="#create-a-database-1" id="toc-create-a-database-1" class="nav-link" data-scroll-target="#create-a-database-1">Create a Database</a></li>
-  <li><a href="#create-a-table-1" id="toc-create-a-table-1" class="nav-link" data-scroll-target="#create-a-table-1">Create a Table</a></li>
+  <li><a href="#pgadmin4" id="toc-pgadmin4" class="nav-link" data-scroll-target="#pgadmin4"><span class="header-section-number">3.1</span> PgAdmin4</a>
+  <ul class="collapse">
+  <li><a href="#add-new-server" id="toc-add-new-server" class="nav-link" data-scroll-target="#add-new-server"><span class="header-section-number">3.1.1</span> Add New Server</a></li>
+  </ul></li>
+  <li><a href="#create-a-database-1" id="toc-create-a-database-1" class="nav-link" data-scroll-target="#create-a-database-1"><span class="header-section-number">3.2</span> Create a Database</a></li>
+  <li><a href="#create-a-table-1" id="toc-create-a-table-1" class="nav-link" data-scroll-target="#create-a-table-1"><span class="header-section-number">3.3</span> Create a Table</a>
+  <ul class="collapse">
+  <li><a href="#create-a-simple-table-1" id="toc-create-a-simple-table-1" class="nav-link" data-scroll-target="#create-a-simple-table-1"><span class="header-section-number">3.3.1</span> Create a simple table</a></li>
+  <li><a href="#insert-values-into-the-table-1" id="toc-insert-values-into-the-table-1" class="nav-link" data-scroll-target="#insert-values-into-the-table-1"><span class="header-section-number">3.3.2</span> Insert values into the table</a></li>
+  <li><a href="#retrieve-values-from-the-table-1" id="toc-retrieve-values-from-the-table-1" class="nav-link" data-scroll-target="#retrieve-values-from-the-table-1"><span class="header-section-number">3.3.3</span> Retrieve values from the table</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -196,16 +209,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="basics" class="level2">
-<h2 class="anchored" data-anchor-id="basics">Basics</h2>
+<section id="basics" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Basics</h1>
 <p><em>SQL</em> (Structured Query Language, pronounced “S-Q-L” or sometimes “Sequel”) is a standardized database language specifically used for managing and manipulating relational databases. Through SQL, users can create, retrieve, update, and delete data, as well as design and manage database structures.</p>
 <p>A Relational Database Management System (RDBMS) is a type of database system where data is stored in structured tables with rows and columns, facilitating complex queries and transactions. Popular open source examples include <em>MySQL</em> and <em>PostgreSQL</em>.</p>
 </section>
-<section id="mysql" class="level2">
-<h2 class="anchored" data-anchor-id="mysql">MySQL</h2>
+<section id="mysql" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> MySQL</h1>
 <p><em>MySQL</em> (pronounced “My S-Q-L” or sometimes “My Sequel”) is a powerful open-source relational database management system (RDBMS).</p>
 <p>It uses a structured query language (SQL) to manage, manipulate, and retrieve data stored in relational databases.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -224,11 +237,11 @@ To do
 </ul>
 </div>
 </div>
-<section id="mysql-workbench" class="level3">
-<h3 class="anchored" data-anchor-id="mysql-workbench">MySQL Workbench</h3>
+<section id="mysql-workbench" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="mysql-workbench"><span class="header-section-number">2.1</span> MySQL Workbench</h2>
 <p><em>MySQL Workbench</em> is a unified visual tool and provides features like data modeling, SQL development, and comprehensive administration tools like user administration.</p>
 <p>Essentially, it’s a one-stop-shop for managing and working with MySQL databases.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -245,8 +258,8 @@ To do
 </div>
 </div>
 </section>
-<section id="create-a-database" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-database">Create a Database</h3>
+<section id="create-a-database" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="create-a-database"><span class="header-section-number">2.2</span> Create a Database</h2>
 <p>Use <em>MySQL Workbench</em> to create a new database called <code>db_data</code></p>
 <ul>
 <li>Open a connection (use local-connection)</li>
@@ -260,11 +273,11 @@ To do
 <li>Click on the refresh symbol 🔃 to display the database (on the top left next to <code>SCHEMAS</code>)</li>
 </ul>
 </section>
-<section id="create-a-table" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-table">Create a Table</h3>
+<section id="create-a-table" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="create-a-table"><span class="header-section-number">2.3</span> Create a Table</h2>
 <p>Next, we include a table in our database.</p>
-<section id="create-a-simple-table" class="level4">
-<h4 class="anchored" data-anchor-id="create-a-simple-table">Create a simple table</h4>
+<section id="create-a-simple-table" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="create-a-simple-table"><span class="header-section-number">2.3.1</span> Create a simple table</h3>
 <p>We’ll begin by creating a table named campaigns that will hold data about different marketing campaigns.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
@@ -307,8 +320,8 @@ Columns in marketing campaigns table
 <li>Expand “Tables” &gt; “campaigns” &gt; “Columns” to view the columns of the table</li>
 </ul>
 </section>
-<section id="insert-values-into-the-table" class="level4">
-<h4 class="anchored" data-anchor-id="insert-values-into-the-table">Insert values into the table</h4>
+<section id="insert-values-into-the-table" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="insert-values-into-the-table"><span class="header-section-number">2.3.2</span> Insert values into the table</h3>
 <p>Let’s now insert some sample marketing campaigns into our table:</p>
 <ul>
 <li>Open a new query tab (File &gt; New Query Tab) in MySQL Workbench</li>
@@ -322,8 +335,8 @@ Columns in marketing campaigns table
 <li>Click on the ⚡ symbol to execute the script</li>
 </ul>
 </section>
-<section id="retrieve-values-from-the-table" class="level4">
-<h4 class="anchored" data-anchor-id="retrieve-values-from-the-table">Retrieve values from the table</h4>
+<section id="retrieve-values-from-the-table" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="retrieve-values-from-the-table"><span class="header-section-number">2.3.3</span> Retrieve values from the table</h3>
 <p>After inserting the campaigns, you can retrieve them using a simple SELECT query. For instance:</p>
 <ul>
 <li>Open a new query tab (File -&gt; New Query Tab) in <em>MySQL Workbench</em></li>
@@ -334,10 +347,10 @@ Columns in marketing campaigns table
 </section>
 </section>
 </section>
-<section id="postgresql" class="level2">
-<h2 class="anchored" data-anchor-id="postgresql">PostgreSQL</h2>
+<section id="postgresql" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> PostgreSQL</h1>
 <p><em>PostgreSQL</em> (often pronounced “Post-gress-Q-L”) is an advanced, open-source relational database management system (RDBMS).</p>
-<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -356,11 +369,11 @@ To do
 </ul>
 </div>
 </div>
-<section id="pgadmin4" class="level3">
-<h3 class="anchored" data-anchor-id="pgadmin4">PgAdmin4</h3>
+<section id="pgadmin4" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="pgadmin4"><span class="header-section-number">3.1</span> PgAdmin4</h2>
 <p><em>pgAdmin4</em> is a popular open-source administration and management tool for the PostgreSQL relational database (it has already been installed together with PostgreSQL).</p>
-<section id="add-new-server" class="level4">
-<h4 class="anchored" data-anchor-id="add-new-server">Add New Server</h4>
+<section id="add-new-server" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="add-new-server"><span class="header-section-number">3.1.1</span> Add New Server</h3>
 <p>First, let’s create a new connection to a PostgreSQL database instance. We will call this instance <code>local-connection</code>.</p>
 <p>Once added, this server will appear in your list of servers in <em>pgAdmin4’s</em> interface, allowing you to quickly connect, manage, and query that database instance.</p>
 <ul>
@@ -377,8 +390,8 @@ To do
 </ul>
 </section>
 </section>
-<section id="create-a-database-1" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-database-1">Create a Database</h3>
+<section id="create-a-database-1" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="create-a-database-1"><span class="header-section-number">3.2</span> Create a Database</h2>
 <p>Use <em>pgadmin4</em> to create a new database called <code>db_data</code></p>
 <ul>
 <li>Right click on our new connection <code>local-connection</code> in the left sidebar and select: Create &gt; Database</li>
@@ -386,11 +399,11 @@ To do
 <li>We are done and you can select <code>Save</code></li>
 </ul>
 </section>
-<section id="create-a-table-1" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-table-1">Create a Table</h3>
+<section id="create-a-table-1" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="create-a-table-1"><span class="header-section-number">3.3</span> Create a Table</h2>
 <p>Next, we include a table in our database.</p>
-<section id="create-a-simple-table-1" class="level4">
-<h4 class="anchored" data-anchor-id="create-a-simple-table-1">Create a simple table</h4>
+<section id="create-a-simple-table-1" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="create-a-simple-table-1"><span class="header-section-number">3.3.1</span> Create a simple table</h3>
 <p>We’ll begin by creating a table named campaigns that will hold data about different marketing campaigns.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
@@ -432,8 +445,8 @@ Columns in marketing campaigns table
 <li>Select the database “db_data” at the left sidebar and expand “Schemas” &gt; “Tables” &gt; “campaigns” &gt; “Columns” to view the columns of the table</li>
 </ul>
 </section>
-<section id="insert-values-into-the-table-1" class="level4">
-<h4 class="anchored" data-anchor-id="insert-values-into-the-table-1">Insert values into the table</h4>
+<section id="insert-values-into-the-table-1" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="insert-values-into-the-table-1"><span class="header-section-number">3.3.2</span> Insert values into the table</h3>
 <p>Let’s now insert some sample marketing campaigns into our table:</p>
 <ul>
 <li>Open a new query tab (Tools &gt; Query Tool) in <em>pgAdmin4</em></li>
@@ -447,8 +460,8 @@ Columns in marketing campaigns table
 <li>Click on the ▶️ symbol to execute the script</li>
 </ul>
 </section>
-<section id="retrieve-values-from-the-table-1" class="level4">
-<h4 class="anchored" data-anchor-id="retrieve-values-from-the-table-1">Retrieve values from the table</h4>
+<section id="retrieve-values-from-the-table-1" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="retrieve-values-from-the-table-1"><span class="header-section-number">3.3.3</span> Retrieve values from the table</h3>
 <p>After inserting the campaigns, you can retrieve them using a simple SELECT query. For instance:</p>
 <ul>
 <li>Open a new query tab (Tools &gt; Query Tool) in <em>pgAdmin4</em></li>

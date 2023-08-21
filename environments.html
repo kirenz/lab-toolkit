@@ -160,12 +160,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#working-environment" id="toc-working-environment" class="nav-link active" data-scroll-target="#working-environment">Working environment</a>
+  <li><a href="#working-environment" id="toc-working-environment" class="nav-link active" data-scroll-target="#working-environment"><span class="header-section-number">1</span> Working environment</a>
   <ul class="collapse">
-  <li><a href="#folder-structure" id="toc-folder-structure" class="nav-link" data-scroll-target="#folder-structure">Folder structure</a></li>
+  <li><a href="#folder-structure" id="toc-folder-structure" class="nav-link" data-scroll-target="#folder-structure"><span class="header-section-number">1.1</span> Folder structure</a></li>
   </ul></li>
-  <li><a href="#environment-file" id="toc-environment-file" class="nav-link" data-scroll-target="#environment-file">Environment file</a></li>
-  <li><a href="#anaconda-environment" id="toc-anaconda-environment" class="nav-link" data-scroll-target="#anaconda-environment">Anaconda environment</a></li>
+  <li><a href="#create-openai-api-key" id="toc-create-openai-api-key" class="nav-link" data-scroll-target="#create-openai-api-key"><span class="header-section-number">2</span> Create OpenAI API Key</a></li>
+  <li><a href="#sec-envfile" id="toc-sec-envfile" class="nav-link" data-scroll-target="#sec-envfile"><span class="header-section-number">3</span> Environment file</a></li>
+  <li><a href="#anaconda-environment" id="toc-anaconda-environment" class="nav-link" data-scroll-target="#anaconda-environment"><span class="header-section-number">4</span> Anaconda environment</a></li>
   </ul>
 </nav>
     </div>
@@ -189,14 +190,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="working-environment" class="level2">
-<h2 class="anchored" data-anchor-id="working-environment">Working environment</h2>
-<section id="folder-structure" class="level3">
-<h3 class="anchored" data-anchor-id="folder-structure">Folder structure</h3>
-<p>Before you start a lab, you should always first create a new folder on your machine with the name of the lab (e.g.&nbsp;<code>clustering</code>). Here, we create a parent directory called “labs” where we can store the different labs. Usually we also create some subdirectories like “code” and “data”.</p>
-<p>Below is a tutorial on how to create a new folder called “labs” using the command line interface for both Windows and macOS.</p>
-<section id="windows" class="level4">
-<h4 class="anchored" data-anchor-id="windows">Windows</h4>
+<section id="working-environment" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="working-environment"><span class="header-section-number">1</span> Working environment</h2>
+<section id="folder-structure" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="folder-structure"><span class="header-section-number">1.1</span> Folder structure</h3>
+<p>Before you start a lab, you should always first create a new folder on your machine with the name of the lab (e.g.&nbsp;<code>clustering</code>). Usually we also create some subdirectories like “code” and “data”.</p>
+<p>Here, we create a parent directory called “labs” where we can store the different labs. Below is a tutorial on how to create a new folder called “labs” using the command line interface for both Windows and macOS.</p>
+<section id="windows" class="level4" data-number="1.1.1">
+<h4 data-number="1.1.1" class="anchored" data-anchor-id="windows"><span class="header-section-number">1.1.1</span> Windows</h4>
 <ol type="1">
 <li>Press <code>Windows + R</code> keys simultaneously to open the Run dialog.</li>
 <li>Type <code>cmd</code> and press <code>Enter</code> to open the Command Prompt.</li>
@@ -209,8 +210,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> labs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="macoslinux" class="level4">
-<h4 class="anchored" data-anchor-id="macoslinux">macOS/Linux</h4>
+<section id="macoslinux" class="level4" data-number="1.1.2">
+<h4 data-number="1.1.2" class="anchored" data-anchor-id="macoslinux"><span class="header-section-number">1.1.2</span> macOS/Linux</h4>
 <ol type="1">
 <li>Open the Terminal application. You can find it in the Applications &gt; Utilities folder or search for it using Spotlight.</li>
 <li>Navigate to the directory where you want to create the new folder using the cd (change directory) command.</li>
@@ -224,8 +225,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 </section>
-<section id="environment-file" class="level2">
-<h2 class="anchored" data-anchor-id="environment-file">Environment file</h2>
+<section id="create-openai-api-key" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="create-openai-api-key"><span class="header-section-number">2</span> Create OpenAI API Key</h2>
+<p>If you need access to models from OpenAI, proceed as follows:</p>
+<ul>
+<li>Go to the <a href="https://openai.com/api/">OpenAI website</a> and create an account</li>
+<li>If you login to your account, choose the <em>API</em> menu</li>
+<li>Click on the name of your account at the top right corner of the page</li>
+<li>Select “View API Keys”</li>
+<li>Choose: “Create new secret key”</li>
+<li>Copy this key and use it in an environment file (see <a href="#sec-envfile">Section&nbsp;3</a>)</li>
+</ul>
+</section>
+<section id="sec-envfile" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="sec-envfile"><span class="header-section-number">3</span> Environment file</h2>
 <p>In some labs we need to access a database or an API. Since we do not want to include passwords and API-keys in our Python scripts, we need to create an environment (“env”) file. A <code>.env</code> file is a simple configuration file where environment-specific settings, such as database credentials or API keys, are stored in key-value pairs.</p>
 <p>By separating these settings from the main application code, we can ensure that sensitive or environment-specific information is both easily configurable and not inadvertently shared or published. The <code>.</code> before a filename serves a specific purpose in many operating systems: A filename that starts with a <code>.</code> is considered a “hidden” file.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -242,8 +255,8 @@ Note
 </div>
 </div>
 <p>Below are tutorials on how to create a <code>.env</code> file.</p>
-<section id="macos" class="level4">
-<h4 class="anchored" data-anchor-id="macos">macOS</h4>
+<section id="macos" class="level4" data-number="3.0.1">
+<h4 data-number="3.0.1" class="anchored" data-anchor-id="macos"><span class="header-section-number">3.0.1</span> macOS</h4>
 <ol type="1">
 <li><a href="./.env">Download the <code>env</code> file template</a></li>
 <li>Open Finder and navigate to the “Downloads” folder</li>
@@ -255,8 +268,8 @@ Note
 <li>If you want to obscure the files again, press the same “Command” + “Shift” + “.” (period) combination.</li>
 </ol>
 </section>
-<section id="windows-10" class="level4">
-<h4 class="anchored" data-anchor-id="windows-10">Windows 10</h4>
+<section id="windows-10" class="level4" data-number="3.0.2">
+<h4 data-number="3.0.2" class="anchored" data-anchor-id="windows-10"><span class="header-section-number">3.0.2</span> Windows 10</h4>
 <ol type="1">
 <li><a href="./.env">Download the <code>env</code> file template</a></li>
 <li>Open File Explorer from the taskbar.</li>
@@ -268,8 +281,8 @@ Note
 <li>Select the View tab and, in Advanced settings, select Show hidden files, folders, and drives and OK.</li>
 </ol>
 </section>
-<section id="windows-11" class="level4">
-<h4 class="anchored" data-anchor-id="windows-11">Windows 11</h4>
+<section id="windows-11" class="level4" data-number="3.0.3">
+<h4 data-number="3.0.3" class="anchored" data-anchor-id="windows-11"><span class="header-section-number">3.0.3</span> Windows 11</h4>
 <ol type="1">
 <li><a href="./.env">Download the <code>env</code> file template</a></li>
 <li>Open File Explorer from the taskbar.</li>
@@ -281,10 +294,10 @@ Note
 </ol>
 </section>
 </section>
-<section id="anaconda-environment" class="level2">
-<h2 class="anchored" data-anchor-id="anaconda-environment">Anaconda environment</h2>
+<section id="anaconda-environment" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="anaconda-environment"><span class="header-section-number">4</span> Anaconda environment</h2>
 <p>After you have installed and updated Anaconda (see <a href="./python.html">these instructions</a>), you can install the modules you need for a specific lab in a new environment.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
