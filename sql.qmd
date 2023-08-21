@@ -1,15 +1,16 @@
 ---
 title: "SQL"
+number-sections: true
 ---
 
-## Basics
+# Basics
 
 *SQL* (Structured Query Language, pronounced "S-Q-L" or sometimes "Sequel") is a standardized database language specifically used for managing and manipulating relational databases. Through SQL, users can create, retrieve, update, and delete data, as well as design and manage database structures. 
 
 A Relational Database Management System (RDBMS) is a type of database system where data is stored in structured tables with rows and columns, facilitating complex queries and transactions. Popular open source examples include *MySQL* and *PostgreSQL*.
 
 
-## MySQL
+# MySQL
 
 *MySQL* (pronounced "My S-Q-L" or sometimes "My Sequel") is a powerful open-source relational database management system (RDBMS). 
 
@@ -25,7 +26,7 @@ It uses a structured query language (SQL) to manage, manipulate, and retrieve da
 :::
 
 
-### MySQL Workbench
+## MySQL Workbench
 
 *MySQL Workbench* is a unified visual tool and provides features like data modeling, SQL development, and comprehensive administration tools like user administration. 
 
@@ -38,7 +39,7 @@ Essentially, it's a one-stop-shop for managing and working with MySQL databases.
 - [Create a new connection](https://dev.mysql.com/doc/workbench/en/wb-mysql-connections-new.html) (use `local-connection` as "Connection Name"; click on "Store in Vault" and provide your password)
 :::
 
-### Create a Database
+## Create a Database
 
 Use *MySQL Workbench* to create a new database called `db_data`
 
@@ -55,11 +56,11 @@ USE `db_data`;
 - Click on the refresh symbol 🔃 to display the database (on the top left next to `SCHEMAS`)
 
 
-### Create a Table
+## Create a Table
 
 Next, we include a table in our database.
 
-#### Create a simple table
+### Create a simple table
 
 We'll begin by creating a table named campaigns that will hold data about different marketing campaigns. 
 
@@ -94,7 +95,7 @@ CREATE TABLE campaigns (
 - Expand "Tables" > "campaigns" > "Columns" to view the columns of the table
 
 
-#### Insert values into the table
+### Insert values into the table
 
 Let's now insert some sample marketing campaigns into our table:
 
@@ -110,7 +111,7 @@ INSERT INTO campaigns (name, start_date, end_date, budget, channel) VALUES
 
 - Click on the ⚡ symbol to execute the script
 
-#### Retrieve values from the table
+### Retrieve values from the table
 
 After inserting the campaigns, you can retrieve them using a simple SELECT query. For instance:
 
@@ -123,7 +124,7 @@ FROM campaigns;
 ```
 
 
-## PostgreSQL
+# PostgreSQL
 
 *PostgreSQL* (often pronounced "Post-gress-Q-L") is an advanced, open-source relational database management system (RDBMS). 
 
@@ -139,11 +140,11 @@ FROM campaigns;
 
 :::
 
-### PgAdmin4
+## PgAdmin4
 
 *pgAdmin4* is a popular open-source administration and management tool for the PostgreSQL relational database (it has already been installed together with PostgreSQL). 
 
-#### Add New Server
+### Add New Server
 
 First, let's create a new connection to a PostgreSQL database instance. We will call this instance `local-connection`.
 
@@ -159,7 +160,7 @@ Once added, this server will appear in your list of servers in *pgAdmin4's* inte
 - We are done and you can select `Save`
 
 
-### Create a Database
+## Create a Database
 
 Use *pgadmin4* to create a new database called `db_data`
 
@@ -168,11 +169,11 @@ Use *pgadmin4* to create a new database called `db_data`
 - We are done and you can select `Save`
 
 
-### Create a Table
+## Create a Table
 
 Next, we include a table in our database.
 
-#### Create a simple table
+### Create a simple table
 
 We'll begin by creating a table named campaigns that will hold data about different marketing campaigns. 
 
@@ -206,7 +207,7 @@ CREATE TABLE campaigns (
 - Select the database "db_data" at the left sidebar and expand "Schemas" > "Tables" > "campaigns" > "Columns" to view the columns of the table   
 
 
-#### Insert values into the table
+### Insert values into the table
 
 Let's now insert some sample marketing campaigns into our table:
 
@@ -223,7 +224,7 @@ INSERT INTO campaigns (name, start_date, end_date, budget, channel) VALUES
 - Click on the ▶️ symbol to execute the script
 
 
-#### Retrieve values from the table
+### Retrieve values from the table
 
 After inserting the campaigns, you can retrieve them using a simple SELECT query. For instance:
 
