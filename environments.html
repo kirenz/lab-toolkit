@@ -165,14 +165,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#windows" id="toc-windows" class="nav-link" data-scroll-target="#windows"><span class="header-section-number">1.1</span> Windows</a></li>
   <li><a href="#macoslinux" id="toc-macoslinux" class="nav-link" data-scroll-target="#macoslinux"><span class="header-section-number">1.2</span> macOS/Linux</a></li>
   </ul></li>
-  <li><a href="#create-openai-api-key" id="toc-create-openai-api-key" class="nav-link" data-scroll-target="#create-openai-api-key"><span class="header-section-number">2</span> Create OpenAI API Key</a></li>
-  <li><a href="#sec-envfile" id="toc-sec-envfile" class="nav-link" data-scroll-target="#sec-envfile"><span class="header-section-number">3</span> Environment file</a>
+  <li><a href="#openai" id="toc-openai" class="nav-link" data-scroll-target="#openai"><span class="header-section-number">2</span> OpenAI</a>
   <ul class="collapse">
-  <li><a href="#macos" id="toc-macos" class="nav-link" data-scroll-target="#macos"><span class="header-section-number">3.1</span> macOS</a></li>
-  <li><a href="#windows-10" id="toc-windows-10" class="nav-link" data-scroll-target="#windows-10"><span class="header-section-number">3.2</span> Windows 10</a></li>
-  <li><a href="#windows-11" id="toc-windows-11" class="nav-link" data-scroll-target="#windows-11"><span class="header-section-number">3.3</span> Windows 11</a></li>
+  <li><a href="#create-api-key" id="toc-create-api-key" class="nav-link" data-scroll-target="#create-api-key"><span class="header-section-number">2.1</span> Create API Key</a></li>
+  <li><a href="#sec-invoice" id="toc-sec-invoice" class="nav-link" data-scroll-target="#sec-invoice"><span class="header-section-number">2.2</span> Invoice limit</a></li>
   </ul></li>
-  <li><a href="#anaconda-environment" id="toc-anaconda-environment" class="nav-link" data-scroll-target="#anaconda-environment"><span class="header-section-number">4</span> Anaconda environment</a></li>
+  <li><a href="#huggingface-api-key" id="toc-huggingface-api-key" class="nav-link" data-scroll-target="#huggingface-api-key"><span class="header-section-number">3</span> HuggingFace API Key</a></li>
+  <li><a href="#sec-envfile" id="toc-sec-envfile" class="nav-link" data-scroll-target="#sec-envfile"><span class="header-section-number">4</span> Environment file</a>
+  <ul class="collapse">
+  <li><a href="#macos" id="toc-macos" class="nav-link" data-scroll-target="#macos"><span class="header-section-number">4.1</span> macOS</a></li>
+  <li><a href="#windows-10" id="toc-windows-10" class="nav-link" data-scroll-target="#windows-10"><span class="header-section-number">4.2</span> Windows 10</a></li>
+  <li><a href="#windows-11" id="toc-windows-11" class="nav-link" data-scroll-target="#windows-11"><span class="header-section-number">4.3</span> Windows 11</a></li>
+  </ul></li>
+  <li><a href="#anaconda-environment" id="toc-anaconda-environment" class="nav-link" data-scroll-target="#anaconda-environment"><span class="header-section-number">5</span> Anaconda environment</a></li>
   </ul>
 </nav>
     </div>
@@ -228,20 +233,96 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> labs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
-<section id="create-openai-api-key" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Create OpenAI API Key</h1>
-<p>If you need access to models from OpenAI, proceed as follows:</p>
+<section id="openai" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> OpenAI</h1>
+<p>In some of our labs, we use GPT-3.5 Turbo or GPT-4 from OpenAI in Python applications with. Therefore, we need access to OpenAI’s API.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note that you need to provide a payment method in order to get access to OpenAI services. However, we will typically stay below the billing limit so you don’t have to pay anything. We also define an upper limit for invoices so that no unexpected costs can arise (see <a href="#sec-invoice">Section&nbsp;2.2</a>).</p>
+</div>
+</div>
+<section id="create-api-key" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="create-api-key"><span class="header-section-number">2.1</span> Create API Key</h2>
+<p>If you need access to services from <em>OpenAI</em>, proceed as follows</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+To do
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
 <li>Go to the <a href="https://openai.com/api/">OpenAI website</a> and create an account</li>
-<li>If you login to your account, choose the <em>API</em> menu</li>
+<li>If you log in to your account, choose the <em>API</em> menu</li>
 <li>Click on the name of your account at the top right corner of the page</li>
 <li>Select “View API Keys”</li>
 <li>Choose: “Create new secret key”</li>
-<li>Copy this key and use it in an environment file (see <a href="#sec-envfile">Section&nbsp;3</a>)</li>
+<li>Copy this key and use it in an environment file (see <a href="#sec-envfile">Section&nbsp;4</a>)</li>
 </ul>
+</div>
+</div>
 </section>
-<section id="sec-envfile" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Environment file</h1>
+<section id="sec-invoice" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="sec-invoice"><span class="header-section-number">2.2</span> Invoice limit</h2>
+<p>Define an upper limit for invoices so that no unexpected costs can arise:</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+To do
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Go to the and create an account</li>
+<li><a href="https://openai.com/api/">Log in</a> to your account and choose the <em>API</em> menu</li>
+<li>Click on the name of your account at the top right corner of the page</li>
+<li>Select “Manage Account” &gt; “Billing” &gt; “Usage Limits”</li>
+<li>Provide a “Hard Limit” and “Soft Limit” (e.g., $10.00 and $5.00)</li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="huggingface-api-key" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> HuggingFace API Key</h1>
+<p>If you need access to services from <em>HuggingFace</em>, proceed as follows:</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+To do
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Go to the <a href="https://huggingface.co/join">HuggingFace website</a> and create an account</li>
+<li><a href="https://huggingface.co/login">Log in</a> to your account</li>
+<li>Click on the name of your account at the top right corner of the page</li>
+<li>Select “Settings”</li>
+<li>Choose: “Access Tokens” and select “New token”</li>
+<li>Copy this token and use it in an environment file (see <a href="#sec-envfile">Section&nbsp;4</a>)</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="sec-envfile" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Environment file</h1>
 <p>In some labs we need to access a database or an API. Since we do not want to include passwords and API-keys in our Python scripts, we need to create an environment (“env”) file.</p>
 <p>A <code>.env</code> file is a simple configuration file where environment-specific settings, such as database credentials or API keys, are stored in key-value pairs.</p>
 <p>By separating these settings from the main application code, we can ensure that sensitive or environment-specific information is both easily configurable and not inadvertently shared or published. The <code>.</code> before a filename serves a specific purpose in many operating systems: A filename that starts with a <code>.</code> is considered a “hidden” file.</p>
@@ -260,8 +341,8 @@ Warning
 </div>
 </div>
 <p>Below are tutorials on how to create a <code>.env</code> file.</p>
-<section id="macos" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="macos"><span class="header-section-number">3.1</span> macOS</h2>
+<section id="macos" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="macos"><span class="header-section-number">4.1</span> macOS</h2>
 <ol type="1">
 <li><a href="./.env">Download the <code>env</code> file template</a></li>
 <li>Open Finder and navigate to the “Downloads” folder</li>
@@ -273,8 +354,8 @@ Warning
 <li>If you want to obscure the files again, press the same “Command” + “Shift” + “.” (period) combination.</li>
 </ol>
 </section>
-<section id="windows-10" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="windows-10"><span class="header-section-number">3.2</span> Windows 10</h2>
+<section id="windows-10" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="windows-10"><span class="header-section-number">4.2</span> Windows 10</h2>
 <ol type="1">
 <li><a href="./.env">Download the <code>env</code> file template</a></li>
 <li>Open File Explorer from the taskbar.</li>
@@ -286,8 +367,8 @@ Warning
 <li>Select the View tab and, in Advanced settings, select Show hidden files, folders, and drives and OK.</li>
 </ol>
 </section>
-<section id="windows-11" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="windows-11"><span class="header-section-number">3.3</span> Windows 11</h2>
+<section id="windows-11" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="windows-11"><span class="header-section-number">4.3</span> Windows 11</h2>
 <ol type="1">
 <li><a href="./.env">Download the <code>env</code> file template</a></li>
 <li>Open File Explorer from the taskbar.</li>
@@ -299,8 +380,8 @@ Warning
 </ol>
 </section>
 </section>
-<section id="anaconda-environment" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Anaconda environment</h1>
+<section id="anaconda-environment" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Anaconda environment</h1>
 <p>After you have installed and updated Anaconda (see <a href="./python.html">these instructions</a>), you can install the modules you need for a specific lab in a new environment.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
