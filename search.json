@@ -217,31 +217,38 @@
     "text": "Before you start a lab, you should always first create a new folder on your machine with the name of the lab (e.g. clustering). Usually we also create some subdirectories like “code” and “data”.\nHere, we create a parent directory called “labs” where we can store the different labs. Below is a tutorial on how to create a new folder called “labs” using the command line interface for both Windows and macOS.\n\n\n\nPress Windows + R keys simultaneously to open the Run dialog.\nType cmd and press Enter to open the Command Prompt.\nNavigate to the directory where you want to create the new folder using the cd (change directory) command.\n\nFor example (replace YourUsername and \\your\\path):\ncd C:\\Users\\YourUsername\\your\\path\n\nOnce you are in the desired directory, create a new folder named “labs” using the following command:\n\nmkdir labs\n\n\n\n\nOpen the Terminal application. You can find it in the Applications &gt; Utilities folder or search for it using Spotlight.\nNavigate to the directory where you want to create the new folder using the cd (change directory) command.\n\nFor example For example (replace YourUsername and /your/path):\ncd /Users/YourUsername/your/path\n\nOnce you are in the desired directory, create a new folder named “labs” using the following command:\n\nmkdir labs"
   },
   {
-    "objectID": "environments.html#working-environment",
-    "href": "environments.html#working-environment",
+    "objectID": "environments.html#windows",
+    "href": "environments.html#windows",
     "title": "Environments",
     "section": "",
-    "text": "Before you start a lab, you should always first create a new folder on your machine with the name of the lab (e.g. clustering). Usually we also create some subdirectories like “code” and “data”.\nHere, we create a parent directory called “labs” where we can store the different labs. Below is a tutorial on how to create a new folder called “labs” using the command line interface for both Windows and macOS.\n\n\n\nPress Windows + R keys simultaneously to open the Run dialog.\nType cmd and press Enter to open the Command Prompt.\nNavigate to the directory where you want to create the new folder using the cd (change directory) command.\n\nFor example (replace YourUsername and \\your\\path):\ncd C:\\Users\\YourUsername\\your\\path\n\nOnce you are in the desired directory, create a new folder named “labs” using the following command:\n\nmkdir labs\n\n\n\n\nOpen the Terminal application. You can find it in the Applications &gt; Utilities folder or search for it using Spotlight.\nNavigate to the directory where you want to create the new folder using the cd (change directory) command.\n\nFor example For example (replace YourUsername and /your/path):\ncd /Users/YourUsername/your/path\n\nOnce you are in the desired directory, create a new folder named “labs” using the following command:\n\nmkdir labs"
+    "text": "Press Windows + R keys simultaneously to open the Run dialog.\nType cmd and press Enter to open the Command Prompt.\nNavigate to the directory where you want to create the new folder using the cd (change directory) command.\n\nFor example (replace YourUsername and \\your\\path):\ncd C:\\Users\\YourUsername\\your\\path\n\nOnce you are in the desired directory, create a new folder named “labs” using the following command:\n\nmkdir labs"
   },
   {
-    "objectID": "environments.html#create-openai-api-key",
-    "href": "environments.html#create-openai-api-key",
+    "objectID": "environments.html#macoslinux",
+    "href": "environments.html#macoslinux",
     "title": "Environments",
-    "section": "2 Create OpenAI API Key",
-    "text": "2 Create OpenAI API Key\nIf you need access to models from OpenAI, proceed as follows:\n\nGo to the OpenAI website and create an account\nIf you login to your account, choose the API menu\nClick on the name of your account at the top right corner of the page\nSelect “View API Keys”\nChoose: “Create new secret key”\nCopy this key and use it in an environment file (see Section 3)"
+    "section": "",
+    "text": "Open the Terminal application. You can find it in the Applications &gt; Utilities folder or search for it using Spotlight.\nNavigate to the directory where you want to create the new folder using the cd (change directory) command.\n\nFor example For example (replace YourUsername and /your/path):\ncd /Users/YourUsername/your/path\n\nOnce you are in the desired directory, create a new folder named “labs” using the following command:\n\nmkdir labs"
   },
   {
-    "objectID": "environments.html#sec-envfile",
-    "href": "environments.html#sec-envfile",
+    "objectID": "environments.html#macos",
+    "href": "environments.html#macos",
     "title": "Environments",
-    "section": "3 Environment file",
-    "text": "3 Environment file\nIn some labs we need to access a database or an API. Since we do not want to include passwords and API-keys in our Python scripts, we need to create an environment (“env”) file. A .env file is a simple configuration file where environment-specific settings, such as database credentials or API keys, are stored in key-value pairs.\nBy separating these settings from the main application code, we can ensure that sensitive or environment-specific information is both easily configurable and not inadvertently shared or published. The . before a filename serves a specific purpose in many operating systems: A filename that starts with a . is considered a “hidden” file.\n\n\n\n\n\n\nNote\n\n\n\nWe will use libraries like python-dotenv to load the variables from the file into our Python script automatically.\n\n\nBelow are tutorials on how to create a .env file.\n\n3.0.1 macOS\n\nDownload the env file template\nOpen Finder and navigate to the “Downloads” folder\nMove the file in your “labs” folder (in the same folder as the Jupyter Notebook).\nOpen the file and replace the relevant placeholder (e.g. YOUR-PASSWORD).\nSave the changes.\nRename the file from env to .env (this will hide the file)\nTo view hidden files, you need to press the “Command” + “Shift” + “.” (period) keys at the same time. The hidden files will show up as translucent in the folder.\nIf you want to obscure the files again, press the same “Command” + “Shift” + “.” (period) combination.\n\n\n\n3.0.2 Windows 10\n\nDownload the env file template\nOpen File Explorer from the taskbar.\nMove the file in your “labs” folder (in the same folder as the Jupyter Notebook).\nOpen the file and replace the relevant placeholder (e.g. YOUR-PASSWORD).\nSave the changes.\nRename the file from env to .env (this will hide the file)\nTo view the hidden file: Select View &gt; Options &gt; Change folder and search options.\nSelect the View tab and, in Advanced settings, select Show hidden files, folders, and drives and OK.\n\n\n\n3.0.3 Windows 11\n\nDownload the env file template\nOpen File Explorer from the taskbar.\nMove the file in your “labs” folder (in the same folder as the Jupyter Notebook).\nOpen the file and replace the relevant placeholder (e.g. YOUR-PASSWORD).\nSave the changes.\nRename the file from env to .env (this will hide the file)\nTo view the hidden file: Select View &gt; Show &gt; Hidden items."
+    "section": "3.1 macOS",
+    "text": "3.1 macOS\n\nDownload the env file template\nOpen Finder and navigate to the “Downloads” folder\nMove the file in your “labs” folder (in the same folder as the Jupyter Notebook).\nOpen the file and replace the relevant placeholder (e.g. YOUR-PASSWORD).\nSave the changes.\nRename the file from env to .env (this will hide the file)\nTo view hidden files, you need to press the “Command” + “Shift” + “.” (period) keys at the same time. The hidden files will show up as translucent in the folder.\nIf you want to obscure the files again, press the same “Command” + “Shift” + “.” (period) combination."
   },
   {
-    "objectID": "environments.html#anaconda-environment",
-    "href": "environments.html#anaconda-environment",
+    "objectID": "environments.html#windows-10",
+    "href": "environments.html#windows-10",
     "title": "Environments",
-    "section": "4 Anaconda environment",
-    "text": "4 Anaconda environment\nAfter you have installed and updated Anaconda (see these instructions), you can install the modules you need for a specific lab in a new environment.\n\n\n\n\n\n\nTo do\n\n\n\n\nGo to GitHub course environments\nFollow the instructions in the GitHub repo and install the environment env-lab"
+    "section": "3.2 Windows 10",
+    "text": "3.2 Windows 10\n\nDownload the env file template\nOpen File Explorer from the taskbar.\nMove the file in your “labs” folder (in the same folder as the Jupyter Notebook).\nOpen the file and replace the relevant placeholder (e.g. YOUR-PASSWORD).\nSave the changes.\nRename the file from env to .env (this will hide the file)\nTo view the hidden file: Select View &gt; Options &gt; Change folder and search options.\nSelect the View tab and, in Advanced settings, select Show hidden files, folders, and drives and OK."
+  },
+  {
+    "objectID": "environments.html#windows-11",
+    "href": "environments.html#windows-11",
+    "title": "Environments",
+    "section": "3.3 Windows 11",
+    "text": "3.3 Windows 11\n\nDownload the env file template\nOpen File Explorer from the taskbar.\nMove the file in your “labs” folder (in the same folder as the Jupyter Notebook).\nOpen the file and replace the relevant placeholder (e.g. YOUR-PASSWORD).\nSave the changes.\nRename the file from env to .env (this will hide the file)\nTo view the hidden file: Select View &gt; Show &gt; Hidden items."
   }
 ]
