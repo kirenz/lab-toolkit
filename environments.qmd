@@ -1,5 +1,5 @@
 ---
-title: "Environments"
+title: "Environment"
 number-sections: true
 ---
 
@@ -46,7 +46,7 @@ mkdir labs
 
 # OpenAI 
 
-In some of our labs, we use GPT-3.5 Turbo or GPT-4 from OpenAI in Python applications with. Therefore, we need access to OpenAI's API. 
+In some of our labs, we use GPT-3.5 Turbo or GPT-4 from OpenAI in Python applications. Therefore, we need access to OpenAI's API. 
 
 :::{.callout-warning}
 Note that you need to provide a payment method in order to get access to OpenAI services. However, we will typically stay below the billing limit so you don't have to pay anything. We also define an upper limit for invoices so that no unexpected costs can arise (see @sec-invoice).
