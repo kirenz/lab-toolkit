@@ -55,6 +55,7 @@ Let`s start your first Colab notebook to get an overview about some basic featur
 - [Colab basic features overview](https://colab.research.google.com/notebooks/basic_features_overview.ipynb)
 :::
 
+To download the Jupyter Notebook go to the Colab menu and choose: "File" > "Download" > "Download .ipynb"
 
 # Markdown
 
