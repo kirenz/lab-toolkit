@@ -5,13 +5,17 @@ number-sections: true
 
 # Basics
 
-[GitHub](https://github.com/) is a provider of internet hosting for software development and version control using Git. 
+[GitHub](https://github.com/) is a provider of internet hosting for software development and version control using Git.  We will use GitHub as a platform for web hosting and collaboration. 
 
 :::{.callout-note}
- We will use GitHub as a platform for web hosting and collaboration.
+Learn about Git with ["Learn Git Branching"](https://learngitbranching.js.org/), the most visual and interactive way to learn Git on the web
 :::
 
 Git is a version control system -- like the "Track Changes" features from Microsoft Word with many more additional features:
+
+::: {.callout-note}
+
+:::
 
 - Git can be used to store content 
 - Code can be changed and other developers can add code in parallel.
@@ -23,6 +27,8 @@ Git is a version control system -- like the "Track Changes" features from Micros
 
 <br>
 
+
+
 # Create account
 
 You need a free GitHub-account for our course. Please follow the instructions below (*in case you already have a GitHub account: please add your HdM-email address to your account*):
@@ -32,7 +38,7 @@ You need a free GitHub-account for our course. Please follow the instructions be
 
 - [Create a GitHub account with your HdM-email](https://github.com/join)
 - Verify your GitHub email
-- You may also sign up fot the free [student developer pack](https://education.github.com/pack)  
+- You may also sign up for the free [student developer pack](https://education.github.com/pack)  
 - Install the [VS Code GitHub extension](https://code.visualstudio.com/docs/editor/github)
 
 :::
