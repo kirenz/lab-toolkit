@@ -2,7 +2,7 @@
 title: "Welcome 👋"
 ---
 
-This tutorial contains instructions about the programming toolkit you will need for our course. 
+This page contains instructions on how to set up your work environment. The content you need depends on the course you are taking.
 
 
 ![](/images/logo.png){width="50%"}
@@ -12,7 +12,7 @@ This tutorial contains instructions about the programming toolkit you will need 
 If you aren't familiar with the command line, you should first take a look at this [short introduction](/cli.qmd)
 :::
 
-You will need to:
+You will learn how to:
 
 1. Install a [SQL](/sql.qmd) environment with a *MySQL database* and *MySQL Workbench*
 2. Set up a [Python](/python.qmd) devolopment environment (we use Anaconda and Visual Studio Code)
@@ -20,4 +20,4 @@ You will need to:
 4. Create a [GitHub](/github.qmd) account for software development and version control.
 5. Make yourself familiar with the [slide toolkit](/slide.qmd). 
 
-Please read all the instructions and complete the tasks listed in the sections. 
+Please read all the relevant instructions and complete the tasks listed in the sections. 
