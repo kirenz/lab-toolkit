@@ -5,7 +5,10 @@ number-sections: true
 
 # Basics
 
-[GitHub](https://github.com/) is a provider of internet hosting for software development and version control using Git.  We will use GitHub as a platform for web hosting and collaboration. 
+
+![](/images/github.png)
+
+[GitHub](https://github.com/) is a provider of internet hosting for software development and version control using Git. We will use GitHub as a platform for web hosting and collaboration. 
 
 :::{.callout-note}
 Learn about Git with ["Learn Git Branching"](https://learngitbranching.js.org/), the most visual and interactive way to learn Git on the web
@@ -81,3 +84,21 @@ Using the SSH protocol, you can connect and authenticate to remote servers and s
 1. [Test connection](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection)
 -->
 
+## GitHub Projects
+
+A project is an adaptable spreadsheet, task-board, and road map that integrates with your issues and pull requests on GitHub to help you plan and track your work effectively. 
+
+You can create and customize multiple views by filtering, sorting, grouping your issues and pull requests, visualize work with configurable charts, and add custom fields to track metadata specific to your team. 
+
+Learn how you can use GitHub Issues to plan and track your work:
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yFQ-p6wMS_Y?si=vYu5dBCHN4XfyPk3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+More resources:
+
+- [Getting started with project planning on GitHub](https://github.blog/2022-02-11-getting-started-with-project-planning-on-github/)
+
+- [10 things you didn’t know you could do with GitHub Projects](https://github.blog/2023-08-28-10-things-you-didnt-know-you-could-do-with-github-projects/)
+
+- [GitHub Projects documentation](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
