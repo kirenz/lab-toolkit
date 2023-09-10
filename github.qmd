@@ -10,20 +10,6 @@ number-sections: true
 
 [GitHub](https://github.com/) is a provider of internet hosting for software development and version control using Git. We will use GitHub as a platform for web hosting and collaboration. 
 
-:::{.callout-note}
-Learn about Git with ["Learn Git Branching"](https://learngitbranching.js.org/), the most visual and interactive way to learn Git on the web
-:::
-
-Git is a version control system -- like the "Track Changes" features from Microsoft Word with many more additional features:
-
-::: {.callout-note}
-
-:::
-
-- Git can be used to store content 
-- Code can be changed and other developers can add code in parallel.
-- Git has a remote repository which is stored in a server and a local repository which is stored in the computer of each developer.  
-
 <br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/w3jLJU7DT5E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
@@ -32,7 +18,39 @@ Git is a version control system -- like the "Track Changes" features from Micros
 
 
 
-# Create account
+## Git
+
+Git is a version control system -- like the "Track Changes" features from Microsoft Word with many more additional features:
+
+- Git can be used to store content 
+- Code can be changed and other developers can add code in parallel.
+- Git has a remote repository which is stored in a server and a local repository which is stored in the computer of each developer.  
+
+
+::: {.callout-important}
+## To do
+Check if you have Git on your machine (see instructions below)
+:::
+
+We need Git for our course. To see if Git is already installed on your machine, you can go in the command line (on Windows), or in the terminal (on Mac) and type this command:
+
+```bash
+git --version
+```
+
+If you don't see the version, you need to install Git
+
+- 💾 Mac: Option 1: you can install Apple's [XCode](https://apps.apple.com/us/app/xcode/id497799835?mt=12), which includes Git. Option 2: Only install [Git](https://git-scm.com/download/mac) (in that case I recommend to use [homebrew(https://brew.sh/)])
+
+- 💾 Windows: [Install Git](https://git-scm.com/download/win). Follow [these instructions](https://www.heise.de/tipps-tricks/Git-auf-Windows-installieren-und-einrichten-5046134.html)
+
+
+:::{.callout-note}
+Learn about Git with ["Learn Git Branching"](https://learngitbranching.js.org/), the most visual and interactive way to learn Git on the web
+:::
+
+
+# Create GitHub account
 
 You need a free GitHub-account for our course. Please follow the instructions below (*in case you already have a GitHub account: please add your HdM-email address to your account*):
 
