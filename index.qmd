@@ -12,12 +12,12 @@ This page contains instructions on how to set up your work environment. The cont
 If you aren't familiar with the command line, you should first take a look at this [short introduction](/cli.qmd)
 :::
 
-You will learn how to:
+This toolkit covers how to:
 
-1. Install a [SQL](/sql.qmd) environment with a *MySQL database* and *MySQL Workbench*
-2. Set up a [Python](/python.qmd) devolopment environment (we use Anaconda and Visual Studio Code)
-3. Prepare a [working environment](/environments.qmd) (create folders and --if necessary-- obtain API keys and create a `.env` file) 
-4. Create a [GitHub](/github.qmd) account for software development and version control.
-5. Make yourself familiar with the [slide toolkit](/slide.qmd). 
+- Set up a [Python](/python.qmd) devolopment environment (we use Anaconda and Visual Studio Code)
+- Prepare a [working environment](/environments.qmd) (create folders and --if necessary-- obtain API keys and create a `.env` file) 
+- Create a [GitHub](/github.qmd) account for software development and version control
+- Install a [SQL](/sql.qmd) environment with a *MySQL database* and *MySQL Workbench*
+- Make yourself familiar with the [slide toolkit](/slide.qmd)
 
 Please read all the relevant instructions and complete the tasks listed in the sections. 
