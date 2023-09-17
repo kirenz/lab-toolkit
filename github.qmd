@@ -3,10 +3,10 @@ title: "GitHub"
 number-sections: true
 ---
 
-# Basics
-
 
 ![](/images/github.png)
+
+# Basics
 
 [GitHub](https://github.com/) is a provider of internet hosting for software development and version control using Git. We will use GitHub as a platform for web hosting and collaboration. 
 
