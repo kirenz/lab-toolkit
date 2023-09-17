@@ -36,6 +36,23 @@ A notebook is basically a list of cells and the cells contain either
 Note that we will use Jupyter Notebook inside the coding editor Visual Studio Code or Google Colab.
 
 
+# Markdown
+
+Markdown is one of the world’s most popular markup languages used in data science. Jupyter Notebooks use Markdown to provide an unified authoring framework for data science, combining code, its results, and commentary in Markdown. 
+
+:::{.callout-note}
+Markdown is a simple way to format text that looks great on any device.
+:::
+
+Review this sites to learn more about Markdown:
+
+::: {.callout-important}
+## To do
+- [Interactive 10 minute Markdown tutorial](https://commonmark.org/help/)
+:::
+
+
+
 # Colab {#sec-colab}
 
 Colaboratory, or “Colab” for short, is a free to use product from Google Research. Colab allows anybody to write and execute python code through the browser, and is especially well suited to perform data analysis and machine learning.
@@ -53,25 +70,32 @@ Let`s start your first Colab notebook to get an overview about some basic featur
 ::: {.callout-important}
 ## To do
 - [Colab basic features overview](https://colab.research.google.com/notebooks/basic_features_overview.ipynb)
+- [Interactive Colab Markdown guide](https://colab.research.google.com/notebooks/markdown_guide.ipynb)
 :::
 
 To download the Jupyter Notebook go to the Colab menu and choose: "File" > "Download" > "Download .ipynb"
 
-# Markdown
 
-Markdown is one of the world’s most popular markup languages used in data science. Jupyter Notebooks use Markdown to provide an unified authoring framework for data science, combining code, its results, and commentary in Markdown. 
+# Amazon SageMaker Studio Lab
 
-:::{.callout-note}
-Markdown is a simple way to format text that looks great on any device.
-:::
 
-Review this sites to learn more about Markdown:
+[Amazon SageMaker Studio Lab](https://aws.amazon.com/sagemaker/studio-lab/) is a free machine learning (ML) development environment that provides the compute, storage (up to 15GB), and security—all at no cost—for anyone to learn and experiment with ML. 
+
+
+![](/images/studio.png)
+
+All you need to get started is a valid email address—you don’t need to configure infrastructure or manage identity and access or even sign up for an AWS account. SageMaker Studio Lab accelerates model building through GitHub integration, and it comes preconfigured with the most popular ML tools, frameworks, and libraries to get you started immediately. SageMaker Studio Lab automatically saves your work so you don’t need to restart in between sessions. It’s as easy as closing your laptop and coming back later.
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/k2nVIvHB1dk?si=kKZa1j316JLtfkgn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
 
 ::: {.callout-important}
 ## To do
-- [Interactive Colab Markdown guide](https://colab.research.google.com/notebooks/markdown_guide.ipynb)
-- [Interactive 10 minute Markdown tutorial](https://commonmark.org/help/)
+- [Sign up for an Amazon SageMaker Studio Lab Account](https://aws.amazon.com/sagemaker/studio-lab/)
 :::
+
 
 
 # Anaconda {#sec-anaconda}
