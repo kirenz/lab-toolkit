@@ -182,6 +182,13 @@
     "text": "4.1 GitHub Projects\nA project is an adaptable spreadsheet, task-board, and road map that integrates with your issues and pull requests on GitHub to help you plan and track your work effectively.\nYou can create and customize multiple views by filtering, sorting, grouping your issues and pull requests, visualize work with configurable charts, and add custom fields to track metadata specific to your team.\nLearn how you can use GitHub Issues to plan and track your work:\n\n\nMore resources:\n\nGetting started with project planning on GitHub\n10 things you didn’t know you could do with GitHub Projects\nGitHub Projects documentation"
   },
   {
+    "objectID": "github.html#github-codespaces",
+    "href": "github.html#github-codespaces",
+    "title": "GitHub",
+    "section": "4.2 GitHub Codespaces",
+    "text": "4.2 GitHub Codespaces\nA codespace is a development environment that’s hosted in the cloud. You can customize your project for GitHub Codespaces by committing configuration files to your repository (often known as Configuration-as-Code), which creates a repeatable codespace configuration for all users of your project.\n\n\nBy default, codespaces are created from an Ubuntu Linux image that includes a selection of popular languages and tools, but you can use an image based on a Linux distribution of your choice and configure it for your particular requirements. Regardless of your local operating system, your codespace will run in a Linux environment. Windows and MacOS are not supported operating systems for the remote container.\n\n\n\n\n\n\nNote\n\n\n\nCreate a codespace to start developing in a secure, configurable, and dedicated development environment that works how and where you want it to.\n\n\nYou can connect to your codespaces from your browser, from Visual Studio Code, from the JetBrains Gateway application, or by using GitHub CLI. When you connect, you are placed within the Docker container. You do not have access to the outer Linux virtual machine host.\n\n\n\n\n\n\nTo do\n\n\n\n\nInstall the GitHub Codespaces Extension\nLearn how to set up a Python project for GitHub Codespaces\nLearn how to use GitHub Codespaces in Visual Studio Code\n\n\n\nAll personal GitHub.com accounts have a monthly quota of free use of GitHub Codespaces included in the Free or Pro plan. You can get started using GitHub Codespaces on your personal account without changing any settings or providing payment details.\n\n\n\n\n\n\nWarning\n\n\n\nDon’t forget to stop your codespace if you are done"
+  },
+  {
     "objectID": "slide.html",
     "href": "slide.html",
     "title": "Slides",

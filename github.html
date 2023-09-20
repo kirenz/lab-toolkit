@@ -169,6 +169,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#github-desktop" id="toc-github-desktop" class="nav-link" data-scroll-target="#github-desktop"><span class="header-section-number">4</span> GitHub Desktop</a>
   <ul class="collapse">
   <li><a href="#github-projects" id="toc-github-projects" class="nav-link" data-scroll-target="#github-projects"><span class="header-section-number">4.1</span> GitHub Projects</a></li>
+  <li><a href="#github-codespaces" id="toc-github-codespaces" class="nav-link" data-scroll-target="#github-codespaces"><span class="header-section-number">4.2</span> GitHub Codespaces</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -331,6 +332,58 @@ Using the SSH protocol, you can connect and authenticate to remote servers and s
 <li><p><a href="https://github.blog/2023-08-28-10-things-you-didnt-know-you-could-do-with-github-projects/">10 things you didn’t know you could do with GitHub Projects</a></p></li>
 <li><p><a href="https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects">GitHub Projects documentation</a></p></li>
 </ul>
+</section>
+<section id="github-codespaces" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="github-codespaces"><span class="header-section-number">4.2</span> GitHub Codespaces</h2>
+<p>A codespace is a development environment that’s hosted in the cloud. You can customize your project for GitHub Codespaces by committing configuration files to your repository (often known as Configuration-as-Code), which creates a repeatable codespace configuration for all users of your project.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_W9B7qc9lVc?si=WW1MwZp6g594GeHR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+<p>By default, codespaces are created from an Ubuntu Linux image that includes a selection of popular languages and tools, but you can use an image based on a Linux distribution of your choice and configure it for your particular requirements. Regardless of your local operating system, your codespace will run in a Linux environment. Windows and MacOS are not supported operating systems for the remote container.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Create a codespace to start developing in a secure, configurable, and dedicated development environment that works how and where you want it to.</p>
+</div>
+</div>
+<p>You can connect to your codespaces from your browser, from <em>Visual Studio Code</em>, from the JetBrains Gateway application, or by using GitHub CLI. When you connect, you are placed within the Docker container. You do not have access to the outer Linux virtual machine host.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+To do
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p><a href="https://marketplace.visualstudio.com/items?itemName=GitHub.codespaces">Install the GitHub Codespaces Extension</a></p></li>
+<li><p><a href="https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/setting-up-your-python-project-for-codespaces">Learn how to set up a Python project for GitHub Codespaces</a></p></li>
+<li><p><a href="https://docs.github.com/en/codespaces/developing-in-codespaces/using-github-codespaces-in-visual-studio-code">Learn how to use GitHub Codespaces in Visual Studio Code</a></p></li>
+</ul>
+</div>
+</div>
+<p>All personal GitHub.com accounts have a monthly quota of free use of GitHub Codespaces included in the Free or Pro plan. You can get started using GitHub Codespaces on your personal account without changing any settings or providing payment details.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Don’t forget to stop your codespace if you are done</p>
+</div>
+</div>
 
 
 </section>
