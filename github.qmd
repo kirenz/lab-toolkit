@@ -123,34 +123,31 @@ More resources:
 
 ## GitHub Codespaces
 
-A codespace is a development environment that's hosted in the cloud. You can customize your project for GitHub Codespaces by committing configuration files to your repository (often known as Configuration-as-Code), which creates a repeatable codespace configuration for all users of your project.
-
+A [GitHub Codespace](https://github.com/features/codespaces) is a fully configured development environment that's hosted in the cloud. 
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_W9B7qc9lVc?si=WW1MwZp6g594GeHR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
-By default, codespaces are created from an Ubuntu Linux image that includes a selection of popular languages and tools, but you can use an image based on a Linux distribution of your choice and configure it for your particular requirements. Regardless of your local operating system, your codespace will run in a Linux environment. Windows and MacOS are not supported operating systems for the remote container.
-
-:::{.callout-note}
-Create a codespace to start developing in a secure, configurable, and dedicated development environment that works how and where you want it to.
-:::
-
-You can connect to your codespaces from your browser, from *Visual Studio Code*, from the JetBrains Gateway application, or by using GitHub CLI. When you connect, you are placed within the Docker container. You do not have access to the outer Linux virtual machine host.
+You can connect to codespaces from your browser (links will be provided) or from your local [Visual Studio Code](https://docs.github.com/en/codespaces/developing-in-codespaces/using-github-codespaces-in-visual-studio-code) installation.
 
 
 ::: {.callout-important}
 ## To do
 - [Install the GitHub Codespaces Extension](https://marketplace.visualstudio.com/items?itemName=GitHub.codespaces)
 
-- [Learn how to set up a Python project for GitHub Codespaces](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/setting-up-your-python-project-for-codespaces)
 
 - [Learn how to use GitHub Codespaces in Visual Studio Code](https://docs.github.com/en/codespaces/developing-in-codespaces/using-github-codespaces-in-visual-studio-code)
 
 :::
 
-All personal GitHub.com accounts have a monthly quota of free use of GitHub Codespaces included in the Free or Pro plan. You can get started using GitHub Codespaces on your personal account without changing any settings or providing payment details.
+All personal GitHub.com accounts have a monthly quota of free use of GitHub Codespaces included in the Free or Pro plan ([see pricing details](https://github.com/features/codespaces)).
+
 
 :::{.callout-warning}
-Don't forget to stop your codespace if you are done
+You only have a limited quota of free hours per month so don't forget to stop your codespace if you are done: [Codespaces status overview in GitHub](https://github.com/codespaces)
 :::
+
+
+Regardless of your local operating system, your codespace will run in a Linux environment. 
+
 
