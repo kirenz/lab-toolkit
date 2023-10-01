@@ -1,10 +1,80 @@
 [
   {
-    "objectID": "assignments.html",
-    "href": "assignments.html",
-    "title": "Assignments",
+    "objectID": "environments.html",
+    "href": "environments.html",
+    "title": "Environment",
     "section": "",
-    "text": "This is a Quarto slidedeck."
+    "text": "Before you start a lab, you should always first create a new folder on your machine with the name of the lab (e.g. clustering). Usually we also create some subdirectories like “code” and “data”.\nHere, we create a parent directory called “labs” where we can store the different labs. Below is a tutorial on how to create a new folder called “labs” using the command line interface for both Windows and macOS.\n\n\n\nPress Windows + R keys simultaneously to open the Run dialog.\nType cmd and press Enter to open the Command Prompt.\nNavigate to the directory where you want to create the new folder using the cd (change directory) command.\n\nFor example (replace YourUsername and \\your\\path):\ncd C:\\Users\\YourUsername\\your\\path\n\nOnce you are in the desired directory, create a new folder named “labs” using the following command:\n\nmkdir labs\n\n\n\n\nOpen the Terminal application. You can find it in the Applications &gt; Utilities folder or search for it using Spotlight.\nNavigate to the directory where you want to create the new folder using the cd (change directory) command.\n\nFor example For example (replace YourUsername and /your/path):\ncd /Users/YourUsername/your/path\n\nOnce you are in the desired directory, create a new folder named “labs” using the following command:\n\nmkdir labs"
+  },
+  {
+    "objectID": "environments.html#windows",
+    "href": "environments.html#windows",
+    "title": "Environment",
+    "section": "",
+    "text": "Press Windows + R keys simultaneously to open the Run dialog.\nType cmd and press Enter to open the Command Prompt.\nNavigate to the directory where you want to create the new folder using the cd (change directory) command.\n\nFor example (replace YourUsername and \\your\\path):\ncd C:\\Users\\YourUsername\\your\\path\n\nOnce you are in the desired directory, create a new folder named “labs” using the following command:\n\nmkdir labs"
+  },
+  {
+    "objectID": "environments.html#macoslinux",
+    "href": "environments.html#macoslinux",
+    "title": "Environment",
+    "section": "",
+    "text": "Open the Terminal application. You can find it in the Applications &gt; Utilities folder or search for it using Spotlight.\nNavigate to the directory where you want to create the new folder using the cd (change directory) command.\n\nFor example For example (replace YourUsername and /your/path):\ncd /Users/YourUsername/your/path\n\nOnce you are in the desired directory, create a new folder named “labs” using the following command:\n\nmkdir labs"
+  },
+  {
+    "objectID": "environments.html#create-api-key",
+    "href": "environments.html#create-api-key",
+    "title": "Environment",
+    "section": "2.1 Create API Key",
+    "text": "2.1 Create API Key\nIf you need access to services from OpenAI, proceed as follows\n\n\n\n\n\n\nTo do\n\n\n\n\nGo to the OpenAI website and create an account\nIf you log in to your account, choose the API menu\nClick on the name of your account at the top right corner of the page\nSelect “View API Keys”\nChoose: “Create new secret key”\nCopy this key and use it in an environment file (see Section 4)"
+  },
+  {
+    "objectID": "environments.html#sec-invoice",
+    "href": "environments.html#sec-invoice",
+    "title": "Environment",
+    "section": "2.2 Invoice limit",
+    "text": "2.2 Invoice limit\nDefine an upper limit for invoices so that no unexpected costs can arise:\n\n\n\n\n\n\nTo do\n\n\n\n\nGo to the and create an account\nLog in to your account and choose the API menu\nClick on the name of your account at the top right corner of the page\nSelect “Manage Account” &gt; “Billing” &gt; “Usage Limits”\nProvide a “Hard Limit” and “Soft Limit” (e.g., $10.00 and $5.00)"
+  },
+  {
+    "objectID": "environments.html#macos",
+    "href": "environments.html#macos",
+    "title": "Environment",
+    "section": "4.1 macOS",
+    "text": "4.1 macOS\n\nDownload the env file template\nOpen Finder and navigate to the “Downloads” folder\nMove the file in your “labs” folder (in the same folder as the Jupyter Notebook).\nOpen the file and replace the relevant placeholder (e.g. YOUR-PASSWORD).\nSave the changes.\nRename the file from env to .env (this will hide the file)\nTo view hidden files, you need to press the “Command” + “Shift” + “.” (period) keys at the same time. The hidden files will show up as translucent in the folder.\nIf you want to obscure the files again, press the same “Command” + “Shift” + “.” (period) combination."
+  },
+  {
+    "objectID": "environments.html#windows-10",
+    "href": "environments.html#windows-10",
+    "title": "Environment",
+    "section": "4.2 Windows 10",
+    "text": "4.2 Windows 10\n\nDownload the env file template\nOpen File Explorer from the taskbar.\nMove the file in your “labs” folder (in the same folder as the Jupyter Notebook).\nOpen the file and replace the relevant placeholder (e.g. YOUR-PASSWORD).\nSave the changes.\nRename the file from env to .env (this will hide the file)\nTo view the hidden file: Select View &gt; Options &gt; Change folder and search options.\nSelect the View tab and, in Advanced settings, select Show hidden files, folders, and drives and OK."
+  },
+  {
+    "objectID": "environments.html#windows-11",
+    "href": "environments.html#windows-11",
+    "title": "Environment",
+    "section": "4.3 Windows 11",
+    "text": "4.3 Windows 11\n\nDownload the env file template\nOpen File Explorer from the taskbar.\nMove the file in your “labs” folder (in the same folder as the Jupyter Notebook).\nOpen the file and replace the relevant placeholder (e.g. YOUR-PASSWORD).\nSave the changes.\nRename the file from env to .env (this will hide the file)\nTo view the hidden file: Select View &gt; Show &gt; Hidden items."
+  },
+  {
+    "objectID": "code/notebook.html",
+    "href": "code/notebook.html",
+    "title": "Notebook",
+    "section": "",
+    "text": "Load Python libaries and API keys.\n\nimport os\nimport openai\nimport pandas as pd\nimport altair as alt\nfrom dotenv import load_dotenv, find_dotenv\n\n\n_ = load_dotenv(find_dotenv()) # read local .env file\nopenai.api_key  = os.environ['OPENAI_API_KEY']"
+  },
+  {
+    "objectID": "code/notebook.html#setup",
+    "href": "code/notebook.html#setup",
+    "title": "Notebook",
+    "section": "",
+    "text": "Load Python libaries and API keys.\n\nimport os\nimport openai\nimport pandas as pd\nimport altair as alt\nfrom dotenv import load_dotenv, find_dotenv\n\n\n_ = load_dotenv(find_dotenv()) # read local .env file\nopenai.api_key  = os.environ['OPENAI_API_KEY']"
+  },
+  {
+    "objectID": "code/notebook.html#data",
+    "href": "code/notebook.html#data",
+    "title": "Notebook",
+    "section": "Data",
+    "text": "Data"
   },
   {
     "objectID": "slides/slides.html#jump-to-slides",
@@ -26,6 +96,13 @@
     "title": "Slides",
     "section": "Chalkboard and notes canvas",
     "text": "Chalkboard and notes canvas\n\nPress b to toggle the chalkboard.\nPress c to toggle the notes canvas.\n\n\n\nJan Kirenz"
+  },
+  {
+    "objectID": "github.html#git",
+    "href": "github.html#git",
+    "title": "GitHub",
+    "section": "1.1 Git",
+    "text": "1.1 Git\nGit is a version control system – like the “Track Changes” features from Microsoft Word with many more additional features:\n\nGit can be used to store content \nCode can be changed and other developers can add code in parallel.\nGit has a remote repository which is stored in a server and a local repository which is stored in the computer of each developer.\n\n\n\n\n\n\n\nTo do\n\n\n\nCheck if you have Git on your machine (see instructions below)\n\n\nWe need Git for our course. To see if Git is already installed on your machine, you can go in the command line (on Windows), or in the terminal (on Mac) and type this command:\ngit --version\nIf you don’t see the version, you need to install Git\n\n💾 Mac: Option 1: you can install Apple’s XCode, which includes Git. Option 2: Only install Git (in that case I recommend to use [homebrew(https://brew.sh/)])\n💾 Windows: Install Git. Follow these instructions\n\n\n\n\n\n\n\nNote\n\n\n\nLearn about Git with “Learn Git Branching”, the most visual and interactive way to learn Git on the web"
   },
   {
     "objectID": "python.html",
@@ -98,62 +175,6 @@
     "text": "7.5 Optional tutorials\nSome resources to get familiar with VS Code:\n\nTake a look at the intro videos\nData Science in VS Code tutorial\nPro tips: 25 VS Code Productivity Tips and Speed Hacks"
   },
   {
-    "objectID": "environments.html",
-    "href": "environments.html",
-    "title": "Environment",
-    "section": "",
-    "text": "Before you start a lab, you should always first create a new folder on your machine with the name of the lab (e.g. clustering). Usually we also create some subdirectories like “code” and “data”.\nHere, we create a parent directory called “labs” where we can store the different labs. Below is a tutorial on how to create a new folder called “labs” using the command line interface for both Windows and macOS.\n\n\n\nPress Windows + R keys simultaneously to open the Run dialog.\nType cmd and press Enter to open the Command Prompt.\nNavigate to the directory where you want to create the new folder using the cd (change directory) command.\n\nFor example (replace YourUsername and \\your\\path):\ncd C:\\Users\\YourUsername\\your\\path\n\nOnce you are in the desired directory, create a new folder named “labs” using the following command:\n\nmkdir labs\n\n\n\n\nOpen the Terminal application. You can find it in the Applications &gt; Utilities folder or search for it using Spotlight.\nNavigate to the directory where you want to create the new folder using the cd (change directory) command.\n\nFor example For example (replace YourUsername and /your/path):\ncd /Users/YourUsername/your/path\n\nOnce you are in the desired directory, create a new folder named “labs” using the following command:\n\nmkdir labs"
-  },
-  {
-    "objectID": "environments.html#windows",
-    "href": "environments.html#windows",
-    "title": "Environment",
-    "section": "",
-    "text": "Press Windows + R keys simultaneously to open the Run dialog.\nType cmd and press Enter to open the Command Prompt.\nNavigate to the directory where you want to create the new folder using the cd (change directory) command.\n\nFor example (replace YourUsername and \\your\\path):\ncd C:\\Users\\YourUsername\\your\\path\n\nOnce you are in the desired directory, create a new folder named “labs” using the following command:\n\nmkdir labs"
-  },
-  {
-    "objectID": "environments.html#macoslinux",
-    "href": "environments.html#macoslinux",
-    "title": "Environment",
-    "section": "",
-    "text": "Open the Terminal application. You can find it in the Applications &gt; Utilities folder or search for it using Spotlight.\nNavigate to the directory where you want to create the new folder using the cd (change directory) command.\n\nFor example For example (replace YourUsername and /your/path):\ncd /Users/YourUsername/your/path\n\nOnce you are in the desired directory, create a new folder named “labs” using the following command:\n\nmkdir labs"
-  },
-  {
-    "objectID": "environments.html#create-api-key",
-    "href": "environments.html#create-api-key",
-    "title": "Environment",
-    "section": "2.1 Create API Key",
-    "text": "2.1 Create API Key\nIf you need access to services from OpenAI, proceed as follows\n\n\n\n\n\n\nTo do\n\n\n\n\nGo to the OpenAI website and create an account\nIf you log in to your account, choose the API menu\nClick on the name of your account at the top right corner of the page\nSelect “View API Keys”\nChoose: “Create new secret key”\nCopy this key and use it in an environment file (see Section 4)"
-  },
-  {
-    "objectID": "environments.html#sec-invoice",
-    "href": "environments.html#sec-invoice",
-    "title": "Environment",
-    "section": "2.2 Invoice limit",
-    "text": "2.2 Invoice limit\nDefine an upper limit for invoices so that no unexpected costs can arise:\n\n\n\n\n\n\nTo do\n\n\n\n\nGo to the and create an account\nLog in to your account and choose the API menu\nClick on the name of your account at the top right corner of the page\nSelect “Manage Account” &gt; “Billing” &gt; “Usage Limits”\nProvide a “Hard Limit” and “Soft Limit” (e.g., $10.00 and $5.00)"
-  },
-  {
-    "objectID": "environments.html#macos",
-    "href": "environments.html#macos",
-    "title": "Environment",
-    "section": "4.1 macOS",
-    "text": "4.1 macOS\n\nDownload the env file template\nOpen Finder and navigate to the “Downloads” folder\nMove the file in your “labs” folder (in the same folder as the Jupyter Notebook).\nOpen the file and replace the relevant placeholder (e.g. YOUR-PASSWORD).\nSave the changes.\nRename the file from env to .env (this will hide the file)\nTo view hidden files, you need to press the “Command” + “Shift” + “.” (period) keys at the same time. The hidden files will show up as translucent in the folder.\nIf you want to obscure the files again, press the same “Command” + “Shift” + “.” (period) combination."
-  },
-  {
-    "objectID": "environments.html#windows-10",
-    "href": "environments.html#windows-10",
-    "title": "Environment",
-    "section": "4.2 Windows 10",
-    "text": "4.2 Windows 10\n\nDownload the env file template\nOpen File Explorer from the taskbar.\nMove the file in your “labs” folder (in the same folder as the Jupyter Notebook).\nOpen the file and replace the relevant placeholder (e.g. YOUR-PASSWORD).\nSave the changes.\nRename the file from env to .env (this will hide the file)\nTo view the hidden file: Select View &gt; Options &gt; Change folder and search options.\nSelect the View tab and, in Advanced settings, select Show hidden files, folders, and drives and OK."
-  },
-  {
-    "objectID": "environments.html#windows-11",
-    "href": "environments.html#windows-11",
-    "title": "Environment",
-    "section": "4.3 Windows 11",
-    "text": "4.3 Windows 11\n\nDownload the env file template\nOpen File Explorer from the taskbar.\nMove the file in your “labs” folder (in the same folder as the Jupyter Notebook).\nOpen the file and replace the relevant placeholder (e.g. YOUR-PASSWORD).\nSave the changes.\nRename the file from env to .env (this will hide the file)\nTo view the hidden file: Select View &gt; Show &gt; Hidden items."
-  },
-  {
     "objectID": "cli.html",
     "href": "cli.html",
     "title": "Command-line",
@@ -161,32 +182,11 @@
     "text": "1 Basics\nOperating systems like Windows and macOS implement a command-line interface (other names for the command line are: cmd, CLI, prompt, console or terminal) in a shell for interactive access to operating system functions or services.\nWe sometimes use the command line interface so you should be familiar with bsaic commands.\n\n\n\n\n\n\nTip\n\n\n\nA command-line interface (CLI) processes commands to a computer program in the form of lines of text.\n\n\nIf you aren’t familiar with the command line, read this short introduction to the command-line interface:\n\n\n\n\n\n\nTo do\n\n\n\n\nIntroduction to the command-line interface\n\n\n\n\n\n2 Useful commands\nHere is a summary of some useful commands:\n\n\n\n\n\n\n\n\n\nCommand (Windows)\nCommand (Mac OS / Linux)\nDescription\nExample\n\n\n\n\nexit\nexit\nclose the window\nexit\n\n\ncd\ncd\nchange directory\ncd test, cd.. (Windows) or cd .. (Mac)\n\n\ncd\npwd\nshow the current directory\ncd (Windows) or pwd (Mac OS / Linux)\n\n\ndir\nls\nlist directories/files\ndir\n\n\ncopy\ncp\ncopy file\ncopy c:.txt c:.txt\n\n\nmove\nmv\nmove file\nmove c:.txt c:.txt\n\n\nmkdir\nmkdir\ncreate a new directory\nmkdir testdirectory\n\n\nrmdir (or del)\nrm\ndelete a file\ndel c:.txt\n\n\nrmdir /S\nrm -r\ndelete a directory\nrm -r testdirectory\n\n\n[CMD] /?\nman [CMD]\nget help for a command\ncd /? (Windows) or man cd (Mac OS / Linux)"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome 👋",
+    "objectID": "assignments.html",
+    "href": "assignments.html",
+    "title": "Assignments",
     "section": "",
-    "text": "This page contains instructions on how to set up your work environment. The content you need depends on the course you are taking.\n\n\n\n\n\n\n\nTip\n\n\n\nIf you aren’t familiar with the command line, you should first take a look at this short introduction\n\n\nThis toolkit covers how to:\n\nSet up a Python devolopment environment (we use Anaconda and Visual Studio Code)\nPrepare a working environment (create folders and –if necessary– obtain API keys and create a .env file)\nCreate a GitHub account for software development and version control\nInstall a SQL environment with a MySQL database and MySQL Workbench\nMake yourself familiar with the slide toolkit\n\nPlease read all the relevant instructions and complete the tasks listed in the sections."
-  },
-  {
-    "objectID": "github.html#git",
-    "href": "github.html#git",
-    "title": "GitHub",
-    "section": "1.1 Git",
-    "text": "1.1 Git\nGit is a version control system – like the “Track Changes” features from Microsoft Word with many more additional features:\n\nGit can be used to store content \nCode can be changed and other developers can add code in parallel.\nGit has a remote repository which is stored in a server and a local repository which is stored in the computer of each developer.\n\n\n\n\n\n\n\nTo do\n\n\n\nCheck if you have Git on your machine (see instructions below)\n\n\nWe need Git for our course. To see if Git is already installed on your machine, you can go in the command line (on Windows), or in the terminal (on Mac) and type this command:\ngit --version\nIf you don’t see the version, you need to install Git\n\n💾 Mac: Option 1: you can install Apple’s XCode, which includes Git. Option 2: Only install Git (in that case I recommend to use [homebrew(https://brew.sh/)])\n💾 Windows: Install Git. Follow these instructions\n\n\n\n\n\n\n\nNote\n\n\n\nLearn about Git with “Learn Git Branching”, the most visual and interactive way to learn Git on the web"
-  },
-  {
-    "objectID": "github.html#github-projects",
-    "href": "github.html#github-projects",
-    "title": "GitHub",
-    "section": "4.1 GitHub Projects",
-    "text": "4.1 GitHub Projects\nA project is an adaptable spreadsheet, task-board, and road map that integrates with your issues and pull requests on GitHub to help you plan and track your work effectively.\nYou can create and customize multiple views by filtering, sorting, grouping your issues and pull requests, visualize work with configurable charts, and add custom fields to track metadata specific to your team.\nLearn how you can use GitHub Issues to plan and track your work:\n\n\nMore resources:\n\nGetting started with project planning on GitHub\n10 things you didn’t know you could do with GitHub Projects\nGitHub Projects documentation"
-  },
-  {
-    "objectID": "github.html#github-codespaces",
-    "href": "github.html#github-codespaces",
-    "title": "GitHub",
-    "section": "4.2 GitHub Codespaces",
-    "text": "4.2 GitHub Codespaces\nA GitHub Codespace is a fully configured development environment that’s hosted in the cloud.\n\n\nYou can connect to codespaces from your browser (links will be provided) or from your local Visual Studio Code installation.\n\n\n\n\n\n\nTo do\n\n\n\n\nInstall the GitHub Codespaces Extension\nLearn how to use GitHub Codespaces in Visual Studio Code\n\n\n\nAll personal GitHub.com accounts have a monthly quota of free use of GitHub Codespaces included in the Free or Pro plan (see pricing details).\n\n\n\n\n\n\nWarning\n\n\n\nYou only have a limited quota of free hours per month so don’t forget to stop your codespace if you are done: Codespaces status overview in GitHub\n\n\nRegardless of your local operating system, your codespace will run in a Linux environment."
+    "text": "This is a Quarto slidedeck."
   },
   {
     "objectID": "slide.html",
@@ -259,24 +259,10 @@
     "text": "3.4 Create a Table\nNext, we include a table in our database.\n\n3.4.1 Create a simple table\nWe’ll begin by creating a table named campaigns that will hold data about different marketing campaigns.\n\n\n\n\n\n\nColumns in marketing campaigns table\n\n\n\n\n\n\nid: A unique identifier for each campaign.\nname: The name of the marketing campaign.\nstart_date & end_date: The time frame of the campaign.\nbudget: The budget allocated to the campaign.\nchannel: The channel used for the campaign (e.g., “Email”, “Social Media”, “TV”).\n\n\n\n\n\nClick on the database db_data\nOpen a new query tab (Tools &gt; Query Tool) in pgAdmin4\nCopy the SQL statement below and paste it into the Query Tab\n\nCREATE TABLE campaigns (\n    id BIGSERIAL PRIMARY KEY,\n    name VARCHAR(255) NOT NULL,\n    start_date DATE,\n    end_date DATE,\n    budget DECIMAL(10, 2),\n    channel VARCHAR(255)\n);\n\nClick on the ▶️ symbol to execute the script\nSelect the database “db_data” at the left sidebar and expand “Schemas” &gt; “Tables” &gt; “campaigns” &gt; “Columns” to view the columns of the table\n\n\n\n3.4.2 Insert values into the table\nLet’s now insert some sample marketing campaigns into our table:\n\nOpen a new query tab (Tools &gt; Query Tool) in pgAdmin4\nCopy the SQL statement below and paste it into the Query Tab\n\nINSERT INTO campaigns (name, start_date, end_date, budget, channel) VALUES\n('Winter Sale', '2023-12-01', '2023-12-31', 5000.00, 'Email'),\n('Summer Festival', '2023-06-01', '2023-06-15', 10000.00, 'Social Media'),\n('Back to School', '2023-08-01', '2023-08-20', 7500.00, 'TV');\n\nClick on the ▶️ symbol to execute the script\n\n\n\n3.4.3 Retrieve values from the table\nAfter inserting the campaigns, you can retrieve them using a simple SELECT query. For instance:\n\nOpen a new query tab (Tools &gt; Query Tool) in pgAdmin4\nCopy the SQL statement below and paste it into the Query Tab\n\nSELECT * \nFROM campaigns;"
   },
   {
-    "objectID": "code/notebook.html",
-    "href": "code/notebook.html",
-    "title": "Notebook",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome 👋",
     "section": "",
-    "text": "Load Python libaries and API keys.\n\nimport os\nimport openai\nimport pandas as pd\nimport altair as alt\nfrom dotenv import load_dotenv, find_dotenv\n\n\n_ = load_dotenv(find_dotenv()) # read local .env file\nopenai.api_key  = os.environ['OPENAI_API_KEY']"
-  },
-  {
-    "objectID": "code/notebook.html#setup",
-    "href": "code/notebook.html#setup",
-    "title": "Notebook",
-    "section": "",
-    "text": "Load Python libaries and API keys.\n\nimport os\nimport openai\nimport pandas as pd\nimport altair as alt\nfrom dotenv import load_dotenv, find_dotenv\n\n\n_ = load_dotenv(find_dotenv()) # read local .env file\nopenai.api_key  = os.environ['OPENAI_API_KEY']"
-  },
-  {
-    "objectID": "code/notebook.html#data",
-    "href": "code/notebook.html#data",
-    "title": "Notebook",
-    "section": "Data",
-    "text": "Data"
+    "text": "This page contains instructions on how to set up your work environment. The content you need depends on the course you are taking.\n\n\n\n\n\n\n\nTip\n\n\n\nIf you aren’t familiar with the command line, you should first take a look at this short introduction\n\n\nThis toolkit covers how to:\n\nSet up a Python devolopment environment (we use Anaconda and Visual Studio Code)\nPrepare a working environment (create folders and –if necessary– obtain API keys and create a .env file)\nCreate a GitHub account for software development and version control\nInstall a SQL environment with a MySQL database and MySQL Workbench\nMake yourself familiar with the slide toolkit\n\nPlease read all the relevant instructions and complete the tasks listed in the sections."
   }
 ]
