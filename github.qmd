@@ -102,7 +102,7 @@ Using the SSH protocol, you can connect and authenticate to remote servers and s
 1. [Test connection](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection)
 -->
 
-## GitHub Projects
+# GitHub Projects
 
 A project is an adaptable spreadsheet, task-board, and road map that integrates with your issues and pull requests on GitHub to help you plan and track your work effectively. 
 
@@ -121,7 +121,7 @@ More resources:
 
 - [GitHub Projects documentation](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
 
-## GitHub Codespaces
+# GitHub Codespaces
 
 A [GitHub Codespace](https://github.com/features/codespaces) is a fully configured development environment that's hosted in the cloud. 
 
