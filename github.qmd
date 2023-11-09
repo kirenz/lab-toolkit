@@ -102,6 +102,20 @@ Using the SSH protocol, you can connect and authenticate to remote servers and s
 1. [Test connection](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection)
 -->
 
+# Create a GitHub Organization
+
+Organizations are shared accounts where businesses and open-source projects can collaborate across many projects at once, with sophisticated security and administrative features.
+
+::: {.callout-important}
+## To do
+Create one [free Organization account](https://github.com/organizations/plan) for your team and invite all members to that account
+:::
+
+Your team can collaborate on GitHub by using an organization account, which serves as a container for your shared work and gives the work a unique name and brand.
+
+Each person that uses GitHub always signs into a personal account, and multiple personal accounts can collaborate on shared projects by joining the same organization account.
+
+
 # GitHub Projects
 
 A project is an adaptable spreadsheet, task-board, and road map that integrates with your issues and pull requests on GitHub to help you plan and track your work effectively. 
