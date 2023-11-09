@@ -7,11 +7,74 @@
     "text": "This is a Quarto slidedeck."
   },
   {
-    "objectID": "slide.html",
-    "href": "slide.html",
-    "title": "Slides",
+    "objectID": "python.html",
+    "href": "python.html",
+    "title": "Python",
     "section": "",
-    "text": "1 Basics\nMost of the slides are made with the open source scientific and technical publishing system Quarto and reveal.js.\nreveal.js is an open source HTML presentation framework. It’s a tool that enables anyone with a web browser to create fully-featured presentations for free. Presentations made with reveal.js are built on open web technologies. That means anything you can do on the web, you can do in your presentation.\n\n\n2 Slides tutorial\nRead the tutorial below to learn how to\n\nNavigate through the slides\nShow all slides\nSave slides as PDF\nPrint slides\n\n\n\n\n\n\n\nTo do\n\n\n\n\n🖥️ Slides tutorial"
+    "text": "Python is an object-oriented language (an object is an entity that contains data along with associated metadata and/or functionality).\nOne thing that distinguishes Python from many other programming languages is that it is interpreted rather than compiled. This means that it is executed line by line which is particular useful for data analysis, as well as the creation of interactive, executable documents like Jupyter Notebooks.\n\n\n\n\n\n\nNote\n\n\n\nPython is an interpreted language. The Python interpreter runs a program by executing one statement at a time.\n\n\nOn top of this, there is a broad ecosystem of third-party tools and modules (like Jupyter Notebook) that offer more specialized data science functionality."
+  },
+  {
+    "objectID": "python.html#basics-1",
+    "href": "python.html#basics-1",
+    "title": "Python",
+    "section": "6.1 Basics",
+    "text": "6.1 Basics\nThe open-source Anaconda Distribution is one of the easiest ways to get started with data science projects. It already includes Python and the most important data science modules.\n\n\n\n\n\n\nNote\n\n\n\nAnaconda is a data science toolkit which already includes most of the data science modules we need.\n\n\nAnaconda’s package manager conda makes it easy to manage multiple data environments that can be maintained and run separately without interference from each other (in so called virtual environments).\n\n\n\n\n\n\nExpand to learn about conda\n\n\n\n\n\nconda analyses the current environment including everything currently installed, and, together with any version limitations specified (e.g. the user may wish to have TensorFlow version 2.0 or higher), works out how to install a compatible set of dependencies, and shows a important if this cannot be done.\n\n\n\nInstead of conda, you can also use pip (the standard package installer for Python) to install packages.\nNote that you should only use either conda or pip in one environment (we usually use pip)."
+  },
+  {
+    "objectID": "python.html#if-you-already-have-anaconda",
+    "href": "python.html#if-you-already-have-anaconda",
+    "title": "Python",
+    "section": "6.2 If you already have Anaconda",
+    "text": "6.2 If you already have Anaconda\nIf you already have Anaconda on your machine, make sure that you use the latest version (in our course, we use Python 3.11).\nIn your command line tool, type python --version to see which Python version you are using in your Anaconda base environment:\n\nOn Windows open the Start menu and open an “Anaconda Command Prompt”. Type python --version to see which Python version you are using in your Anaconda base environment.\nOn macOS or Linux open a terminal window. Type python --version to see which Python version you are using in your Anaconda base environment.\n\nYou may also uninstall your current Anaconda environment from your machine and install the latest version: here a guide of how to uninstall Anaconda."
+  },
+  {
+    "objectID": "python.html#installation",
+    "href": "python.html#installation",
+    "title": "Python",
+    "section": "6.3 Installation",
+    "text": "6.3 Installation\nInstall the latest version of the Anaconda Distribution:\n\n\n\n\n\n\nTo do\n\n\n\n\nAnaconda installation\n\n\n\nAfter you have installed Anaconda, you can update it. The following commands will update all packages in the default “base” environment to the latest version but will not update Python:\n\n\n\n\n\n\nTo do\n\n\n\n\nOn Windows open the Start menu and open an “Anaconda Command Prompt”.\nOn macOS or Linux open a terminal window.\nIn your terminal, type: conda update --all\n\n\n\nNow follow the steps described in the next section."
+  },
+  {
+    "objectID": "python.html#anaconda-environment",
+    "href": "python.html#anaconda-environment",
+    "title": "Python",
+    "section": "6.4 Anaconda environment",
+    "text": "6.4 Anaconda environment\nAfter you have installed and updated Anaconda, you can install the modules you need for a specific lab in a new environment.\n\n\n\n\n\n\nTo do\n\n\n\n\nGo to GitHub course environments\nFollow the instructions in the GitHub repo and install the environment env-lab"
+  },
+  {
+    "objectID": "python.html#basics-2",
+    "href": "python.html#basics-2",
+    "title": "Python",
+    "section": "7.1 Basics",
+    "text": "7.1 Basics\nVisual Studio Code (also called Code) is a powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with a rich ecosystem of extensions for Python.\n\n\n\n\n\n\nNote\n\n\n\nVisual Studio Code is a code editor that can be used with a variety of programming languages including Python."
+  },
+  {
+    "objectID": "python.html#installation-1",
+    "href": "python.html#installation-1",
+    "title": "Python",
+    "section": "7.2 Installation",
+    "text": "7.2 Installation\nInstall VS Code:\n\n\n\n\n\n\nTo do\n\n\n\n\nInstall Code"
+  },
+  {
+    "objectID": "python.html#install-extensions",
+    "href": "python.html#install-extensions",
+    "title": "Python",
+    "section": "7.3 Install extensions",
+    "text": "7.3 Install extensions\nThe features that Visual Studio Code includes out-of-the-box are just the start. VS Code extensions let you add languages, debuggers, and tools to your installation to support your development workflow.\nLet’s install some important extensions:\n\n\n\n\n\n\nTo do\n\n\n\n\nVisual Studio Code Extensions"
+  },
+  {
+    "objectID": "python.html#jupyter-notebooks",
+    "href": "python.html#jupyter-notebooks",
+    "title": "Python",
+    "section": "7.4 Jupyter Notebooks",
+    "text": "7.4 Jupyter Notebooks\nWe usually work with Jupyter Notebook files in VS Code:\n\n\n\n\n\n\nTo do\n\n\n\n\nLearn how to use Jupyter Notebooks in VS Code\n\n\n\nTo use a specific Anaconda environment as Jupyter kernel, select the kernel (e.g. lab) using the kernel picker in the top right of VS Code."
+  },
+  {
+    "objectID": "python.html#optional-tutorials",
+    "href": "python.html#optional-tutorials",
+    "title": "Python",
+    "section": "7.5 Optional tutorials",
+    "text": "7.5 Optional tutorials\nSome resources to get familiar with VS Code:\n\nTake a look at the intro videos\nData Science in VS Code tutorial\nPro tips: 25 VS Code Productivity Tips and Speed Hacks"
   },
   {
     "objectID": "github.html#git",
@@ -19,6 +82,34 @@
     "title": "GitHub",
     "section": "1.1 Git",
     "text": "1.1 Git\nGit is a version control system – like the “Track Changes” features from Microsoft Word with many more additional features:\n\nGit can be used to store content \nCode can be changed and other developers can add code in parallel.\nGit has a remote repository which is stored in a server and a local repository which is stored in the computer of each developer.\n\n\n\n\n\n\n\nTo do\n\n\n\nCheck if you have Git on your machine (see instructions below)\n\n\nWe need Git for our course. To see if Git is already installed on your machine, you can go in the command line (on Windows), or in the terminal (on Mac) and type this command:\ngit --version\nIf you don’t see the version, you need to install Git\n\n💾 Mac: Option 1: you can install Apple’s XCode, which includes Git. Option 2: Only install Git (in that case I recommend to use [homebrew(https://brew.sh/)])\n💾 Windows: Install Git. Follow these instructions\n\n\n\n\n\n\n\nNote\n\n\n\nLearn about Git with “Learn Git Branching”, the most visual and interactive way to learn Git on the web"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome 👋",
+    "section": "",
+    "text": "This page contains instructions on how to set up your work environment. The content you need depends on the course you are taking.\n\n\n\n\n\n\n\nTip\n\n\n\nIf you aren’t familiar with the command line, you should first take a look at this short introduction\n\n\nThis toolkit covers how to:\n\nSet up a Python devolopment environment (we use Anaconda and Visual Studio Code)\nPrepare a working environment (create folders and –if necessary– obtain API keys and create a .env file)\nCreate a GitHub account for software development and version control\nInstall a SQL environment with a MySQL database and MySQL Workbench\nMake yourself familiar with the slide toolkit\n\nPlease read all the relevant instructions and complete the tasks listed in the sections."
+  },
+  {
+    "objectID": "code/notebook.html",
+    "href": "code/notebook.html",
+    "title": "Notebook",
+    "section": "",
+    "text": "Load Python libaries and API keys.\n\nimport os\nimport openai\nimport pandas as pd\nimport altair as alt\nfrom dotenv import load_dotenv, find_dotenv\n\n\n_ = load_dotenv(find_dotenv()) # read local .env file\nopenai.api_key  = os.environ['OPENAI_API_KEY']"
+  },
+  {
+    "objectID": "code/notebook.html#setup",
+    "href": "code/notebook.html#setup",
+    "title": "Notebook",
+    "section": "",
+    "text": "Load Python libaries and API keys.\n\nimport os\nimport openai\nimport pandas as pd\nimport altair as alt\nfrom dotenv import load_dotenv, find_dotenv\n\n\n_ = load_dotenv(find_dotenv()) # read local .env file\nopenai.api_key  = os.environ['OPENAI_API_KEY']"
+  },
+  {
+    "objectID": "code/notebook.html#data",
+    "href": "code/notebook.html#data",
+    "title": "Notebook",
+    "section": "Data",
+    "text": "Data"
   },
   {
     "objectID": "cli.html",
@@ -91,125 +182,6 @@
     "text": "3.4 Create a Table\nNext, we include a table in our database.\n\n3.4.1 Create a simple table\nWe’ll begin by creating a table named campaigns that will hold data about different marketing campaigns.\n\n\n\n\n\n\nColumns in marketing campaigns table\n\n\n\n\n\n\nid: A unique identifier for each campaign.\nname: The name of the marketing campaign.\nstart_date & end_date: The time frame of the campaign.\nbudget: The budget allocated to the campaign.\nchannel: The channel used for the campaign (e.g., “Email”, “Social Media”, “TV”).\n\n\n\n\n\nClick on the database db_data\nOpen a new query tab (Tools &gt; Query Tool) in pgAdmin4\nCopy the SQL statement below and paste it into the Query Tab\n\nCREATE TABLE campaigns (\n    id BIGSERIAL PRIMARY KEY,\n    name VARCHAR(255) NOT NULL,\n    start_date DATE,\n    end_date DATE,\n    budget DECIMAL(10, 2),\n    channel VARCHAR(255)\n);\n\nClick on the ▶️ symbol to execute the script\nSelect the database “db_data” at the left sidebar and expand “Schemas” &gt; “Tables” &gt; “campaigns” &gt; “Columns” to view the columns of the table\n\n\n\n3.4.2 Insert values into the table\nLet’s now insert some sample marketing campaigns into our table:\n\nOpen a new query tab (Tools &gt; Query Tool) in pgAdmin4\nCopy the SQL statement below and paste it into the Query Tab\n\nINSERT INTO campaigns (name, start_date, end_date, budget, channel) VALUES\n('Winter Sale', '2023-12-01', '2023-12-31', 5000.00, 'Email'),\n('Summer Festival', '2023-06-01', '2023-06-15', 10000.00, 'Social Media'),\n('Back to School', '2023-08-01', '2023-08-20', 7500.00, 'TV');\n\nClick on the ▶️ symbol to execute the script\n\n\n\n3.4.3 Retrieve values from the table\nAfter inserting the campaigns, you can retrieve them using a simple SELECT query. For instance:\n\nOpen a new query tab (Tools &gt; Query Tool) in pgAdmin4\nCopy the SQL statement below and paste it into the Query Tab\n\nSELECT * \nFROM campaigns;"
   },
   {
-    "objectID": "code/notebook.html",
-    "href": "code/notebook.html",
-    "title": "Notebook",
-    "section": "",
-    "text": "Load Python libaries and API keys.\n\nimport os\nimport openai\nimport pandas as pd\nimport altair as alt\nfrom dotenv import load_dotenv, find_dotenv\n\n\n_ = load_dotenv(find_dotenv()) # read local .env file\nopenai.api_key  = os.environ['OPENAI_API_KEY']"
-  },
-  {
-    "objectID": "code/notebook.html#setup",
-    "href": "code/notebook.html#setup",
-    "title": "Notebook",
-    "section": "",
-    "text": "Load Python libaries and API keys.\n\nimport os\nimport openai\nimport pandas as pd\nimport altair as alt\nfrom dotenv import load_dotenv, find_dotenv\n\n\n_ = load_dotenv(find_dotenv()) # read local .env file\nopenai.api_key  = os.environ['OPENAI_API_KEY']"
-  },
-  {
-    "objectID": "code/notebook.html#data",
-    "href": "code/notebook.html#data",
-    "title": "Notebook",
-    "section": "Data",
-    "text": "Data"
-  },
-  {
-    "objectID": "python.html",
-    "href": "python.html",
-    "title": "Python",
-    "section": "",
-    "text": "Python is an object-oriented language (an object is an entity that contains data along with associated metadata and/or functionality).\nOne thing that distinguishes Python from many other programming languages is that it is interpreted rather than compiled. This means that it is executed line by line which is particular useful for data analysis, as well as the creation of interactive, executable documents like Jupyter Notebooks.\n\n\n\n\n\n\nNote\n\n\n\nPython is an interpreted language. The Python interpreter runs a program by executing one statement at a time.\n\n\nOn top of this, there is a broad ecosystem of third-party tools and modules (like Jupyter Notebook) that offer more specialized data science functionality."
-  },
-  {
-    "objectID": "python.html#basics-1",
-    "href": "python.html#basics-1",
-    "title": "Python",
-    "section": "6.1 Basics",
-    "text": "6.1 Basics\nThe open-source Anaconda Distribution is one of the easiest ways to get started with data science projects. It already includes Python and the most important data science modules.\n\n\n\n\n\n\nNote\n\n\n\nAnaconda is a data science toolkit which already includes most of the data science modules we need.\n\n\nAnaconda’s package manager conda makes it easy to manage multiple data environments that can be maintained and run separately without interference from each other (in so called virtual environments).\n\n\n\n\n\n\nExpand to learn about conda\n\n\n\n\n\nconda analyses the current environment including everything currently installed, and, together with any version limitations specified (e.g. the user may wish to have TensorFlow version 2.0 or higher), works out how to install a compatible set of dependencies, and shows a important if this cannot be done.\n\n\n\nInstead of conda, you can also use pip (the standard package installer for Python) to install packages.\nNote that you should only use either conda or pip in one environment (we usually use pip)."
-  },
-  {
-    "objectID": "python.html#if-you-already-have-anaconda",
-    "href": "python.html#if-you-already-have-anaconda",
-    "title": "Python",
-    "section": "6.2 If you already have Anaconda",
-    "text": "6.2 If you already have Anaconda\nIf you already have Anaconda on your machine, make sure that you use the latest version (in our course, we use Python 3.11).\nIn your command line tool, type python --version to see which Python version you are using in your Anaconda base environment:\n\nOn Windows open the Start menu and open an “Anaconda Command Prompt”. Type python --version to see which Python version you are using in your Anaconda base environment.\nOn macOS or Linux open a terminal window. Type python --version to see which Python version you are using in your Anaconda base environment.\n\nYou may also uninstall your current Anaconda environment from your machine and install the latest version: here a guide of how to uninstall Anaconda."
-  },
-  {
-    "objectID": "python.html#installation",
-    "href": "python.html#installation",
-    "title": "Python",
-    "section": "6.3 Installation",
-    "text": "6.3 Installation\nInstall the latest version of the Anaconda Distribution:\n\n\n\n\n\n\nTo do\n\n\n\n\nAnaconda installation\n\n\n\nAfter you have installed Anaconda, you can update it. The following commands will update all packages in the default “base” environment to the latest version but will not update Python:\n\n\n\n\n\n\nTo do\n\n\n\n\nOn Windows open the Start menu and open an “Anaconda Command Prompt”.\nOn macOS or Linux open a terminal window.\nIn your terminal, type: conda update --all\n\n\n\nNow follow the steps described in the next section."
-  },
-  {
-    "objectID": "python.html#anaconda-environment",
-    "href": "python.html#anaconda-environment",
-    "title": "Python",
-    "section": "6.4 Anaconda environment",
-    "text": "6.4 Anaconda environment\nAfter you have installed and updated Anaconda, you can install the modules you need for a specific lab in a new environment.\n\n\n\n\n\n\nTo do\n\n\n\n\nGo to GitHub course environments\nFollow the instructions in the GitHub repo and install the environment env-lab"
-  },
-  {
-    "objectID": "python.html#basics-2",
-    "href": "python.html#basics-2",
-    "title": "Python",
-    "section": "7.1 Basics",
-    "text": "7.1 Basics\nVisual Studio Code (also called Code) is a powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with a rich ecosystem of extensions for Python.\n\n\n\n\n\n\nNote\n\n\n\nVisual Studio Code is a code editor that can be used with a variety of programming languages including Python."
-  },
-  {
-    "objectID": "python.html#installation-1",
-    "href": "python.html#installation-1",
-    "title": "Python",
-    "section": "7.2 Installation",
-    "text": "7.2 Installation\nInstall VS Code:\n\n\n\n\n\n\nTo do\n\n\n\n\nInstall Code"
-  },
-  {
-    "objectID": "python.html#install-extensions",
-    "href": "python.html#install-extensions",
-    "title": "Python",
-    "section": "7.3 Install extensions",
-    "text": "7.3 Install extensions\nThe features that Visual Studio Code includes out-of-the-box are just the start. VS Code extensions let you add languages, debuggers, and tools to your installation to support your development workflow.\nLet’s install some important extensions:\n\n\n\n\n\n\nTo do\n\n\n\n\nVisual Studio Code Extensions"
-  },
-  {
-    "objectID": "python.html#jupyter-notebooks",
-    "href": "python.html#jupyter-notebooks",
-    "title": "Python",
-    "section": "7.4 Jupyter Notebooks",
-    "text": "7.4 Jupyter Notebooks\nWe usually work with Jupyter Notebook files in VS Code:\n\n\n\n\n\n\nTo do\n\n\n\n\nLearn how to use Jupyter Notebooks in VS Code\n\n\n\nTo use a specific Anaconda environment as Jupyter kernel, select the kernel (e.g. lab) using the kernel picker in the top right of VS Code."
-  },
-  {
-    "objectID": "python.html#optional-tutorials",
-    "href": "python.html#optional-tutorials",
-    "title": "Python",
-    "section": "7.5 Optional tutorials",
-    "text": "7.5 Optional tutorials\nSome resources to get familiar with VS Code:\n\nTake a look at the intro videos\nData Science in VS Code tutorial\nPro tips: 25 VS Code Productivity Tips and Speed Hacks"
-  },
-  {
-    "objectID": "slides/slides.html#jump-to-slides",
-    "href": "slides/slides.html#jump-to-slides",
-    "title": "Slides",
-    "section": "Jump to slides",
-    "text": "Jump to slides\n\nClicking the button (or press m) opens a slide navigation menu that enables you to easily jump to any slide"
-  },
-  {
-    "objectID": "slides/slides.html#zoom-into-slide",
-    "href": "slides/slides.html#zoom-into-slide",
-    "title": "Slides",
-    "section": "Zoom into slide",
-    "text": "Zoom into slide\n\nHold down the Alt key (or option) and click on any element to zoom towards it."
-  },
-  {
-    "objectID": "slides/slides.html#chalkboard-and-notes-canvas",
-    "href": "slides/slides.html#chalkboard-and-notes-canvas",
-    "title": "Slides",
-    "section": "Chalkboard and notes canvas",
-    "text": "Chalkboard and notes canvas\n\nPress b to toggle the chalkboard.\nPress c to toggle the notes canvas.\n\n\n\nJan Kirenz"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome 👋",
-    "section": "",
-    "text": "This page contains instructions on how to set up your work environment. The content you need depends on the course you are taking.\n\n\n\n\n\n\n\nTip\n\n\n\nIf you aren’t familiar with the command line, you should first take a look at this short introduction\n\n\nThis toolkit covers how to:\n\nSet up a Python devolopment environment (we use Anaconda and Visual Studio Code)\nPrepare a working environment (create folders and –if necessary– obtain API keys and create a .env file)\nCreate a GitHub account for software development and version control\nInstall a SQL environment with a MySQL database and MySQL Workbench\nMake yourself familiar with the slide toolkit\n\nPlease read all the relevant instructions and complete the tasks listed in the sections."
-  },
-  {
     "objectID": "environments.html",
     "href": "environments.html",
     "title": "Environment",
@@ -264,5 +236,33 @@
     "title": "Environment",
     "section": "4.3 Windows 11",
     "text": "4.3 Windows 11\n\nDownload the env file template\nOpen File Explorer from the taskbar.\nMove the file in your “labs” folder (in the same folder as the Jupyter Notebook).\nOpen the file and replace the relevant placeholder (e.g. YOUR-PASSWORD).\nSave the changes.\nRename the file from env to .env (this will hide the file)\nTo view the hidden file: Select View &gt; Show &gt; Hidden items."
+  },
+  {
+    "objectID": "slides/slides.html#jump-to-slides",
+    "href": "slides/slides.html#jump-to-slides",
+    "title": "Slides",
+    "section": "Jump to slides",
+    "text": "Jump to slides\n\nClicking the button (or press m) opens a slide navigation menu that enables you to easily jump to any slide"
+  },
+  {
+    "objectID": "slides/slides.html#zoom-into-slide",
+    "href": "slides/slides.html#zoom-into-slide",
+    "title": "Slides",
+    "section": "Zoom into slide",
+    "text": "Zoom into slide\n\nHold down the Alt key (or option) and click on any element to zoom towards it."
+  },
+  {
+    "objectID": "slides/slides.html#chalkboard-and-notes-canvas",
+    "href": "slides/slides.html#chalkboard-and-notes-canvas",
+    "title": "Slides",
+    "section": "Chalkboard and notes canvas",
+    "text": "Chalkboard and notes canvas\n\nPress b to toggle the chalkboard.\nPress c to toggle the notes canvas.\n\n\n\nJan Kirenz"
+  },
+  {
+    "objectID": "slide.html",
+    "href": "slide.html",
+    "title": "Slides",
+    "section": "",
+    "text": "1 Basics\nMost of the slides are made with the open source scientific and technical publishing system Quarto and reveal.js.\nreveal.js is an open source HTML presentation framework. It’s a tool that enables anyone with a web browser to create fully-featured presentations for free. Presentations made with reveal.js are built on open web technologies. That means anything you can do on the web, you can do in your presentation.\n\n\n2 Slides tutorial\nRead the tutorial below to learn how to\n\nNavigate through the slides\nShow all slides\nSave slides as PDF\nPrint slides\n\n\n\n\n\n\n\nTo do\n\n\n\n\n🖥️ Slides tutorial"
   }
 ]
