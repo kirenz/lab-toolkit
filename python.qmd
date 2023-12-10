@@ -75,6 +75,7 @@ Let`s start your first Colab notebook to get an overview about some basic featur
 
 To download the Jupyter Notebook go to the Colab menu and choose: "File" > "Download" > "Download .ipynb"
 
+<!--
 
 # Amazon SageMaker Studio Lab
 
@@ -96,7 +97,7 @@ All you need to get started is a valid email address—you don’t need to confi
 - [Sign up for an Amazon SageMaker Studio Lab Account](https://aws.amazon.com/sagemaker/studio-lab/)
 :::
 
-
+-->
 
 # Anaconda {#sec-anaconda}
 
