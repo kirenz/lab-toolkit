@@ -203,7 +203,7 @@ Finally, take a look at the [Anaconda Cheat Sheet](https://docs.conda.io/project
 
 -->
 
-<!--
+
 
 ### Miniforge {#sec-miniforge}
 
@@ -229,7 +229,7 @@ Install the latest version of the Miniforge
 :::
 
 
--->
+
 
 # Visual Studio Code {#sec-vscode}
 
@@ -288,14 +288,4 @@ Some resources to get familiar with VS Code:
 - [Data Science in VS Code tutorial](https://code.visualstudio.com/docs/datascience/data-science-tutorial)
 - Pro tips: [25 VS Code Productivity Tips and Speed Hacks](https://www.youtube.com/watch?v=ifTF3ags0XI)
 
-<!--
-
-#### Troubleshooting
-
-If you have troubles to use Anaconda in Visual Studio Code, follow these instructions: 
-
-- [Windows](https://stackoverflow.com/a/61937090/14796848)
-- [Mac](https://stackoverflow.com/a/55203534/14796848)
-
--->
 
