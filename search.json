@@ -284,7 +284,7 @@
     "href": "python.html#anaconda-environment",
     "title": "Python",
     "section": "5.4 Anaconda environment",
-    "text": "5.4 Anaconda environment\nAfter you have installed and updated Anaconda, you can install the modules you need for a specific lab in a new environment.\n\n\n\n\n\n\nTo do\n\n\n\n\nGo to GitHub course environments\nFollow the instructions in the GitHub repo and install the environment env-lab"
+    "text": "5.4 Anaconda environment\nAfter you have installed and updated Anaconda, you can install the modules you need for a specific lab in a new environment.\n\n\n\n\n\n\nTo do\n\n\n\n\nGo to GitHub course environments\nFollow the instructions in the GitHub repo and install the environment env-lab\n\n\n\n\n\n5.4.1 Miniforge\nAs an alternative to Anaconda, you can also use the open-source project Miniforge.\nMiniforge is a small, bootstrap version of the data science platform Anaconda that includes only Python, the open source package management system conda and a small number of other useful packages.\nMiniforge also uses Anaconda’s package manager conda, which makes it easy to manage multiple data environments that can be maintained and run separately without interference from each other (in so called virtual environments).\n\n\n\n\n\n\nNote\n\n\n\nMiniforge is an community-led alternative to the data science platforms Anaconda and Miniconda, provided by Anaconda, Inc.\n\n\nCompared to Anaconda, Miniforge provides more up-to-date packages, and is more user-friendly. Therefore, I recommend using Miniforge for data science projects.\n\n\n\n\n\n\nTo do\n\n\n\nInstall the latest version of the Miniforge\n\nMiniforge installation tutorial"
   },
   {
     "objectID": "python.html#basics-2",
